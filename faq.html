@@ -132,6 +132,8 @@
             box-shadow: 0 4px 15px rgba(255, 242, 117, 0.4);
             transition: all 0.3s;
             font-size: 0.9em;
+            border: none;
+            cursor: pointer;
         }
 
         .btn-secondary {
@@ -199,7 +201,6 @@
             font-size: 0.9em;
             margin-top: 20px;
         }
-
     </style>
 </head>
 <body>
@@ -212,7 +213,7 @@
     
     <div class="cta-container">
         <a href="#schedule" class="btn">FIND OUR NEXT POP-UP</a>
-        <a href="mailto:connectmoregamecafe@gmail.com" class="btn btn-secondary">BOOK AN EVENT</a>
+        <a href="#contact" class="btn btn-secondary">BOOK AN EVENT</a>
     </div>
 </header>
 
@@ -244,6 +245,30 @@
             <li><strong>Mar 21:</strong> Local Brewery, Franklin (1pm-5pm)</li>
             <li><strong>Mar 24:</strong> The Coffee House, Nashville (5pm-9pm)</li>
         </ul>
+    </div>
+
+    <div id="contact" class="card">
+        <h2>Book a Private Event</h2>
+        <p>Interested in having the mobile library at your party or office? Send us a message!</p>
+        <br>
+        <form name="contact" method="POST" data-netlify="true" action="/success.html" style="text-align: left; max-width: 500px; margin: 0 auto;">
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; font-weight: 700; margin-bottom: 5px;">Your Name</label>
+                <input type="text" name="name" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd;">
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; font-weight: 700; margin-bottom: 5px;">Email Address</label>
+                <input type="email" name="email" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd;">
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; font-weight: 700; margin-bottom: 5px;">Event Details</label>
+                <textarea name="message" rows="4" placeholder="Tell us about your event (date, location, group size)..." required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; font-family: inherit;"></textarea>
+            </div>
+
+            <button type="submit" class="btn" style="width: 100%;">SEND INQUIRY</button>
+        </form>
     </div>
 </section>
 
