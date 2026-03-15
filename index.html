@@ -8,19 +8,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <style>
+        /* New Brand Variables */
+        :root {
+            --diode-blue: #0045B0;
+            --crystal-seas: #5dafce;
+            --yellow-jasper: #F4D896;
+            --black-cat: #413F42;
+            --bright-white: #F4F5F0;
+        }
+
         /* Base Styles */
         body { 
             font-family: 'Montserrat', sans-serif; 
-            color: #333333; 
+            color: var(--black-cat); 
             margin: 0; 
-            background-color: #fdfdfd; 
+            background-color: var(--bright-white); 
             text-align: center;
             line-height: 1.6;
         }
 
         /* Header & Hero Section */
         header { 
-            background: #3B60E4; 
+            background: var(--diode-blue); 
             color: white; 
             padding: 80px 20px; 
             display: flex;
@@ -46,7 +55,7 @@
         }
         
         .tagline { 
-            color: #A4DEFF; 
+            color: var(--yellow-jasper); 
             font-size: 1.4em; 
             font-weight: 400;
             margin: 10px 0 20px 0;
@@ -76,7 +85,7 @@
         }
         
         h2 { 
-            color: #3B60E4; 
+            color: var(--diode-blue); 
             font-size: 2.2em;
             margin-top: 0;
         }
@@ -92,14 +101,14 @@
 
         .pricing-box { 
             background: #f8faff;
-            border: 2px solid #3B60E4; 
+            border: 2px solid var(--crystal-seas); 
             border-radius: 15px; 
             padding: 25px; 
             width: 180px;
         }
         
         .price-item h3 { 
-            color: #3B60E4; 
+            color: var(--diode-blue); 
             font-size: 2.5em;
             margin: 0; 
         }
@@ -112,24 +121,25 @@
         }
 
         .schedule-list li {
-            background: #3B60E4;
+            background: var(--crystal-seas);
             color: white;
             margin: 10px auto;
             padding: 15px 25px;
             border-radius: 50px;
             max-width: 500px;
+            font-weight: 700;
         }
 
-        /* Buttons & Footer */
+        /* Buttons */
         .btn { 
-            background: #FFF275; 
-            color: #3B60E4; 
+            background: var(--yellow-jasper); 
+            color: var(--diode-blue); 
             padding: 20px 40px; 
             text-decoration: none; 
             font-weight: 700; 
             border-radius: 50px; 
             display: inline-block;
-            box-shadow: 0 4px 15px rgba(255, 242, 117, 0.4);
+            box-shadow: 0 4px 15px rgba(244, 216, 150, 0.4);
             transition: all 0.3s;
             font-size: 0.9em;
             border: none;
@@ -139,7 +149,7 @@
         .btn-secondary {
             background: transparent;
             color: white;
-            border: 2px solid #FFF275;
+            border: 2px solid var(--yellow-jasper);
             box-shadow: none;
         }
 
@@ -148,13 +158,13 @@
         }
 
         .btn-secondary:hover {
-            background: #FFF275;
-            color: #3B60E4;
+            background: var(--yellow-jasper);
+            color: var(--diode-blue);
         }
 
         /* Footer & Social Icons */
         .footer { 
-            background: #333333; 
+            background: var(--black-cat); 
             color: #eee; 
             padding: 60px 20px; 
             margin-top: 60px; 
@@ -168,7 +178,7 @@
         }
 
         .social-icons a {
-            color: #FFF275;
+            color: var(--yellow-jasper);
             font-size: 2em;
             text-decoration: none;
             transition: transform 0.3s, color 0.3s;
@@ -176,24 +186,24 @@
 
         .social-icons a:hover {
             transform: translateY(-5px);
-            color: #A4DEFF;
+            color: var(--crystal-seas);
         }
 
         .faq-link {
             display: inline-block;
             margin-bottom: 20px;
-            color: #FFF275;
+            color: var(--yellow-jasper);
             text-decoration: none;
             font-weight: 700;
-            border: 1px solid #FFF275;
+            border: 1px solid var(--yellow-jasper);
             padding: 10px 20px;
             border-radius: 25px;
             transition: all 0.3s;
         }
 
         .faq-link:hover {
-            background-color: #FFF275;
-            color: #333333;
+            background-color: var(--yellow-jasper);
+            color: var(--black-cat);
         }
 
         .footer-text {
@@ -207,7 +217,7 @@
 <body>
 
 <header>
-    <img class="piccenter" src="https://codehs.com/uploads/0a01c96ffae485647aa753e527399748" alt="Connect More Logo" style="width:250px;">
+    <img class="piccenter" src="YOUR_NEW_LOGO_URL_HERE.jpg" alt="Connect More Logo" style="width:200px;">
     <div class="hero-text">CONNECT MORE</div>
     <div class="tagline">POPUP GAME CAFE | FRANKLIN, TN</div>
     <p>Scroll Less. Connect More.</p>
@@ -221,7 +231,7 @@
 <section class="section">
     <div class="card">
         <h2>The Table is Set</h2>
-        <p>We are Jake and Kate Habegger. We believe the best connections happen over a board game, not a screen. Join us at our next local pop-up for a curated library of modern classics and community fun.</p>
+        <p>We believe the best connections happen over a board game, not a screen. Join us at our next local pop-up for a curated library of modern classics and community fun.</p>
         
         <div class="pricing-container">
             <div class="pricing-box">
@@ -248,71 +258,32 @@
         </ul>
     </div>
 </section>
-<!--
-    <form name="contact" netlify>
-  <p>
-    <label>Name <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Email <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
+
 <section id="contact" class="section">
-    <div class="card">
+    <div class="card" style="border-top: 6px solid var(--diode-blue); text-align: center;">
         <h2>Book a Private Event</h2>
-        <p>Interested in having the mobile library at your party or office? Send us a message!</p>
+        <p style="margin-bottom: 25px;">Interested in having the library at your party or office? Send us a message!</p>
         
-        <form name="contact" method="POST" data-netlify="true" action="/successful.html" style="text-align: left; max-width: 500px; margin: 0 auto;">
+        <form name="contact" method="POST" data-netlify="true" style="text-align: left; max-width: 450px; margin: 0 auto;">
             <input type="hidden" name="form-name" value="contact">
 
             <div style="margin-bottom: 15px;">
-                <label style="display: block; font-weight: 700; margin-bottom: 5px;">Your Name</label>
-                <input type="text" name="name" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd;">
-            </div>
-            
-            <div style="margin-bottom: 15px;">
-                <label style="display: block; font-weight: 700; margin-bottom: 5px;">Email Address</label>
-                <input type="email" name="email" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd;">
-            </div>
-
-            <div style="margin-bottom: 15px;">
-                <label style="display: block; font-weight: 700; margin-bottom: 5px;">Event Details</label>
-                <textarea name="message" rows="4" placeholder="Tell us about your event (date, location, group size)..." required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; font-family: inherit;"></textarea>
-            </div>
-
-            <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">SEND INQUIRY</button>
-        </form>
-    </div>
-</section>
--->
-<section id="contact" class="section" style="background-color: #F4F5F0; padding: 40px 20px;">
-    <div class="card" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-top: 6px solid #0045B0; max-width: 500px; margin: 0 auto; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-        
-        <h2 style="color: #0045B0; margin-top: 0; text-transform: uppercase; letter-spacing: 1px;">Book a Private Event</h2>
-        <p style="color: #413F42; margin-bottom: 25px;">Interested in having the library at your party or office? Send us a message!</p>
-        
-        <form name="contact" method="POST" data-netlify="true" style="text-align: left;">
-            <input type="hidden" name="form-name" value="contact">
-
-            <div style="margin-bottom: 15px;">
-                <label style="display: block; font-weight: 700; margin-bottom: 5px; color: #413F42;">Name</label>
+                <label style="display: block; font-weight: 700; margin-bottom: 5px;">Name</label>
                 <input type="text" name="name" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box;">
             </div>
             
             <div style="margin-bottom: 15px;">
-                <label style="display: block; font-weight: 700; margin-bottom: 5px; color: #413F42;">Email</label>
+                <label style="display: block; font-weight: 700; margin-bottom: 5px;">Email</label>
                 <input type="email" name="email" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box;">
             </div>
 
             <div style="margin-bottom: 20px;">
-                <button type="submit" style="width: 100%; padding: 14px; background-color: #0045B0; color: white; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; text-transform: uppercase; letter-spacing: 1px;">Send</button>
+                <button type="submit" class="btn" style="width: 100%; border-radius: 8px; text-transform: uppercase;">Send Inquiry</button>
             </div>
         </form>
     </div>
 </section>
+
 <div class="footer">
     <h3>Stay Connected</h3>
     <div class="social-icons">
