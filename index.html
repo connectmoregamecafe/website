@@ -248,7 +248,8 @@
         </ul>
     </div>
 </section>
-<form name="contact" netlify>
+<!--
+    <form name="contact" netlify>
   <p>
     <label>Name <input type="text" name="name" /></label>
   </p>
@@ -286,7 +287,32 @@
         </form>
     </div>
 </section>
+-->
+<section id="contact" class="section" style="background-color: #F4F5F0; padding: 40px 20px;">
+    <div class="card" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-top: 6px solid #0045B0; max-width: 500px; margin: 0 auto; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        
+        <h2 style="color: #0045B0; margin-top: 0; text-transform: uppercase; letter-spacing: 1px;">Book a Private Event</h2>
+        <p style="color: #413F42; margin-bottom: 25px;">Interested in having the library at your party or office? Send us a message!</p>
+        
+        <form name="contact" method="POST" data-netlify="true" style="text-align: left;">
+            <input type="hidden" name="form-name" value="contact">
 
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; font-weight: 700; margin-bottom: 5px; color: #413F42;">Name</label>
+                <input type="text" name="name" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box;">
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; font-weight: 700; margin-bottom: 5px; color: #413F42;">Email</label>
+                <input type="email" name="email" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box;">
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <button type="submit" style="width: 100%; padding: 14px; background-color: #0045B0; color: white; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; text-transform: uppercase; letter-spacing: 1px;">Send</button>
+            </div>
+        </form>
+    </div>
+</section>
 <div class="footer">
     <h3>Stay Connected</h3>
     <div class="social-icons">
