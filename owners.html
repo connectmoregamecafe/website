@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Jake & Kate | Connect More</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --diode-blue: #0045B0;
+            --crystal-seas: #5dafce;
+            --yellow-jasper: #F4D896;
+            --black-cat: #413F42;
+            --bright-white: #F4F5F0;
+        }
+
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            color: var(--black-cat); 
+            margin: 0; 
+            background-color: var(--bright-white); 
+            line-height: 1.6;
+        }
+
+        header { 
+            background: var(--diode-blue); 
+            color: white; 
+            padding: 50px 20px; 
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .profile-grid { grid-template-columns: 1fr; }
+        }
+
+        .profile-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .profile-card img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--yellow-jasper);
+            margin-bottom: 20px;
+        }
+
+        .profile-card h2 {
+            color: var(--diode-blue);
+            margin-bottom: 5px;
+        }
+
+        .role {
+            font-weight: 700;
+            color: var(--crystal-seas);
+            text-transform: uppercase;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .bio-text {
+            text-align: left;
+            font-size: 0.95em;
+        }
+
+        .back-nav {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .btn-text {
+            color: var(--diode-blue);
+            text-decoration: none;
+            font-weight: 700;
+            border-bottom: 2px solid var(--yellow-jasper);
+            transition: all 0.3s;
+        }
+
+        .btn-text:hover {
+            color: var(--crystal-seas);
+            border-color: var(--diode-blue);
+        }
+
+        footer {
+            background: var(--black-cat);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 style="margin:0; text-transform: uppercase; letter-spacing: 2px;">The Faces Behind the Games</h1>
+</header>
+
+<div class="container">
+    <div class="profile-grid">
+        
+        <div class="profile-card">
+            <img src="jake-photo.jpg" alt="Jake Habegger">
+            <h2>Jake Habegger</h2>
+            <span class="role">The Tech Enthusiast</span>
+            <div class="bio-text">
+                <p>By day, I’m a middle school computer science teacher, helping students navigate the world of coding and logic. But I’ve always believed that while technology is a tool, real connection is a human experience.</p>
+                <p>My love for games started with the complexity of strategy—seeing how different mechanics can create entirely different outcomes. I started 3D printing custom game components as a hobby, and it wasn't long before I realized I wanted to share the broader "tabletop" experience with others.</p>
+            </div>
+        </div>
+
+        <div class="profile-card">
+            <img src="kate-photo.jpg" alt="Kate Habegger">
+            <h2>Kate Habegger</h2>
+            <span class="role">The Community Builder</span>
+            <div class="bio-text">
+                <p>I’ve always been the person who wants to host. For me, board games are the perfect "social icebreaker"—they give people a reason to sit down, stay a while, and truly engage with whoever is sitting across from them.</p>
+                <p>I’m the one focusing on the cafe atmosphere and the "Gateway Games"—the titles that are so fun and intuitive they can turn anyone into a board gamer. Seeing a group of strangers go from quiet to cheering during a game of <i>Codenames</i> is exactly why we started this.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="back-nav">
+        <a href="about.html" class="btn-text">← Back to Our Story</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Connect More Game Cafe</p>
+</footer>
+
+</body>
+</html>
