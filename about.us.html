@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Connect More Game Cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --diode-blue: #0045B0;
+            --crystal-seas: #5dafce;
+            --yellow-jasper: #F4D896;
+            --black-cat: #413F42;
+            --bright-white: #F4F5F0;
+        }
+
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            color: var(--black-cat); 
+            margin: 0; 
+            background-color: var(--bright-white); 
+            line-height: 1.6;
+        }
+
+        header { 
+            background: var(--diode-blue); 
+            color: white; 
+            padding: 60px 20px; 
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .story-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .story-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .story-image {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--yellow-jasper);
+            border-radius: 20px;
+            padding: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .story-image img {
+            width: 100%;
+            border-radius: 15px;
+            display: block;
+        }
+
+        h1, h2 {
+            color: var(--diode-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        header h1 {
+            color: white;
+            margin: 0;
+        }
+
+        .mission-box {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            border-left: 8px solid var(--crystal-seas);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-top: 40px;
+        }
+
+        .highlight {
+            color: var(--diode-blue);
+            font-weight: 700;
+        }
+
+        .footer { 
+            background: var(--black-cat); 
+            color: #eee; 
+            padding: 40px 20px; 
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--diode-blue);
+            text-decoration: none;
+            font-weight: 700;
+            border-bottom: 2px solid var(--diode-blue);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Our Story</h1>
+</header>
+
+<div class="container">
+    <section class="story-section">
+        <div class="story-text">
+            <h2>Analog Hearts in a Digital World</h2>
+            <p>Hi, we’re <span class="highlight">Jake and Kate Habegger</span>. Like many people today, we found ourselves spending more time looking at notifications than at each other. We realized that some of our best memories weren't made in front of a screen, but across a tabletop.</p>
+            <p>Connect More started as a simple idea: what if we could bring that feeling to our community in Franklin? We wanted to create a space where the wifi password doesn't matter, but the next move does.</p>
+        </div>
+        <div class="story-image">
+            <img src="https://via.placeholder.com/400x300" alt="Jake and Kate">
+        </div>
+    </section>
+
+    <section class="mission-box">
+        <h2>Our Mission</h2>
+        <p>At <strong>Connect More</strong>, our goal is to facilitate face-to-face interaction through the universal language of play. Whether you're a seasoned strategist or haven't picked up a pair of dice since childhood, there is a seat at our table for you.</p>
+        <p>We curate our library to include "Gateway Games"—titles that are easy to learn but hard to put down—so you spend less time reading rulebooks and more time laughing with friends.</p>
+    </section>
+
+    <center>
+        <a href="index.html" class="btn-back">← Back to Home</a>
+    </center>
+</div>
+
+<div class="footer">
+    <p>&copy; 2026 Connect More Game Cafe | Franklin, TN</p>
+</div>
+
+</body>
+</html>
