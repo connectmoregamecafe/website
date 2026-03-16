@@ -1,105 +1,91 @@
-/* --- CONNECT MORE MASTER STYLES (V3) --- */
-:root {
-    --diode-blue: #0045B0;
-    --crystal-seas: #5dafce;
-    --yellow-jasper: #F4D896;
-    --black-cat: #413F42;
-    --bright-white: #F4F5F0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect More Game Cafe | Franklin, TN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-/* Global Styles */
-body { 
-    font-family: 'Montserrat', sans-serif; 
-    background-color: var(--bright-white); 
-    color: var(--black-cat); 
-    line-height: 1.6;
-    margin: 0; 
-    padding: 0;
-}
+<header>
+    <img class="piccenter" src="logo.png" alt="Connect More Logo">
+    <div class="hero-text">CONNECT MORE</div>
+    <div class="tagline">POPUP GAME CAFE | FRANKLIN, TN</div>
+    <p>Scroll Less. Connect More.</p>
+    
+    <div class="cta-container">
+        <a href="#schedule" class="btn">FIND OUR NEXT POP-UP</a>
+        <a href="#contact" class="btn btn-secondary">BOOK AN EVENT</a>
+    </div>
+</header>
 
-/* Header & Hero Section Fixes */
-header { 
-    background: var(--diode-blue); 
-    color: white; 
-    padding: 80px 20px; /* More breathing room */
-    text-align: center;
-}
+<section class="section">
+    <div class="card">
+        <h2>The Table is Set</h2>
+        <p>We believe the best connections happen over a board game, not a screen. Join us at our next local pop-up for a curated library of modern classics and community fun.</p>
+        
+        <div class="pricing-container">
+            <div class="pricing-box">
+                <h3>$10</h3>
+                <p>ADULTS</p>
+            </div>
+            <div class="pricing-box">
+                <h3>$5</h3>
+                <p>KIDS (5-13)</p>
+            </div>
+        </div>
+        <p style="text-align: center; font-size: 0.85em; color: #888;">Unlimited play while we're popped up!</p>
+    </div>
 
-.hero-text {
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: 4px;
-    margin-top: 20px;
-    text-transform: uppercase;
-}
+    <div id="schedule" class="card">
+        <h2>Upcoming Pop-Ups</h2>
+        <ul class="schedule-list">
+            <li><strong>TBD:</strong> Stay Tuned!</li>
+        </ul>
+    </div>
+</section>
 
-.tagline {
-    font-size: 1.2rem;
-    color: var(--yellow-jasper);
-    letter-spacing: 2px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
+<section id="contact" class="section">
+    <div class="card" style="border-top: 6px solid var(--diode-blue);">
+        <h2 style="text-align: center;">Book a Private Event</h2>
+        <p style="text-align: center; margin-bottom: 25px;">Interested in having the library at your party or office? Send us a message!</p>
+        
+        <form name="contact" method="POST" data-netlify="true" style="max-width: 450px; margin: 0 auto;">
+            <input type="hidden" name="form-name" value="contact">
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; font-weight: 700;">Name</label>
+                <input type="text" name="name" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; font-weight: 700;">Email</label>
+                <input type="email" name="email" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; font-weight: 700;">Event Information</label>
+                <textarea name="message" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box; min-height: 100px;"></textarea>
+            </div>
+            <button type="submit" class="btn" style="width: 100%;">Send Inquiry</button>
+        </form>
+    </div>
+</section>
 
-header p {
-    font-style: italic;
-    font-size: 1.1rem;
-    opacity: 0.9;
-    margin-bottom: 30px;
-}
+<div class="footer">
+    <h3>Stay Connected</h3>
+    <div class="social-icons">
+        <a href="https://instagram.com/connectmoregamecafe" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61582265409098" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:connectmoregamecafe@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div style="margin-bottom: 20px;">
+        <a href="faq.html">FAQ</a>
+        <a href="about.us.html">About Us</a>
+    </div>
+    <p style="font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Connect More Game Cafe | Franklin, TN</p>
+</div>
 
-/* Container for all content below the header */
-.container, .section {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-/* Card Styling */
-.card {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    margin-bottom: 30px;
-}
-
-/* Button Styling */
-.cta-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    display: inline-block;
-    background-color: var(--yellow-jasper);
-    color: var(--diode-blue);
-    padding: 15px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: transform 0.2s;
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-}
-
-/* Footer Fix */
-.footer {
-    background: var(--black-cat);
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-/* Typography */
-h1, h2, h3 { color: var(--diode-blue); text-transform: uppercase; }
+</body>
+</html>
