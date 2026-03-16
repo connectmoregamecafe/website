@@ -1,0 +1,103 @@
+/* Connect More Global Styles */
+:root {
+    --diode-blue: #0045B0;
+    --crystal-seas: #5dafce;
+    --yellow-jasper: #F4D896;
+    --black-cat: #413F42;
+    --bright-white: #F4F5F0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bright-white);
+    color: var(--black-cat);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--diode-blue);
+    color: white;
+    padding: 2.5rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* FAQ Components */
+.faq-item {
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--crystal-seas);
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 1.5rem;
+    font-weight: bold;
+    color: var(--diode-blue);
+    border-bottom: 1px solid #eee;
+}
+
+.faq-answer {
+    padding: 1.5rem;
+    color: var(--black-cat);
+}
+
+.highlight {
+    color: var(--diode-blue);
+    font-weight: bold;
+}
+
+/* Contact & Buttons */
+.contact-section {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+    border: 2px dashed var(--yellow-jasper);
+}
+
+.btn-contact {
+    display: inline-block;
+    background-color: var(--diode-blue);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+    background-color: var(--crystal-seas);
+}
+
+footer {
+    text-align: center;
+    padding: 3rem 1rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    color: var(--diode-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
