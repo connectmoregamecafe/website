@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ | Connect More Game Cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     
     <script type="application/ld+json">
     {
@@ -14,211 +17,69 @@
         "name": "What is a Board Game Cafe?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A board game cafe is a social space where people gather to play from a library of tabletop games while enjoying food and drinks. It is designed to help people disconnect from screens and connect more with each other through play."
+          "text": "A board game cafe is a social space where people gather to play from a library of tabletop games while enjoying food and drinks."
         }
       }, {
         "@type": "Question",
         "name": "How does the Library Fee work?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "For a small flat fee, you get unlimited access to our collection of over 500 board games for the entire day. Members play for free!"
-        }
-      }, {
-        "@type": "Question",
-        "name": "Can I bring my own games?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely! You are welcome to bring your own games to play at our tables. Standard table rates still apply to cover the space."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Do you teach people how to play?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes! Our Game Gurus are always on hand to help you pick a game, set it up, and explain the rules so you can start connecting faster."
+          "text": "For a small flat fee, you get unlimited access to our collection of board games for the entire day."
         }
       }]
     }
     </script>
-
-    <style>
-        :root {
-            --diode-blue: #0045B0;
-            --crystal-seas: #5dafce;
-            --yellow-jasper: #F4D896;
-            --black-cat: #413F42;
-            --bright-white: #F4F5F0;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bright-white);
-            color: var(--black-cat);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: var(--diode-blue);
-            color: white;
-            padding: 2.5rem 1rem;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        .faq-item {
-            background: white;
-            border-radius: 8px;
-            margin-bottom: 1.2rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            border-left: 5px solid var(--crystal-seas);
-            overflow: hidden;
-        }
-
-        .faq-question {
-            padding: 1.5rem;
-            font-weight: bold;
-            color: var(--diode-blue);
-            border-bottom: 1px solid #eee;
-        }
-
-        .faq-answer {
-            padding: 1.5rem;
-            color: var(--black-cat);
-        }
-
-        .highlight {
-            color: var(--diode-blue);
-            font-weight: bold;
-        }
-
-        /* Contact Section Styling */
-        .contact-section {
-            background-color: white;
-            padding: 2.5rem;
-            border-radius: 8px;
-            text-align: center;
-            margin-top: 3rem;
-            border: 2px dashed var(--yellow-jasper);
-        }
-
-        .contact-section h2 {
-            color: var(--diode-blue);
-            margin-top: 0;
-        }
-
-        .btn-contact {
-            display: inline-block;
-            background-color: var(--diode-blue);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 1rem;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-contact:hover {
-            background-color: var(--crystal-seas);
-        }
-
-        footer {
-            text-align: center;
-            padding: 3rem 1rem;
-            font-size: 0.9rem;
-            color: #888;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-top: 2rem;
-            color: var(--diode-blue);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
 
 <header>
-    <h1>Connect More</h1>
-    <p>Frequently Asked Questions</p>
+    <h1>Frequently Asked Questions</h1>
 </header>
 
 <div class="container">
-
-    <div class="faq-item">
-        <div class="faq-question">What is a Board Game Cafe?</div>
-        <div class="faq-answer">
-            Think of it as a community living room! A board game cafe is a social space where you can gather with friends or family to enjoy a library of hundreds of tabletop games while grabbing a drink or a snack. It’s a place designed to help people disconnect from screens and <span class="highlight">Connect More</span> with each other.
-        </div>
-    </div>
-    
-    <div class="faq-item">
-        <div class="faq-question">How does the "Library Fee" work?</div>
-        <div class="faq-answer">
-            For a small flat fee, you get unlimited access to our collection of over 500 board games for the entire day. Members play for free!
-        </div>
+    <div class="card">
+        <h3 style="color: var(--diode-blue);">What is a Board Game Cafe?</h3>
+        <p>A board game cafe is a social space where you can gather with friends to enjoy a library of hundreds of tabletop games while grabbing a drink or a snack. It’s a place designed to help people disconnect from screens and <strong>Connect More</strong> with each other.</p>
     </div>
 
-    <div class="faq-item">
-        <div class="faq-question">Can I bring my own games?</div>
-        <div class="faq-answer">
-            Absolutely! You are welcome to bring your own games to play at our tables. Standard table rates still apply to cover the space.
-        </div>
+    <div class="card">
+        <h3 style="color: var(--diode-blue);">How does the "Library Fee" work?</h3>
+        <p>For a small flat fee, you get unlimited access to our collection of over 500 board games for the entire day. Members play for free!</p>
     </div>
 
-    <div class="faq-item">
-        <div class="faq-question">Do you teach people how to play?</div>
-        <div class="faq-answer">
-            Yes! Our "Game Gurus" are always on hand to help you pick a game, set it up, and explain the rules so you can start <span class="highlight">connecting</span> faster.
-        </div>
+    <div class="card">
+        <h3 style="color: var(--diode-blue);">Can I bring my own games?</h3>
+        <p>Absolutely! You are welcome to bring your own games. Standard table rates still apply to cover the space.</p>
     </div>
 
-    <div class="faq-item">
-        <div class="faq-question">Are kids allowed?</div>
-        <div class="faq-answer">
-            We are a community-focused space! Kids are welcome, though we ask that children under 13 be accompanied by an adult. We have a great selection of family-friendly titles.
-        </div>
+    <div class="card">
+        <h3 style="color: var(--diode-blue);">Do you teach people how to play?</h3>
+        <p>Yes! Our "Game Gurus" are always on hand to help you pick a game, set it up, and explain the rules.</p>
     </div>
 
-    <div class="faq-item">
-        <div class="faq-question">Do you serve food and drinks?</div>
-        <div class="faq-answer">
-            We try to partner with our hosting locations to offer their delicious food and drinks to purchase. If requested, we are happy to provide snack and drink options as well.
-        </div>
-    </div>
-
-    <div class="contact-section">
+    <div class="card" style="text-align: center; border-style: dashed; border-width: 2px; border-color: var(--yellow-jasper);">
         <h2>Still have questions?</h2>
-        <p>We're here to help! Whether you're planning a party or just curious about a specific game, feel free to reach out.</p>
-        <a href="index.html#contact" class="btn-contact">Get in Touch</a>
+        <a href="index.html#contact" class="btn">Get in Touch</a>
     </div>
 
-    <center>
-        <a href="index.html" class="back-link">← Back to Home</a>
-    </center>
+    <div class="nav-container">
+        <a href="index.html" class="btn btn-secondary">← Back to Home</a>
+    </div>
 </div>
 
-<footer>
-    &copy; 2026 Connect More Game Cafe. All rights reserved.
-</footer>
-
+<div class="footer">
+    <h3>Stay Connected</h3>
+    <div class="social-icons">
+        <a href="https://instagram.com/connectmoregamecafe" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61582265409098" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:connectmoregamecafe@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div style="margin-bottom: 20px;">
+        <a href="index.html">Home</a>
+        <a href="about.us.html">Our Story</a>
+        <a href="owners.html">Meet the Family</a>
+    </div>
+    <p style="font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Connect More Game Cafe | Franklin, TN</p>
+</div>
 </body>
 </html>
