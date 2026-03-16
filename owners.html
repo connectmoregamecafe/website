@@ -3,128 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meet Jake & Kate | Connect More</title>
+    <title>Meet the Family | Connect More</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --diode-blue: #0045B0;
-            --crystal-seas: #5dafce;
-            --yellow-jasper: #F4D896;
-            --black-cat: #413F42;
-            --bright-white: #F4F5F0;
-        }
- 
-        body { 
-            font-family: 'Montserrat', sans-serif; 
-            color: var(--black-cat); 
-            margin: 0; 
-            background-color: var(--bright-white); 
-            line-height: 1.6;
-        }
-
-        header { 
-            background: var(--diode-blue); 
-            color: white; 
-            padding: 50px 20px; 
-            text-align: center;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .profile-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-top: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .profile-grid { grid-template-columns: 1fr; }
-        }
-
-        .profile-card {
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-
-        .profile-card img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid var(--yellow-jasper);
-            margin-bottom: 20px;
-        }
-
-        .profile-card h2 {
-            color: var(--diode-blue);
-            margin-bottom: 5px;
-        }
-
-        .role {
-            font-weight: 700;
-            color: var(--crystal-seas);
-            text-transform: uppercase;
-            font-size: 0.9em;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .bio-text {
-            text-align: left;
-            font-size: 0.95em;
-        }
-
-        .back-nav {
-            margin-top: 50px;
-            text-align: center;
-        }
-
-        .btn-text {
-            color: var(--diode-blue);
-            text-decoration: none;
-            font-weight: 700;
-            border-bottom: 2px solid var(--yellow-jasper);
-            transition: all 0.3s;
-        }
-
-        .btn-text:hover {
-            color: var(--crystal-seas);
-            border-color: var(--diode-blue);
-        }
-
-        footer {
-            background: var(--black-cat);
-            color: white;
-            padding: 30px;
-            text-align: center;
-            margin-top: 60px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1 style="margin:0; text-transform: uppercase; letter-spacing: 2px;">The Faces Behind the Games</h1>
+    <h1>The Faces Behind the Games</h1>
 </header>
 
 <div class="container">
     <div class="profile-grid">
-        
         <div class="profile-card">
             <img src="jake-photo.jpg" alt="Jake Habegger">
             <h2>Jake Habegger</h2>
             <span class="role">Game Connector</span>
             <div class="bio-text">
-                <p>By day, I’m a middle school computer science teacher, helping students navigate the world of coding and logic. But I’ve always believed that while technology is a tool, real connection is a human experience.</p>
-                <p>My love for games started with the complexity of strategy—seeing how different mechanics can create entirely different outcomes. I started 3D printing custom game components as a hobby, and it wasn't long before I realized I wanted to share the broader "tabletop" experience with others.</p>
+                <p>By day, I’m a middle school computer science teacher, helping students navigate the world of coding and logic. I’ve always believed that while technology is a tool, real connection is a human experience.</p>
+                <p>My love for games started with strategy—seeing how mechanics create outcomes. I even 3D print custom components for our library!</p>
             </div>
         </div>
 
@@ -133,46 +30,42 @@
             <h2>Kate Habegger</h2>
             <span class="role">The Community Builder</span>
             <div class="bio-text">
-                <p>I’ve always been the person who wants to host. For me, board games are the perfect "social icebreaker"—they give people a reason to sit down, stay a while, and truly engage with whoever is sitting across from them.</p>
-                <p>I’m the one focusing on the cafe atmosphere and the "Gateway Games"—the titles that are so fun and intuitive they can turn anyone into a board gamer. Seeing a group of strangers go from quiet to cheering during a game of <i>Codenames</i> is exactly why we started this.</p>
+                <p>I’m the host at heart. For me, board games are the perfect icebreaker. I focus on the atmosphere and "Gateway Games" that turn anyone into a gamer.</p>
+                <p>Seeing a group go from quiet to cheering during a game is exactly why we started Connect More.</p>
             </div>
         </div>
-
     </div>
 
-    <div class="back-nav">
-        <a href="about.us.html" class="btn-text">← Back to Our Story</a>
-    </div>
-</div>
-<div style="text-align: center; margin-top: 60px;">
-        <h2 style="color: var(--diode-blue); text-transform: uppercase;">The Next Generation</h2>
-        <p style="color: var(--black-cat);">The official game-testers and joy-bringers of Connect More.</p>
+    <div style="text-align: center; margin-top: 60px;">
+        <h2>The Next Generation</h2>
+        <p>The official game-testers and joy-bringers of Connect More.</p>
     </div>
 
-    <div class="profile-grid" style="margin-top: 30px;">
-        
+    <div class="profile-grid">
         <div class="profile-card" style="border-top: 4px solid var(--crystal-seas);">
             <img src="addy-photo.jpg" alt="Addy Habegger">
             <h2>Addy Habegger</h2>
-            <span class="role">Hostess with the Mostess</span>
+            <span class="role">Lead Hostess</span>
             <div class="bio-text">
-                <p>Addy is the heart of our hospitality. As our lead hostess, she is the first smiling face you’ll see when you walk through our doors. She believes that a great gaming experience starts the moment you arrive, and she takes pride in making every guest feel like a regular.
-                </p>
-                <p>With a natural talent for organization and a warm, welcoming spirit, Addy ensures that every group finds the perfect spot to settle in. Whether she’s managing the table waitlist or handing out our library passes, she is dedicated to making sure your visit to Connect More is seamless and inviting from start to finish.</p>
+                <p>Addy ensures every guest feels like a regular the moment they walk in. She's the master of our table waitlist and hospitality.</p>
             </div>
         </div>
 
         <div class="profile-card" style="border-top: 4px solid var(--crystal-seas);">
             <img src="emma-kate-photo.jpg" alt="Emma Kate Habegger">
             <h2>Emma Kate Habegger</h2>
-            <span class="role">Game Connector with the Scepter</span>
+            <span class="role">Game Connector</span>
             <div class="bio-text">
-                <p>Emma Kate has been playing games for as long as she can remember. She has a keen sense for strategy and is here to win! When you need someone to get you started on a new game, Emma Kate is your go-to gal!</p>
-                <p>Her specialty is asking the right questions to help you find the perfect game. If you're not sure where to start, Emma Kate is usually nearby with a recommendation that's guaranteed to get the table talking.</p>
+                <p>Emma Kate has a keen sense for strategy. She’s your go-to when you need a game recommendation that gets the whole table talking.</p>
             </div>
         </div>
-
     </div>
+
+    <div style="text-align: center; margin-top: 50px;">
+        <a href="about.us.html" class="btn-text">← Back to Our Story</a>
+    </div>
+</div>
+
 <footer>
     <p>&copy; 2026 Connect More Game Cafe</p>
 </footer>
