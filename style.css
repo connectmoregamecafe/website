@@ -1,4 +1,4 @@
-/* --- CONNECT MORE MASTER STYLES --- */
+/* --- CONNECT MORE MASTER STYLES (V2) --- */
 :root {
     --diode-blue: #0045B0;
     --crystal-seas: #5dafce;
@@ -17,136 +17,88 @@ body {
     padding: 0;
 }
 
-/* Typography */
-h1, h2, h3 {
+/* Typography & Links */
+h1, h2, h3 { color: var(--diode-blue); text-transform: uppercase; letter-spacing: 1px; }
+.highlight { color: var(--diode-blue); font-weight: 700; }
+.btn-text {
     color: var(--diode-blue);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.highlight {
-    color: var(--diode-blue);
+    text-decoration: none;
     font-weight: 700;
+    border-bottom: 2px solid var(--yellow-jasper);
+    transition: all 0.3s;
+}
+.btn-text:hover { color: var(--crystal-seas); border-color: var(--diode-blue); }
+
+/* Layout Containers */
+header { background: var(--diode-blue); color: white; padding: 50px 20px; text-align: center; }
+.container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+
+/* Profile Grid & Cards (For Owners Page) */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 20px;
 }
 
-/* Header & Navigation */
-header { 
-    background: var(--diode-blue); 
-    color: white; 
-    padding: 60px 20px; 
+/* Responsive Grid: Stacks on phones */
+@media (max-width: 768px) {
+    .profile-grid { grid-template-columns: 1fr; }
+}
+
+.profile-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     text-align: center;
 }
 
-header h1 {
-    color: white;
-    margin: 0;
+.profile-card img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; /* Makes photos circular */
+    object-fit: cover;
+    border: 5px solid var(--yellow-jasper);
+    margin-bottom: 20px;
 }
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-/* About Us / Story Section */
-.story-section {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 60px;
-    flex-wrap: wrap; /* Allows image to drop below text on mobile */
-}
-
-.story-text {
-    flex: 1;
-    min-width: 300px;
-}
-
-.story-image {
-    flex: 1;
-    min-width: 300px;
-    background-color: var(--yellow-jasper);
-    border-radius: 20px;
-    padding: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-.story-image img {
-    width: 100%;
-    border-radius: 15px;
+.role {
+    font-weight: 700;
+    color: var(--crystal-seas);
+    text-transform: uppercase;
+    font-size: 0.9em;
+    margin-bottom: 15px;
     display: block;
 }
 
-.mission-box {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    border-left: 8px solid var(--crystal-seas);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    margin-top: 40px;
-}
+.bio-text { text-align: left; font-size: 0.95em; }
 
-/* FAQ Components */
-.faq-item {
+/* About Us Story Section */
+.story-section { display: flex; align-items: center; gap: 40px; margin-bottom: 60px; flex-wrap: wrap; }
+.story-text { flex: 1; min-width: 300px; }
+.story-image { 
+    flex: 1; min-width: 300px; background-color: var(--yellow-jasper); 
+    border-radius: 20px; padding: 10px; 
+}
+.story-image img { width: 100%; border-radius: 15px; display: block; }
+
+/* Mission & FAQ Boxes */
+.mission-box, .faq-item {
     background: white;
-    border-radius: 8px;
+    border-radius: 15px;
     margin-bottom: 1.2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    border-left: 5px solid var(--crystal-seas);
-    overflow: hidden;
+    border-left: 8px solid var(--crystal-seas);
 }
+.faq-question { padding: 1.5rem; font-weight: bold; color: var(--diode-blue); border-bottom: 1px solid #eee; }
+.faq-answer { padding: 1.5rem; }
 
-.faq-question {
-    padding: 1.5rem;
-    font-weight: bold;
-    color: var(--diode-blue);
-    border-bottom: 1px solid #eee;
-}
-
-.faq-answer {
-    padding: 1.5rem;
-}
-
-/* Contact Section & Buttons */
-.contact-section {
-    background-color: white;
-    padding: 2.5rem;
-    border-radius: 8px;
-    text-align: center;
-    margin-top: 3rem;
-    border: 2px dashed var(--yellow-jasper);
-}
-
-.btn-contact, .btn-back {
-    display: inline-block;
-    background-color: var(--diode-blue);
+/* Global Footer */
+footer, .footer {
+    background: var(--black-cat);
     color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 20px;
-    font-weight: 700;
-    transition: background-color 0.3s ease;
-}
-
-.btn-contact:hover {
-    background-color: var(--crystal-seas);
-}
-
-.btn-back {
-    background: transparent;
-    color: var(--diode-blue);
-    border-bottom: 2px solid var(--diode-blue);
-    border-radius: 0;
-    padding: 5px 0;
-}
-
-/* Footer Styles */
-.footer, footer { 
-    background: var(--black-cat); 
-    color: #eee; 
-    padding: 40px 20px; 
+    padding: 40px 20px;
     text-align: center;
     margin-top: 60px;
-    font-size: 0.9rem;
 }
