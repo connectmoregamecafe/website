@@ -1,4 +1,4 @@
-/* --- CONNECT MORE MASTER STYLES (V2) --- */
+/* --- CONNECT MORE MASTER STYLES (V3) --- */
 :root {
     --diode-blue: #0045B0;
     --crystal-seas: #5dafce;
@@ -9,7 +9,7 @@
 
 /* Global Styles */
 body { 
-    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    font-family: 'Montserrat', sans-serif; 
     background-color: var(--bright-white); 
     color: var(--black-cat); 
     line-height: 1.6;
@@ -17,88 +17,89 @@ body {
     padding: 0;
 }
 
-/* Typography & Links */
-h1, h2, h3 { color: var(--diode-blue); text-transform: uppercase; letter-spacing: 1px; }
-.highlight { color: var(--diode-blue); font-weight: 700; }
-.btn-text {
-    color: var(--diode-blue);
-    text-decoration: none;
+/* Header & Hero Section Fixes */
+header { 
+    background: var(--diode-blue); 
+    color: white; 
+    padding: 80px 20px; /* More breathing room */
+    text-align: center;
+}
+
+.hero-text {
+    font-size: 3rem;
     font-weight: 700;
-    border-bottom: 2px solid var(--yellow-jasper);
-    transition: all 0.3s;
-}
-.btn-text:hover { color: var(--crystal-seas); border-color: var(--diode-blue); }
-
-/* Layout Containers */
-header { background: var(--diode-blue); color: white; padding: 50px 20px; text-align: center; }
-.container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
-
-/* Profile Grid & Cards (For Owners Page) */
-.profile-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    letter-spacing: 4px;
     margin-top: 20px;
+    text-transform: uppercase;
 }
 
-/* Responsive Grid: Stacks on phones */
-@media (max-width: 768px) {
-    .profile-grid { grid-template-columns: 1fr; }
+.tagline {
+    font-size: 1.2rem;
+    color: var(--yellow-jasper);
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
-.profile-card {
+header p {
+    font-style: italic;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* Container for all content below the header */
+.container, .section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Card Styling */
+.card {
     background: white;
-    padding: 30px;
+    padding: 40px;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    text-align: center;
+    margin-bottom: 30px;
 }
 
-.profile-card img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%; /* Makes photos circular */
-    object-fit: cover;
-    border: 5px solid var(--yellow-jasper);
-    margin-bottom: 20px;
+/* Button Styling */
+.cta-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-.role {
+.btn {
+    display: inline-block;
+    background-color: var(--yellow-jasper);
+    color: var(--diode-blue);
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
     font-weight: 700;
-    color: var(--crystal-seas);
-    text-transform: uppercase;
-    font-size: 0.9em;
-    margin-bottom: 15px;
-    display: block;
+    transition: transform 0.2s;
 }
 
-.bio-text { text-align: left; font-size: 0.95em; }
-
-/* About Us Story Section */
-.story-section { display: flex; align-items: center; gap: 40px; margin-bottom: 60px; flex-wrap: wrap; }
-.story-text { flex: 1; min-width: 300px; }
-.story-image { 
-    flex: 1; min-width: 300px; background-color: var(--yellow-jasper); 
-    border-radius: 20px; padding: 10px; 
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
 }
-.story-image img { width: 100%; border-radius: 15px; display: block; }
 
-/* Mission & FAQ Boxes */
-.mission-box, .faq-item {
-    background: white;
-    border-radius: 15px;
-    margin-bottom: 1.2rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    border-left: 8px solid var(--crystal-seas);
+.btn:hover {
+    transform: translateY(-3px);
 }
-.faq-question { padding: 1.5rem; font-weight: bold; color: var(--diode-blue); border-bottom: 1px solid #eee; }
-.faq-answer { padding: 1.5rem; }
 
-/* Global Footer */
-footer, .footer {
+/* Footer Fix */
+.footer {
     background: var(--black-cat);
     color: white;
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
-    margin-top: 60px;
 }
+
+/* Typography */
+h1, h2, h3 { color: var(--diode-blue); text-transform: uppercase; }
