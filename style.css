@@ -61,14 +61,41 @@ header p {
     padding: 20px;
 }
 
-/* Card Styling - NOW WITH THE BLUE ACCENT LINE */
+/* Card Styling - Standardized with Blue Accent */
 .card {
     background: white;
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     margin-bottom: 40px;
-    border-top: 6px solid var(--diode-blue); /* This applies it to ALL cards */
+    border-top: 6px solid var(--diode-blue);
+    overflow: hidden; /* Keeps images/content from leaking out */
+}
+
+/* Story Layout (For About Us Page) */
+.story-layout {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.story-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+.story-image {
+    flex: 1;
+    min-width: 250px;
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* Schedule Specific */
@@ -140,7 +167,7 @@ header p {
     text-align: center;
 }
 
-/* Profiles */
+/* Profile Grid (For Owners Page) */
 .profile-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -153,7 +180,7 @@ header p {
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     text-align: center;
-    border-top: 4px solid var(--crystal-seas); /* Accenting kids/owners differently */
+    border-top: 6px solid var(--diode-blue);
 }
 
 .profile-card img {
@@ -197,4 +224,5 @@ h1, h2, h3 { color: var(--diode-blue); text-transform: uppercase; }
     .profile-grid { grid-template-columns: 1fr; }
     .pricing-container { flex-direction: column; align-items: center; }
     .pricing-box { width: 80%; }
+    .story-layout { text-align: center; }
 }
