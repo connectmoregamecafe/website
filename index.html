@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connect More Game Cafe | Franklin, TN</title>
-    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <link rel="icon" type="image/png" href="logo.png">
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <img class="piccenter" src="logo.png" alt="Connect More Logo" style="width:200px; display: block; margin: 0 auto;">
+    <img class="piccenter" src="logo.png" alt="Connect More Logo">
     <div class="hero-text">CONNECT MORE</div>
     <div class="tagline">POPUP GAME CAFE | FRANKLIN, TN</div>
     <p>Scroll Less. Connect More.</p>
@@ -31,77 +28,63 @@
         <h2>The Table is Set</h2>
         <p>We believe the best connections happen over a board game, not a screen. Join us at our next local pop-up for a curated library of modern classics and community fun.</p>
         
-        <div class="pricing-container" style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
-            <div class="pricing-box" style="background: var(--bright-white); padding: 15px; border-radius: 10px; border-top: 4px solid var(--yellow-jasper);">
-                <div class="price-item">
-                    <h3 style="margin: 0; color: var(--diode-blue);">$10</h3>
-                    <p style="margin: 0; font-weight: bold;">ADULTS</p>
-                </div>
+        <div class="pricing-container">
+            <div class="pricing-box">
+                <h3>$10</h3>
+                <p>ADULTS</p>
             </div>
-            <div class="pricing-box" style="background: var(--bright-white); padding: 15px; border-radius: 10px; border-top: 4px solid var(--yellow-jasper);">
-                <div class="price-item">
-                    <h3 style="margin: 0; color: var(--diode-blue);">$5</h3>
-                    <p style="margin: 0; font-weight: bold;">KIDS (5-13)</p>
-                </div>
+            <div class="pricing-box">
+                <h3>$5</h3>
+                <p>KIDS (5-13)</p>
             </div>
         </div>
-        <p style="font-size: 0.85em; color: #888; text-align: center; margin-top: 15px;">Unlimited play while we're popped up!</p>
+        <p style="text-align: center; font-size: 0.85em; color: #888;">Unlimited play while we're popped up!</p>
     </div>
 
     <div id="schedule" class="card">
         <h2>Upcoming Pop-Ups</h2>
-        <ul class="schedule-list" style="list-style: none; padding: 0;">
+        <ul class="schedule-list">
             <li><strong>TBD:</strong> Stay Tuned!</li>
         </ul>
     </div>
 </section>
 
 <section id="contact" class="section">
-    <div class="card" style="border-top: 6px solid var(--diode-blue); text-align: center;">
-        <h2>Book a Private Event</h2>
-        <p style="margin-bottom: 25px;">Interested in having the library at your party or office? Send us a message!</p>
+    <div class="card" style="border-top: 6px solid var(--diode-blue);">
+        <h2 style="text-align: center;">Book a Private Event</h2>
+        <p style="text-align: center; margin-bottom: 25px;">Interested in having the library at your party or office? Send us a message!</p>
         
-        <form name="contact" method="POST" data-netlify="true" style="text-align: left; max-width: 450px; margin: 0 auto;">
+        <form name="contact" method="POST" data-netlify="true" style="max-width: 450px; margin: 0 auto;">
             <input type="hidden" name="form-name" value="contact">
-
             <div style="margin-bottom: 15px;">
-                <label style="display: block; font-weight: 700; margin-bottom: 5px;">Name</label>
+                <label style="display: block; font-weight: 700;">Name</label>
                 <input type="text" name="name" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box;">
             </div>
-            
             <div style="margin-bottom: 15px;">
-                <label style="display: block; font-weight: 700; margin-bottom: 5px;">Email</label>
+                <label style="display: block; font-weight: 700;">Email</label>
                 <input type="email" name="email" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box;">
             </div>
-
             <div style="margin-bottom: 15px;">
-                <label style="display: block; font-weight: 700; margin-bottom: 5px;">Event Information</label>
-                <textarea name="event-info" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box; min-height: 100px;"></textarea>
+                <label style="display: block; font-weight: 700;">Event Information</label>
+                <textarea name="message" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box; min-height: 100px;"></textarea>
             </div>
-            
-            <div style="margin-bottom: 20px;">
-                <button type="submit" class="btn" style="width: 100%; border-radius: 8px; text-transform: uppercase; background-color: var(--diode-blue); color: white; padding: 15px; border: none; cursor: pointer; font-weight: bold;">Send Inquiry</button>
-            </div>
+            <button type="submit" class="btn" style="width: 100%;">Send Inquiry</button>
         </form>
     </div>
 </section>
 
-<div class="footer" style="background: var(--black-cat); color: white; padding: 40px 20px; text-align: center;">
+<div class="footer">
     <h3>Stay Connected</h3>
-    <div class="social-icons" style="font-size: 1.5rem; margin-bottom: 20px;">
-        <a href="https://instagram.com/connectmoregamecafe" target="_blank" style="color: white; margin: 0 10px;"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=61582265409098" target="_blank" style="color: white; margin: 0 10px;"><i class="fab fa-facebook"></i></a>
-        <a href="mailto:connectmoregamecafe@gmail.com" style="color: white; margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+    <div class="social-icons">
+        <a href="https://instagram.com/connectmoregamecafe" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61582265409098" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:connectmoregamecafe@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
-
     <div style="margin-bottom: 20px;">
-        <a href="faq.html" style="color: var(--yellow-jasper); text-decoration: none; margin: 0 10px; font-weight: bold;">FAQ</a>
-        <a href="about.us.html" style="color: var(--yellow-jasper); text-decoration: none; margin: 0 10px; font-weight: bold;">About Us</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.us.html">About Us</a>
     </div>
-
-    <p style="font-size: 0.8rem; opacity: 0.7;">
-        &copy; 2026 Connect More Game Cafe | Franklin, TN
-    </p>
+    <p style="font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Connect More Game Cafe | Franklin, TN</p>
 </div>
 
 </body>
