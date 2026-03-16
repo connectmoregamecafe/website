@@ -61,13 +61,14 @@ header p {
     padding: 20px;
 }
 
-/* Card Styling */
+/* Card Styling - NOW WITH THE BLUE ACCENT LINE */
 .card {
     background: white;
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    margin-bottom: 40px; /* Consistent spacing between all sections */
+    margin-bottom: 40px;
+    border-top: 6px solid var(--diode-blue); /* This applies it to ALL cards */
 }
 
 /* Schedule Specific */
@@ -139,7 +140,7 @@ header p {
     text-align: center;
 }
 
-/* Profile Grid (For Owners Page) */
+/* Profiles */
 .profile-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -152,6 +153,7 @@ header p {
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     text-align: center;
+    border-top: 4px solid var(--crystal-seas); /* Accenting kids/owners differently */
 }
 
 .profile-card img {
@@ -183,9 +185,7 @@ header p {
     margin-bottom: 20px;
 }
 
-.social-icons a {
-    color: white;
-}
+.social-icons a { color: white; }
 
 /* Typography */
 h1, h2, h3 { color: var(--diode-blue); text-transform: uppercase; }
