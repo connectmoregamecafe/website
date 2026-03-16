@@ -7,7 +7,6 @@
     --bright-white: #F4F5F0;
 }
 
-/* Global Styles */
 body { 
     font-family: 'Montserrat', sans-serif; 
     background-color: var(--bright-white); 
@@ -17,7 +16,6 @@ body {
     padding: 0;
 }
 
-/* Header & Hero Section */
 header { 
     background: var(--diode-blue); 
     color: white; 
@@ -54,14 +52,12 @@ header p {
     margin-bottom: 30px;
 }
 
-/* Layout Containers */
 .container {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Card Styling */
 .card {
     background: white;
     padding: 40px;
@@ -72,7 +68,6 @@ header p {
     overflow: hidden;
 }
 
-/* Story Layout (About Us) */
 .story-layout {
     display: flex;
     align-items: center;
@@ -89,7 +84,6 @@ header p {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Profiles (Owners) */
 .profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
 .profile-card {
     background: white;
@@ -106,7 +100,6 @@ header p {
     margin-bottom: 20px;
 }
 
-/* Badges & Buttons */
 .schedule-badge {
     display: inline-block;
     background-color: var(--crystal-seas);
@@ -118,6 +111,14 @@ header p {
     text-transform: uppercase;
 }
 
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
 .btn {
     display: inline-block;
     background-color: var(--yellow-jasper);
@@ -127,6 +128,7 @@ header p {
     text-decoration: none;
     font-weight: 700;
     transition: 0.2s;
+    border: none;
 }
 
 .btn-secondary {
@@ -137,7 +139,6 @@ header p {
 
 .btn:hover { transform: translateY(-3px); }
 
-/* Unified Footer */
 .footer {
     background: var(--black-cat);
     color: white;
@@ -145,12 +146,11 @@ header p {
     text-align: center;
     margin-top: 60px;
 }
-.footer h3 { color: white !important; margin-bottom: 20px; }
+.footer h3 { color: white !important; margin-bottom: 20px; text-transform: uppercase; }
 .footer a { color: var(--yellow-jasper); text-decoration: none; margin: 0 10px; font-weight: bold; }
 .social-icons { font-size: 1.5rem; margin-bottom: 20px; }
 .social-icons a { color: white; margin: 0 15px; }
 
-/* Mobile */
 @media (max-width: 768px) {
     .hero-text { font-size: 2rem; }
     .profile-grid { grid-template-columns: 1fr; }
