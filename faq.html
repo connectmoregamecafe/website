@@ -4,6 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ | Connect More Game Cafe</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is a Board Game Cafe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A board game cafe is a social space where people gather to play from a library of tabletop games while enjoying food and drinks. It is designed to help people disconnect from screens and connect more with each other through play."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How does the Library Fee work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For a small flat fee, you get unlimited access to our collection of over 500 board games for the entire day. Members play for free!"
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I bring my own games?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely! You are welcome to bring your own games to play at our tables. Standard table rates still apply to cover the space."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Do you teach people how to play?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! Our Game Gurus are always on hand to help you pick a game, set it up, and explain the rules so you can start connecting faster."
+        }
+      }]
+    }
+    </script>
+
     <style>
         :root {
             --diode-blue: #0045B0;
@@ -25,7 +62,7 @@
         header {
             background-color: var(--diode-blue);
             color: white;
-            padding: 2rem 1rem;
+            padding: 2.5rem 1rem;
             text-align: center;
         }
 
@@ -44,7 +81,7 @@
         .faq-item {
             background: white;
             border-radius: 8px;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             border-left: 5px solid var(--crystal-seas);
             overflow: hidden;
@@ -52,29 +89,49 @@
 
         .faq-question {
             padding: 1.5rem;
-            cursor: pointer;
             font-weight: bold;
             color: var(--diode-blue);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-question:hover {
-            background-color: #f0f7ff;
+            border-bottom: 1px solid #eee;
         }
 
         .faq-answer {
-            padding: 0 1.5rem 1.5rem;
-            display: block; /* Change to none and add JS for accordion effect */
+            padding: 1.5rem;
             color: var(--black-cat);
-            border-top: 1px solid #eee;
-            padding-top: 1rem;
         }
 
         .highlight {
-            color: var(--crystal-seas);
+            color: var(--diode-blue);
             font-weight: bold;
+        }
+
+        /* Contact Section Styling */
+        .contact-section {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 3rem;
+            border: 2px dashed var(--yellow-jasper);
+        }
+
+        .contact-section h2 {
+            color: var(--diode-blue);
+            margin-top: 0;
+        }
+
+        .btn-contact {
+            display: inline-block;
+            background-color: var(--diode-blue);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-contact:hover {
+            background-color: var(--crystal-seas);
         }
 
         footer {
@@ -105,6 +162,13 @@
 </header>
 
 <div class="container">
+
+    <div class="faq-item">
+        <div class="faq-question">What is a Board Game Cafe?</div>
+        <div class="faq-answer">
+            Think of it as a community living room! A board game cafe is a social space where you can gather with friends or family to enjoy a library of hundreds of tabletop games while grabbing a drink or a snack. It’s a place designed to help people disconnect from screens and <span class="highlight">Connect More</span> with each other.
+        </div>
+    </div>
     
     <div class="faq-item">
         <div class="faq-question">How does the "Library Fee" work?</div>
@@ -139,6 +203,12 @@
         <div class="faq-answer">
             We try to partner with our hosting locations to offer their delicious food and drinks to purchase. If requested, we are happy to provide snack and drink options as well.
         </div>
+    </div>
+
+    <div class="contact-section">
+        <h2>Still have questions?</h2>
+        <p>We're here to help! Whether you're planning a party or just curious about a specific game, feel free to reach out.</p>
+        <a href="index.html#contact" class="btn-contact">Get in Touch</a>
     </div>
 
     <center>
