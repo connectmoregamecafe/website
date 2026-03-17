@@ -79,9 +79,12 @@ header p {
 .story-image { flex: 1; min-width: 250px; }
 .story-image img {
     width: 100%;
-    height: auto;
+    height: 100%;         /* Force it to fill the container height */
+    object-fit: cover;    /* Scale without stretching */
+    object-position: top; /* <--- THIS ensures the head isn't cut off */
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 }
 
 .profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
