@@ -71,24 +71,28 @@ header p {
 /* --- THE STORY LAYOUT FIX --- */
 .story-layout {
     display: flex;
-    align-items: stretch; /* Changed from center to stretch for better cropping */
+    align-items: center; /* Vertically centers image next to text */
     gap: 30px;
     flex-wrap: wrap;
 }
 
-.story-text { flex: 2; min-width: 300px; }
+.story-text { 
+    flex: 2; 
+    min-width: 300px; 
+}
 
 .story-image { 
     flex: 1; 
     min-width: 250px; 
-    height: 350px; /* Fixed height is key to cropping */
+    display: flex;
+    justify-content: center;
 }
 
 .story-image img {
     width: 100%;
-    height: 100%;         
-    object-fit: cover;    
-    object-position: 50% 15%; /* Keeps the heads in frame */
+    max-width: 400px;     /* Prevents the image from getting too massive */
+    height: auto;         /* Maintains original proportions */
+    object-fit: contain;  /* SHOWS ENTIRE IMAGE without cropping sides */
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
@@ -174,7 +178,7 @@ header p {
 /* --- RESPONSIVE FIXES --- */
 @media (max-width: 768px) {
     .hero-text { font-size: 2rem; }
-    .profile-grid { grid-template-columns: 1fr; } /* Stack on mobile */
-    .story-layout { text-align: center; }
-    .story-image { height: 250px; } /* Slightly shorter image for mobile */
+    .profile-grid { grid-template-columns: 1fr; }
+    .story-layout { text-align: center; flex-direction: column; }
+    .story-image { width: 100%; }
 }
