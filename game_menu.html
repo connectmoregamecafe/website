@@ -23,30 +23,24 @@
 
     <div class="filter-section">
         <div class="filter-label">Filter by Vibe</div>
-        
-        <label class="filter-chip">
-            <input type="checkbox" class="category-check" value="The Classics" onchange="filterLibrary()"> The Classics
-        </label>
-        
-        <label class="filter-chip">
-            <input type="checkbox" class="category-check" value="Gateway Game" onchange="filterLibrary()"> Gateway Games
-        </label>
-        
-        <label class="filter-chip">
-            <input type="checkbox" class="category-check" value="Two-Player Duel" onchange="filterLibrary()"> 2-Player Duels
-        </label>
-        
-        <label class="filter-chip">
-            <input type="checkbox" class="category-check" value="Table Talk" onchange="filterLibrary()"> Table Talk
-        </label>
-        
-        <label class="filter-chip">
-            <input type="checkbox" class="category-check" value="Strategy" onchange="filterLibrary()"> Strategy
-        </label>
-        
-        <label class="filter-chip">
-            <input type="checkbox" class="category-check" value="Youth Table" onchange="filterLibrary()"> Youth Table
-        </label>
+        <label class="filter-chip"><input type="checkbox" class="category-check" value="The Classics" onchange="filterLibrary()"> The Classics</label>
+        <label class="filter-chip"><input type="checkbox" class="category-check" value="Gateway Game" onchange="filterLibrary()"> Gateway Games</label>
+        <label class="filter-chip"><input type="checkbox" class="category-check" value="Two-Player Duel" onchange="filterLibrary()"> 2-Player Duels</label>
+        <label class="filter-chip"><input type="checkbox" class="category-check" value="Table Talk" onchange="filterLibrary()"> Table Talk</label>
+        <label class="filter-chip"><input type="checkbox" class="category-check" value="Strategy" onchange="filterLibrary()"> Strategy</label>
+        <label class="filter-chip"><input type="checkbox" class="category-check" value="Youth Table" onchange="filterLibrary()"> Youth Table</label>
+
+        <div class="filter-label" style="margin-top: 15px;">Number of Players</div>
+        <label class="filter-chip"><input type="checkbox" class="player-check" value="1" onchange="filterLibrary()"> 1</label>
+        <label class="filter-chip"><input type="checkbox" class="player-check" value="2" onchange="filterLibrary()"> 2</label>
+        <label class="filter-chip"><input type="checkbox" class="player-check" value="3" onchange="filterLibrary()"> 3</label>
+        <label class="filter-chip"><input type="checkbox" class="player-check" value="4" onchange="filterLibrary()"> 4</label>
+        <label class="filter-chip"><input type="checkbox" class="player-check" value="5+" onchange="filterLibrary()"> 5+</label>
+
+        <div class="filter-label" style="margin-top: 15px;">Complexity</div>
+        <label class="filter-chip"><input type="checkbox" class="complexity-check" value="easy" onchange="filterLibrary()"> Easy</label>
+        <label class="filter-chip"><input type="checkbox" class="complexity-check" value="intermediate" onchange="filterLibrary()"> Intermediate</label>
+        <label class="filter-chip"><input type="checkbox" class="complexity-check" value="advanced" onchange="filterLibrary()"> Advanced</label>
 
         <div style="width: 100%; text-align: center;">
             <button class="btn-clear" onclick="clearFilters()">Clear All Filters</button>
@@ -55,10 +49,10 @@
 
     <div id="guideList">
 
-        <div class="game-card" data-category="Youth Table">
+        <div class="game-card" data-category="Youth Table" data-players="2,3,4" data-complexity="easy">
             <div class="game-header" onclick="toggleCard(this)">
                 <div>
-                    <span class="category-badge">Youth Table</span>
+                    <span class="category-badge">Youth • 2-4 Players • Easy</span>
                     <h2>Animal Upon Animal</h2>
                 </div>
                 <div class="arrow">▼</div>
@@ -70,10 +64,10 @@
             </div>
         </div>
 
-        <div class="game-card" data-category="Gateway Game">
+        <div class="game-card" data-category="Gateway Game" data-players="2,3,4" data-complexity="easy">
             <div class="game-header" onclick="toggleCard(this)">
                 <div>
-                    <span class="category-badge">Gateway Game</span>
+                    <span class="category-badge">Gateway • 2-4 Players • Easy</span>
                     <h2>Azul</h2>
                 </div>
                 <div class="arrow">▼</div>
@@ -85,10 +79,10 @@
             </div>
         </div>
 
-        <div class="game-card" data-category="Gateway Game">
+        <div class="game-card" data-category="Gateway Game" data-players="3,4" data-complexity="intermediate">
             <div class="game-header" onclick="toggleCard(this)">
                 <div>
-                    <span class="category-badge">Gateway Game</span>
+                    <span class="category-badge">Gateway • 3-4 Players • Intermediate</span>
                     <h2>Catan</h2>
                 </div>
                 <div class="arrow">▼</div>
@@ -100,25 +94,25 @@
             </div>
         </div>
 
-        <div class="game-card" data-category="Table Talk">
+        <div class="game-card" data-category="Table Talk" data-players="2,3,4,5+" data-complexity="easy">
             <div class="game-header" onclick="toggleCard(this)">
                 <div>
-                    <span class="category-badge">Table Talk</span>
+                    <span class="category-badge">Table Talk • 2-8 Players • Easy</span>
                     <h2>Codenames</h2>
                 </div>
                 <div class="arrow">▼</div>
             </div>
             <div class="game-content">
-                <div class="rule-item"><strong>The Goal:</strong> Contact all your agents based on one-word clues from your Spymaster.</div>
+                <div class="rule-item"><strong>The Goal:</strong> Contact all agents based on one-word clues from your Spymaster.</div>
                 <div class="rule-item"><strong>How to Play:</strong> Teams take turns guessing cards. Avoid the "Assassin" card at all costs!</div>
                 <div class="rule-item"><strong>Connector Tip:</strong> Look for clues that link multiple cards together to win faster.</div>
             </div>
         </div>
 
-        <div class="game-card" data-category="Two-Player Duel">
+        <div class="game-card" data-category="Two-Player Duel" data-players="2" data-complexity="easy">
             <div class="game-header" onclick="toggleCard(this)">
                 <div>
-                    <span class="category-badge">Two-Player Duel</span>
+                    <span class="category-badge">2-Player • 2 Players • Easy</span>
                     <h2>Jaipur</h2>
                 </div>
                 <div class="arrow">▼</div>
@@ -130,25 +124,25 @@
             </div>
         </div>
 
-        <div class="game-card" data-category="The Classics">
+        <div class="game-card" data-category="The Classics" data-players="2,3,4" data-complexity="intermediate">
             <div class="game-header" onclick="toggleCard(this)">
                 <div>
-                    <span class="category-badge">The Classics</span>
+                    <span class="category-badge">Classic • 2-4 Players • Intermediate</span>
                     <h2>Scrabble</h2>
                 </div>
                 <div class="arrow">▼</div>
             </div>
             <div class="game-content">
                 <div class="rule-item"><strong>The Goal:</strong> Build high-scoring words that connect to existing tiles on the board.</div>
-                <div class="rule-item"><strong>How to Play:</strong> Play a word, calculate points based on letter values and board bonuses, and draw back to 7 tiles.</div>
+                <div class="rule-item"><strong>How to Play:</strong> Play a word, calculate points based on letter values and board bonuses.</div>
                 <div class="rule-item"><strong>Connector Tip:</strong> Two-letter words are your best friend for tight spots.</div>
             </div>
         </div>
 
-        <div class="game-card" data-category="Table Talk">
+        <div class="game-card" data-category="Table Talk" data-players="2,3,4,5+" data-complexity="easy">
             <div class="game-header" onclick="toggleCard(this)">
                 <div>
-                    <span class="category-badge">Table Talk</span>
+                    <span class="category-badge">Table Talk • 2-5 Players • Easy</span>
                     <h2>Sushi Go!</h2>
                 </div>
                 <div class="arrow">▼</div>
@@ -160,16 +154,16 @@
             </div>
         </div>
 
-        <div class="game-card" data-category="Strategy">
+        <div class="game-card" data-category="Strategy" data-players="1,2,3,4,5+" data-complexity="advanced">
             <div class="game-header" onclick="toggleCard(this)">
                 <div>
-                    <span class="category-badge">Strategy</span>
+                    <span class="category-badge">Strategy • 1-5 Players • Advanced</span>
                     <h2>Wingspan</h2>
                 </div>
                 <div class="arrow">▼</div>
             </div>
             <div class="game-content">
-                <div class="rule-item"><strong>The Goal:</strong> Discover and attract the best birds to your wildlife original habitat.</div>
+                <div class="rule-item"><strong>The Goal:</strong> Discover and attract the best birds to your wildlife habitat.</div>
                 <div class="rule-item"><strong>How to Play:</strong> Spend food to play birds. Birds give you powers that trigger when you gather food or lay eggs.</div>
                 <div class="rule-item"><strong>Connector Tip:</strong> Pay attention to your "End of Round" goals for extra points.</div>
             </div>
@@ -194,29 +188,36 @@
 
     function filterLibrary() {
         const searchInput = document.getElementById('gameSearch').value.toLowerCase();
-        const checkboxes = document.querySelectorAll('.category-check:checked');
-        const cards = document.getElementsByClassName('game-card');
         
-        const selectedCategories = Array.from(checkboxes).map(cb => cb.value);
+        // Collect checked filters
+        const selectedCats = Array.from(document.querySelectorAll('.category-check:checked')).map(cb => cb.value);
+        const selectedPlayers = Array.from(document.querySelectorAll('.player-check:checked')).map(cb => cb.value);
+        const selectedComplexity = Array.from(document.querySelectorAll('.complexity-check:checked')).map(cb => cb.value);
+
+        const cards = document.getElementsByClassName('game-card');
 
         for (let i = 0; i < cards.length; i++) {
             const title = cards[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
             const category = cards[i].getAttribute('data-category');
-            
-            const matchesSearch = title.includes(searchInput);
-            const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(category);
+            const complexity = cards[i].getAttribute('data-complexity');
+            const playersSupported = cards[i].getAttribute('data-players').split(',');
 
-            cards[i].style.display = (matchesSearch && matchesCategory) ? "" : "none";
+            const matchesSearch = title.includes(searchInput);
+            const matchesCategory = selectedCats.length === 0 || selectedCats.includes(category);
+            const matchesComplexity = selectedComplexity.length === 0 || selectedComplexity.includes(complexity);
+            const matchesPlayers = selectedPlayers.length === 0 || selectedPlayers.some(p => playersSupported.includes(p));
+
+            if (matchesSearch && matchesCategory && matchesComplexity && matchesPlayers) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
+            }
         }
     }
 
     function clearFilters() {
-        // Reset search input
         document.getElementById('gameSearch').value = "";
-        // Uncheck all boxes
-        const checkboxes = document.querySelectorAll('.category-check');
-        checkboxes.forEach(cb => cb.checked = false);
-        // Run filter to show everything
+        document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
         filterLibrary();
     }
 </script>
