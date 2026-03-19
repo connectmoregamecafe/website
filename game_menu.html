@@ -18,10 +18,35 @@
 <div class="container">
     
     <div class="search-container">
-        <input type="text" id="gameSearch" placeholder="Find your game (e.g. Azul, Catan...)" onkeyup="filterGames()">
+        <input type="text" id="gameSearch" placeholder="Search our library (e.g. Catan, Codenames...)" onkeyup="filterGames()">
     </div>
 
     <div id="guideList">
+
+        <div class="game-card">
+            <div class="game-header" onclick="toggleCard(this)">
+                <div>
+                    <span class="category-badge">The Classics</span>
+                    <h2>Scrabble</h2>
+                </div>
+                <div class="arrow">▼</div>
+            </div>
+            <div class="game-content">
+                <div class="rule-item">
+                    <strong>The Goal</strong>
+                    Score the most points by creating interlocking words on the board using letter tiles.
+                </div>
+                <div class="rule-item">
+                    <strong>How to Play</strong>
+                    On your turn, use tiles from your rack to form a word. Words must touch at least one tile already on the board. Draw back up to 7 tiles.
+                </div>
+                <div class="rule-item">
+                    <strong>Connector Tip</strong>
+                    Aim for the "Premium Squares" (Double/Triple Word) to skyrocket your score!
+                </div>
+            </div>
+        </div>
+
         <div class="game-card">
             <div class="game-header" onclick="toggleCard(this)">
                 <div>
@@ -33,15 +58,15 @@
             <div class="game-content">
                 <div class="rule-item">
                     <strong>The Goal</strong>
-                    Score points by drafting tiles to decorate the palace wall. Don't drop any!
+                    Draft colored tiles to complete patterns on your player board.
                 </div>
                 <div class="rule-item">
                     <strong>How to Play</strong>
-                    Pick all tiles of one color from a display. Place them on your staging rows. Once a row is full, one tile moves to your wall.
+                    Pick all tiles of one color from a factory circle. Place them on your staging rows. At the end of the round, "wall" your tiles to score.
                 </div>
                 <div class="rule-item">
-                    <strong>Guru Tip</strong>
-                    Watch your floor line! Excess tiles count against your score at the end of the round.
+                    <strong>Connector Tip</strong>
+                    If you take tiles you can't use, they fall to the floor and cost you negative points!
                 </div>
             </div>
         </div>
@@ -49,33 +74,153 @@
         <div class="game-card">
             <div class="game-header" onclick="toggleCard(this)">
                 <div>
-                    <span class="category-badge">Classic</span>
-                    <h2>Ticket to Ride</h2>
+                    <span class="category-badge">Gateway Game</span>
+                    <h2>Catan</h2>
                 </div>
                 <div class="arrow">▼</div>
             </div>
             <div class="game-content">
                 <div class="rule-item">
                     <strong>The Goal</strong>
-                    Connect North American cities with your train cars to fulfill destination tickets.
+                    Be the first to reach 10 Victory Points by building settlements, cities, and roads.
                 </div>
                 <div class="rule-item">
                     <strong>How to Play</strong>
-                    On your turn, either draw colored train cards, claim a route by spending cards, or draw new destination tickets.
+                    Roll dice to collect resources based on where your houses are. Trade resources with other players to get what you need to build.
                 </div>
                 <div class="rule-item">
-                    <strong>Guru Tip</strong>
-                    Long routes score big points, but don't ignore your tickets—incomplete ones lose you points!
+                    <strong>Connector Tip</strong>
+                    Don't be afraid to haggle! Trading is the heart of the game.
                 </div>
             </div>
         </div>
 
+        <div class="game-card">
+            <div class="game-header" onclick="toggleCard(this)">
+                <div>
+                    <span class="category-badge">Two-Player Duel</span>
+                    <h2>Jaipur</h2>
+                </div>
+                <div class="arrow">▼</div>
+            </div>
+            <div class="game-content">
+                <div class="rule-item">
+                    <strong>The Goal</strong>
+                    Be the most successful merchant in the Maharaja’s court by trading goods for tokens.
+                </div>
+                <div class="rule-item">
+                    <strong>How to Play</strong>
+                    On your turn, either take cards (goods or camels) from the market or sell goods for points.
+                </div>
+                <div class="rule-item">
+                    <strong>Connector Tip</strong>
+                    The earlier you sell a specific type of good, the more points it's worth!
+                </div>
+            </div>
         </div>
+
+        <div class="game-card">
+            <div class="game-header" onclick="toggleCard(this)">
+                <div>
+                    <span class="category-badge">Table Talk</span>
+                    <h2>Codenames</h2>
+                </div>
+                <div class="arrow">▼</div>
+            </div>
+            <div class="game-content">
+                <div class="rule-item">
+                    <strong>The Goal</strong>
+                    Find all your team's secret agents before the other team does.
+                </div>
+                <div class="rule-item">
+                    <strong>How to Play</strong>
+                    The "Spymaster" gives a one-word clue and a number (e.g., "Animal: 3"). The team tries to pick the correct cards on the table.
+                </div>
+                <div class="rule-item">
+                    <strong>Connector Tip</strong>
+                    Avoid the Assassin card! If you pick it, your team loses instantly.
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-header" onclick="toggleCard(this)">
+                <div>
+                    <span class="category-badge">Table Talk</span>
+                    <h2>Sushi Go!</h2>
+                </div>
+                <div class="arrow">▼</div>
+            </div>
+            <div class="game-content">
+                <div class="rule-item">
+                    <strong>The Goal</strong>
+                    Create the best "meal" of sushi combinations.
+                </div>
+                <div class="rule-item">
+                    <strong>How to Play</strong>
+                    Pick one card from your hand, place it face down, and pass the rest to the player on your left. Everyone reveals at once.
+                </div>
+                <div class="rule-item">
+                    <strong>Connector Tip</strong>
+                    Pudding cards don't score until the very end of the game—don't ignore them!
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-header" onclick="toggleCard(this)">
+                <div>
+                    <span class="category-badge">Strategy</span>
+                    <h2>Wingspan</h2>
+                </div>
+                <div class="arrow">▼</div>
+            </div>
+            <div class="game-content">
+                <div class="rule-item">
+                    <strong>The Goal</strong>
+                    Attract the best variety of birds to your wildlife preserves.
+                </div>
+                <div class="rule-item">
+                    <strong>How to Play</strong>
+                    Play bird cards to your board, which then makes your "Lay Eggs," "Gain Food," and "Draw Cards" actions more powerful.
+                </div>
+                <div class="rule-item">
+                    <strong>Connector Tip</strong>
+                    Look for "Engine Building" birds—cards that give you bonuses every time you take an action in that row.
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-header" onclick="toggleCard(this)">
+                <div>
+                    <span class="category-badge">Youth Table</span>
+                    <h2>Animal Upon Animal</h2>
+                </div>
+                <div class="arrow">▼</div>
+            </div>
+            <div class="game-content">
+                <div class="rule-item">
+                    <strong>The Goal</strong>
+                    Be the first to place all your wooden animals on the stack.
+                </div>
+                <div class="rule-item">
+                    <strong>How to Play</strong>
+                    Roll the die to see if you place one animal, two animals, or let the group decide.
+                </div>
+                <div class="rule-item">
+                    <strong>Connector Tip</strong>
+                    If the stack falls, you have to take up to two of the fallen animals into your pile!
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
 
 <footer class="footer">
     <h3>Still Stuck?</h3>
-    <p>Flag down a Game Guru! We're here to help.</p>
+    <p>Flag down a <strong>Game Connector</strong>! We're here to help.</p>
     <div class="nav-container">
         <a href="index.html" class="btn btn-secondary">Back to Home</a>
     </div>
