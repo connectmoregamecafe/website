@@ -1,184 +1,44 @@
-/* --- CONNECT MORE MASTER STYLES --- */
-:root {
-    --diode-blue: #0045B0;
-    --crystal-seas: #5dafce;
-    --yellow-jasper: #F4D896;
-    --black-cat: #413F42;
-    --bright-white: #F4F5F0;
-}
-
-body { 
-    font-family: 'Montserrat', sans-serif; 
-    background-color: var(--bright-white); 
-    color: var(--black-cat); 
-    line-height: 1.6;
-    margin: 0; 
-    padding: 0;
-}
-
-header { 
-    background: var(--diode-blue); 
-    color: white; 
-    padding: 80px 20px; 
-    text-align: center;
-}
-
-.piccenter {
-    width: 300px;
-    display: block;
-    margin: 0 auto;
-}
-
-.hero-text {
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: 4px;
-    margin-top: 20px;
-    text-transform: uppercase;
-}
-
-.tagline {
-    font-size: 1.2rem;
-    color: var(--yellow-jasper);
-    letter-spacing: 2px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-style: italic;
-    font-size: 1.1rem;
-    opacity: 0.9;
-    margin-bottom: 30px;
-}
-
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.card {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    margin-bottom: 40px;
-    border-top: 6px solid var(--diode-blue);
-    overflow: hidden;
-}
-
-/* --- THE STORY LAYOUT FIX --- */
-.story-layout {
-    display: flex;
-    align-items: center; /* Vertically centers image next to text */
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.story-text { 
-    flex: 2; 
-    min-width: 300px; 
-}
-
-.story-image { 
-    flex: 1; 
-    min-width: 250px; 
+/* --- SENDER.NET FORM STYLES --- */
+.sender-form-custom {
     display: flex;
     justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px 0;
 }
 
-.story-image img {
-    width: 100%;
-    max-width: 400px;     /* Prevents the image from getting too massive */
-    height: auto;         /* Maintains original proportions */
-    object-fit: contain;  /* SHOWS ENTIRE IMAGE without cropping sides */
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* --- THE PROFILE GRID FIX --- */
-.profile-grid { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 30px; 
-    margin-top: 20px;
-}
-
-.profile-card {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    text-align: center;
-    border-top: 6px solid var(--diode-blue);
-}
-
-.profile-card img {
-    width: 180px; 
-    height: 180px;
-    border-radius: 50%; 
-    object-fit: cover;
-    border: 5px solid var(--yellow-jasper);
-    margin-bottom: 20px;
-}
-
-.schedule-badge {
-    display: inline-block;
-    background-color: var(--crystal-seas);
-    color: white;
-    padding: 8px 20px;
+.sender-form-custom input {
+    padding: 15px;
     border-radius: 50px;
-    font-weight: 700;
-    font-size: 0.85rem;
-    text-transform: uppercase;
+    border: none;
+    width: 280px;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
 }
 
-.nav-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin: 40px 0;
-}
-
-.btn {
-    display: inline-block;
+.sender-form-custom button {
     background-color: var(--yellow-jasper);
     color: var(--diode-blue);
-    padding: 15px 30px;
+    padding: 15px 35px;
     border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: 0.2s;
     border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
 }
 
-.btn-secondary {
-    background-color: transparent;
-    color: var(--diode-blue);
-    border: 2px solid var(--diode-blue);
+.sender-form-custom button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    background-color: white;
 }
 
-.btn:hover { transform: translateY(-3px); }
-
-.footer {
-    background: var(--black-cat);
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-    margin-top: 60px;
-}
-
-.footer h3 { color: white !important; margin-bottom: 20px; text-transform: uppercase; }
-.footer a { color: var(--yellow-jasper); text-decoration: none; margin: 0 10px; font-weight: bold; }
-.social-icons { font-size: 1.5rem; margin-bottom: 20px; }
-.social-icons a { color: white; margin: 0 15px; }
-
-/* --- RESPONSIVE FIXES --- */
-@media (max-width: 768px) {
-    .hero-text { font-size: 2rem; }
-    .profile-grid { grid-template-columns: 1fr; }
-    .story-layout { text-align: center; flex-direction: column; }
-    .story-image { width: 100%; }
+@media (max-width: 600px) {
+    .sender-form-custom input, 
+    .sender-form-custom button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
