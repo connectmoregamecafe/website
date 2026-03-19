@@ -1,229 +1,92 @@
-/* --- CONNECT MORE MASTER STYLES --- */
-:root {
-    --diode-blue: #0045B0;
-    --crystal-seas: #5dafce;
-    --yellow-jasper: #F4D896;
-    --black-cat: #413F42;
-    --bright-white: #F4F5F0;
-}
-
-body { 
-    font-family: 'Montserrat', sans-serif; 
-    background-color: var(--bright-white); 
-    color: var(--black-cat); 
-    line-height: 1.6;
-    margin: 0; 
-    padding: 0;
-}
-
-header { 
-    background: var(--diode-blue); 
-    color: white; 
-    padding: 80px 20px; 
-    text-align: center;
-}
-
-.piccenter {
-    width: 300px;
-    display: block;
-    margin: 0 auto;
-}
-
-.hero-text {
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: 4px;
-    margin-top: 20px;
-    text-transform: uppercase;
-}
-
-.tagline {
-    font-size: 1.2rem;
-    color: var(--yellow-jasper);
-    letter-spacing: 2px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-style: italic;
-    font-size: 1.1rem;
-    opacity: 0.9;
+/* --- QUICK START GUIDE STYLES --- */
+.search-container {
+    background: var(--diode-blue);
+    padding: 20px;
+    border-radius: 20px;
     margin-bottom: 30px;
 }
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.card {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    margin-bottom: 40px;
-    border-top: 6px solid var(--diode-blue);
-    overflow: hidden;
-}
-
-/* --- THE STORY LAYOUT --- */
-.story-layout {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.story-text { 
-    flex: 2; 
-    min-width: 300px; 
-}
-
-.story-image { 
-    flex: 1; 
-    min-width: 250px; 
-}
-
-.story-image img {
+#gameSearch {
     width: 100%;
-    max-width: 400px;
-    height: auto;
-    object-fit: contain;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* --- THE PROFILE GRID --- */
-.profile-grid { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 30px; 
-    margin-top: 20px;
-}
-
-.profile-card {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    text-align: center;
-    border-top: 6px solid var(--diode-blue);
-}
-
-.profile-card img {
-    width: 180px; 
-    height: 180px;
-    border-radius: 50%; 
-    object-fit: cover;
-    border: 5px solid var(--yellow-jasper);
-    margin-bottom: 20px;
-}
-
-.schedule-badge {
-    display: inline-block;
-    background-color: var(--crystal-seas);
-    color: white;
-    padding: 8px 20px;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-}
-
-/* --- NAV & BUTTONS --- */
-.nav-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin: 40px 0;
-}
-
-.btn {
-    display: inline-block;
-    background-color: var(--yellow-jasper);
-    color: var(--diode-blue);
-    padding: 15px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: 0.2s;
-    border: none;
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-}
-
-.btn:hover { transform: translateY(-3px); }
-
-/* --- SENDER.NET FORM STYLES --- */
-.sender-form-custom {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    padding: 10px 0;
-}
-
-.sender-form-custom input {
-    padding: 15px;
+    padding: 15px 25px;
     border-radius: 50px;
     border: none;
-    width: 280px;
     font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
     outline: none;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.sender-form-custom button {
-    background-color: var(--yellow-jasper);
-    color: var(--diode-blue);
-    padding: 15px 35px;
-    border-radius: 50px;
-    border: none;
-    font-weight: 700;
+.game-card {
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    border-left: 10px solid var(--yellow-jasper);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.game-header {
+    padding: 25px;
     cursor: pointer;
-    transition: 0.3s ease;
-    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-header h2 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--diode-blue);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.category-badge {
+    display: inline-block;
+    background: var(--crystal-seas);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 8px;
     text-transform: uppercase;
 }
 
-.sender-form-custom button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    background-color: white;
+.game-content {
+    display: none;
+    padding: 0 25px 30px 25px;
+    background-color: #fafafa;
+    border-top: 1px solid #eee;
 }
 
-/* --- FOOTER --- */
-.footer {
-    background: var(--black-cat);
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-    margin-top: 60px;
+.game-card.active .game-content {
+    display: block;
 }
 
-.footer h3 { color: white !important; margin-bottom: 20px; text-transform: uppercase; }
-.footer a { color: var(--yellow-jasper); text-decoration: none; margin: 0 10px; font-weight: bold; }
-.social-icons { font-size: 1.5rem; margin-bottom: 20px; }
-.social-icons a { color: white; margin: 0 15px; }
-
-/* --- RESPONSIVE FIXES --- */
-@media (max-width: 768px) {
-    .hero-text { font-size: 2rem; }
-    .profile-grid { grid-template-columns: 1fr; }
-    .story-layout { text-align: center; flex-direction: column; }
-    .story-image { width: 100%; }
+.game-card.active .game-header {
+    background-color: var(--bright-white);
 }
 
-@media (max-width: 600px) {
-    .sender-form-custom input, 
-    .sender-form-custom button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
+.rule-item {
+    margin-top: 15px;
+}
+
+.rule-item strong {
+    color: var(--diode-blue);
+    display: block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.arrow {
+    font-size: 1.2rem;
+    color: var(--crystal-seas);
+    transition: 0.3s;
+}
+
+.game-card.active .arrow {
+    transform: rotate(180deg);
 }
