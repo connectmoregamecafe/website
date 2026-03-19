@@ -7,6 +7,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <script>
+      (function (s, e, n, d, er) {
+        s['Sender'] = er;
+        s[er] = s[er] || function () {
+          (s[er].q = s[er].q || []).push(arguments)
+        }, s[er].l = 1 * new Date();
+        var a = e.createElement(n),
+            m = e.getElementsByTagName(n)[0];
+        a.async = 1;
+        a.src = d;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+      sender('6c119623044886')
+    </script>
 </head>
 <body>
 
@@ -27,14 +42,12 @@
         <p>Join us for curated tabletop experiences in Franklin. We bring the games, you bring the connection.</p>
     </div>
 
-    <div id="newsletter" class="card" style="text-align: center; background-color: var(--diode-blue); color: white; border-top: none;">
-        <h2 style="color: var(--yellow-jasper);">Join Connect More+</h2>
+    <div id="newsletter" class="card" style="text-align: center; border-top: 6px solid var(--diode-blue);">
+        <h2 style="color: var(--diode-blue);">Join Connect More+</h2>
         <p style="margin-bottom: 25px;">Be the first to get info on upcoming location reveals for our Franklin pop-up nights.</p>
         
-        <form action="https://app.sender.net/forms/subscribe/av26Z8" method="post" class="sender-form-custom" data-netlify="false">
-            <input type="email" name="email" placeholder="Email Address" required>
-            <button type="submit">Join the Club</button>
-        </form>
+        <div style="text-align: center" class="sender-form-field" data-sender-form-id="av26Z8"></div>
+        
         <p style="font-size: 0.8rem; margin-top: 15px; opacity: 0.8;">No spam. Just games.</p>
     </div>
 
