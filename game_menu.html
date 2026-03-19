@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Start Guides | Connect More Cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="tagline">Rules of the Road</div>
+    <h1 class="hero-text">Quick Start Guides</h1>
+    <p>Get playing in 60 seconds or less.</p>
+</header>
+
+<div class="container">
+    
+    <div class="search-container">
+        <input type="text" id="gameSearch" placeholder="Find your game (e.g. Azul, Catan...)" onkeyup="filterGames()">
+    </div>
+
+    <div id="guideList">
+        <div class="game-card">
+            <div class="game-header" onclick="toggleCard(this)">
+                <div>
+                    <span class="category-badge">Gateway Game</span>
+                    <h2>Azul</h2>
+                </div>
+                <div class="arrow">▼</div>
+            </div>
+            <div class="game-content">
+                <div class="rule-item">
+                    <strong>The Goal</strong>
+                    Score points by drafting tiles to decorate the palace wall. Don't drop any!
+                </div>
+                <div class="rule-item">
+                    <strong>How to Play</strong>
+                    Pick all tiles of one color from a display. Place them on your staging rows. Once a row is full, one tile moves to your wall.
+                </div>
+                <div class="rule-item">
+                    <strong>Guru Tip</strong>
+                    Watch your floor line! Excess tiles count against your score at the end of the round.
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-header" onclick="toggleCard(this)">
+                <div>
+                    <span class="category-badge">Classic</span>
+                    <h2>Ticket to Ride</h2>
+                </div>
+                <div class="arrow">▼</div>
+            </div>
+            <div class="game-content">
+                <div class="rule-item">
+                    <strong>The Goal</strong>
+                    Connect North American cities with your train cars to fulfill destination tickets.
+                </div>
+                <div class="rule-item">
+                    <strong>How to Play</strong>
+                    On your turn, either draw colored train cards, claim a route by spending cards, or draw new destination tickets.
+                </div>
+                <div class="rule-item">
+                    <strong>Guru Tip</strong>
+                    Long routes score big points, but don't ignore your tickets—incomplete ones lose you points!
+                </div>
+            </div>
+        </div>
+
+        </div>
+</div>
+
+<footer class="footer">
+    <h3>Still Stuck?</h3>
+    <p>Flag down a Game Guru! We're here to help.</p>
+    <div class="nav-container">
+        <a href="index.html" class="btn btn-secondary">Back to Home</a>
+    </div>
+</footer>
+
+<script>
+    function toggleCard(header) {
+        const card = header.parentElement;
+        card.classList.toggle('active');
+    }
+
+    function filterGames() {
+        const input = document.getElementById('gameSearch').value.toLowerCase();
+        const cards = document.getElementsByClassName('game-card');
+
+        for (let i = 0; i < cards.length; i++) {
+            const title = cards[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
+            cards[i].style.display = title.includes(input) ? "" : "none";
+        }
+    }
+</script>
+
+</body>
+</html>
