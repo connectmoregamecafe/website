@@ -3,195 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quick Start Guides | Connect More Cafe</title>
+    <title>Game Library | Connect More Cafe</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <div class="tagline">Rules of the Road</div>
+    <div class="tagline">The Library</div>
     <h1 class="hero-text">Quick Start Guides</h1>
-    <p>Get playing in 60 seconds or less.</p>
+    <p>Scroll less, play more. Find your game below.</p>
 </header>
 
 <div class="container">
     
     <div class="search-container">
-        <input type="text" id="gameSearch" placeholder="Search our library (e.g. Catan, Codenames...)" onkeyup="filterGames()">
+        <input type="text" id="gameSearch" placeholder="Search by name (e.g. Catan)..." onkeyup="filterLibrary()">
+    </div>
+
+    <div class="filter-section">
+        <div class="filter-label">Filter by Vibe</div>
+        
+        <label class="filter-chip">
+            <input type="checkbox" class="category-check" value="The Classics" onchange="filterLibrary()"> The Classics
+        </label>
+        
+        <label class="filter-chip">
+            <input type="checkbox" class="category-check" value="Gateway Game" onchange="filterLibrary()"> Gateway Games
+        </label>
+        
+        <label class="filter-chip">
+            <input type="checkbox" class="category-check" value="Two-Player Duel" onchange="filterLibrary()"> 2-Player Duels
+        </label>
+        
+        <label class="filter-chip">
+            <input type="checkbox" class="category-check" value="Table Talk" onchange="filterLibrary()"> Table Talk
+        </label>
+        
+        <label class="filter-chip">
+            <input type="checkbox" class="category-check" value="Strategy" onchange="filterLibrary()"> Strategy
+        </label>
+        
+        <label class="filter-chip">
+            <input type="checkbox" class="category-check" value="Youth Table" onchange="filterLibrary()"> Youth Table
+        </label>
+
+        <div style="width: 100%; text-align: center;">
+            <button class="btn-clear" onclick="clearFilters()">Clear All Filters</button>
+        </div>
     </div>
 
     <div id="guideList">
 
-        <div class="game-card">
-            <div class="game-header" onclick="toggleCard(this)">
-                <div>
-                    <span class="category-badge">The Classics</span>
-                    <h2>Scrabble</h2>
-                </div>
-                <div class="arrow">▼</div>
-            </div>
-            <div class="game-content">
-                <div class="rule-item">
-                    <strong>The Goal</strong>
-                    Score the most points by creating interlocking words on the board using letter tiles.
-                </div>
-                <div class="rule-item">
-                    <strong>How to Play</strong>
-                    On your turn, use tiles from your rack to form a word. Words must touch at least one tile already on the board. Draw back up to 7 tiles.
-                </div>
-                <div class="rule-item">
-                    <strong>Connector Tip</strong>
-                    Aim for the "Premium Squares" (Double/Triple Word) to skyrocket your score!
-                </div>
-            </div>
-        </div>
-
-        <div class="game-card">
-            <div class="game-header" onclick="toggleCard(this)">
-                <div>
-                    <span class="category-badge">Gateway Game</span>
-                    <h2>Azul</h2>
-                </div>
-                <div class="arrow">▼</div>
-            </div>
-            <div class="game-content">
-                <div class="rule-item">
-                    <strong>The Goal</strong>
-                    Draft colored tiles to complete patterns on your player board.
-                </div>
-                <div class="rule-item">
-                    <strong>How to Play</strong>
-                    Pick all tiles of one color from a factory circle. Place them on your staging rows. At the end of the round, "wall" your tiles to score.
-                </div>
-                <div class="rule-item">
-                    <strong>Connector Tip</strong>
-                    If you take tiles you can't use, they fall to the floor and cost you negative points!
-                </div>
-            </div>
-        </div>
-
-        <div class="game-card">
-            <div class="game-header" onclick="toggleCard(this)">
-                <div>
-                    <span class="category-badge">Gateway Game</span>
-                    <h2>Catan</h2>
-                </div>
-                <div class="arrow">▼</div>
-            </div>
-            <div class="game-content">
-                <div class="rule-item">
-                    <strong>The Goal</strong>
-                    Be the first to reach 10 Victory Points by building settlements, cities, and roads.
-                </div>
-                <div class="rule-item">
-                    <strong>How to Play</strong>
-                    Roll dice to collect resources based on where your houses are. Trade resources with other players to get what you need to build.
-                </div>
-                <div class="rule-item">
-                    <strong>Connector Tip</strong>
-                    Don't be afraid to haggle! Trading is the heart of the game.
-                </div>
-            </div>
-        </div>
-
-        <div class="game-card">
-            <div class="game-header" onclick="toggleCard(this)">
-                <div>
-                    <span class="category-badge">Two-Player Duel</span>
-                    <h2>Jaipur</h2>
-                </div>
-                <div class="arrow">▼</div>
-            </div>
-            <div class="game-content">
-                <div class="rule-item">
-                    <strong>The Goal</strong>
-                    Be the most successful merchant in the Maharaja’s court by trading goods for tokens.
-                </div>
-                <div class="rule-item">
-                    <strong>How to Play</strong>
-                    On your turn, either take cards (goods or camels) from the market or sell goods for points.
-                </div>
-                <div class="rule-item">
-                    <strong>Connector Tip</strong>
-                    The earlier you sell a specific type of good, the more points it's worth!
-                </div>
-            </div>
-        </div>
-
-        <div class="game-card">
-            <div class="game-header" onclick="toggleCard(this)">
-                <div>
-                    <span class="category-badge">Table Talk</span>
-                    <h2>Codenames</h2>
-                </div>
-                <div class="arrow">▼</div>
-            </div>
-            <div class="game-content">
-                <div class="rule-item">
-                    <strong>The Goal</strong>
-                    Find all your team's secret agents before the other team does.
-                </div>
-                <div class="rule-item">
-                    <strong>How to Play</strong>
-                    The "Spymaster" gives a one-word clue and a number (e.g., "Animal: 3"). The team tries to pick the correct cards on the table.
-                </div>
-                <div class="rule-item">
-                    <strong>Connector Tip</strong>
-                    Avoid the Assassin card! If you pick it, your team loses instantly.
-                </div>
-            </div>
-        </div>
-
-        <div class="game-card">
-            <div class="game-header" onclick="toggleCard(this)">
-                <div>
-                    <span class="category-badge">Table Talk</span>
-                    <h2>Sushi Go!</h2>
-                </div>
-                <div class="arrow">▼</div>
-            </div>
-            <div class="game-content">
-                <div class="rule-item">
-                    <strong>The Goal</strong>
-                    Create the best "meal" of sushi combinations.
-                </div>
-                <div class="rule-item">
-                    <strong>How to Play</strong>
-                    Pick one card from your hand, place it face down, and pass the rest to the player on your left. Everyone reveals at once.
-                </div>
-                <div class="rule-item">
-                    <strong>Connector Tip</strong>
-                    Pudding cards don't score until the very end of the game—don't ignore them!
-                </div>
-            </div>
-        </div>
-
-        <div class="game-card">
-            <div class="game-header" onclick="toggleCard(this)">
-                <div>
-                    <span class="category-badge">Strategy</span>
-                    <h2>Wingspan</h2>
-                </div>
-                <div class="arrow">▼</div>
-            </div>
-            <div class="game-content">
-                <div class="rule-item">
-                    <strong>The Goal</strong>
-                    Attract the best variety of birds to your wildlife preserves.
-                </div>
-                <div class="rule-item">
-                    <strong>How to Play</strong>
-                    Play bird cards to your board, which then makes your "Lay Eggs," "Gain Food," and "Draw Cards" actions more powerful.
-                </div>
-                <div class="rule-item">
-                    <strong>Connector Tip</strong>
-                    Look for "Engine Building" birds—cards that give you bonuses every time you take an action in that row.
-                </div>
-            </div>
-        </div>
-
-        <div class="game-card">
+        <div class="game-card" data-category="Youth Table">
             <div class="game-header" onclick="toggleCard(this)">
                 <div>
                     <span class="category-badge">Youth Table</span>
@@ -200,18 +64,114 @@
                 <div class="arrow">▼</div>
             </div>
             <div class="game-content">
-                <div class="rule-item">
-                    <strong>The Goal</strong>
-                    Be the first to place all your wooden animals on the stack.
+                <div class="rule-item"><strong>The Goal:</strong> Be the first to place all your wooden animals on the stack.</div>
+                <div class="rule-item"><strong>How to Play:</strong> Roll the die to see if you place animals or let the group decide where they go.</div>
+                <div class="rule-item"><strong>Connector Tip:</strong> Steady hands! If the stack falls, you have to take more animals back.</div>
+            </div>
+        </div>
+
+        <div class="game-card" data-category="Gateway Game">
+            <div class="game-header" onclick="toggleCard(this)">
+                <div>
+                    <span class="category-badge">Gateway Game</span>
+                    <h2>Azul</h2>
                 </div>
-                <div class="rule-item">
-                    <strong>How to Play</strong>
-                    Roll the die to see if you place one animal, two animals, or let the group decide.
+                <div class="arrow">▼</div>
+            </div>
+            <div class="game-content">
+                <div class="rule-item"><strong>The Goal:</strong> Draft tiles to create beautiful patterns on your palace wall.</div>
+                <div class="rule-item"><strong>How to Play:</strong> Pick all tiles of one color from a factory. Place them in rows; full rows move to your wall.</div>
+                <div class="rule-item"><strong>Connector Tip:</strong> Don't take tiles you can't fit! They drop to the floor and cost you points.</div>
+            </div>
+        </div>
+
+        <div class="game-card" data-category="Gateway Game">
+            <div class="game-header" onclick="toggleCard(this)">
+                <div>
+                    <span class="category-badge">Gateway Game</span>
+                    <h2>Catan</h2>
                 </div>
-                <div class="rule-item">
-                    <strong>Connector Tip</strong>
-                    If the stack falls, you have to take up to two of the fallen animals into your pile!
+                <div class="arrow">▼</div>
+            </div>
+            <div class="game-content">
+                <div class="rule-item"><strong>The Goal:</strong> Build settlements and roads to reach 10 Victory Points.</div>
+                <div class="rule-item"><strong>How to Play:</strong> Roll dice for resources. Use Wheat, Sheep, Wood, Brick, and Ore to expand.</div>
+                <div class="rule-item"><strong>Connector Tip:</strong> Trading with other players is key. Don't be afraid to make an offer!</div>
+            </div>
+        </div>
+
+        <div class="game-card" data-category="Table Talk">
+            <div class="game-header" onclick="toggleCard(this)">
+                <div>
+                    <span class="category-badge">Table Talk</span>
+                    <h2>Codenames</h2>
                 </div>
+                <div class="arrow">▼</div>
+            </div>
+            <div class="game-content">
+                <div class="rule-item"><strong>The Goal:</strong> Contact all your agents based on one-word clues from your Spymaster.</div>
+                <div class="rule-item"><strong>How to Play:</strong> Teams take turns guessing cards. Avoid the "Assassin" card at all costs!</div>
+                <div class="rule-item"><strong>Connector Tip:</strong> Look for clues that link multiple cards together to win faster.</div>
+            </div>
+        </div>
+
+        <div class="game-card" data-category="Two-Player Duel">
+            <div class="game-header" onclick="toggleCard(this)">
+                <div>
+                    <span class="category-badge">Two-Player Duel</span>
+                    <h2>Jaipur</h2>
+                </div>
+                <div class="arrow">▼</div>
+            </div>
+            <div class="game-content">
+                <div class="rule-item"><strong>The Goal:</strong> Be the best merchant by collecting and selling goods for gold.</div>
+                <div class="rule-item"><strong>How to Play:</strong> Take cards from the market or sell sets of goods. Use camels to swap multiple cards.</div>
+                <div class="rule-item"><strong>Connector Tip:</strong> Big sales (3+ cards) give you bonus point tokens!</div>
+            </div>
+        </div>
+
+        <div class="game-card" data-category="The Classics">
+            <div class="game-header" onclick="toggleCard(this)">
+                <div>
+                    <span class="category-badge">The Classics</span>
+                    <h2>Scrabble</h2>
+                </div>
+                <div class="arrow">▼</div>
+            </div>
+            <div class="game-content">
+                <div class="rule-item"><strong>The Goal:</strong> Build high-scoring words that connect to existing tiles on the board.</div>
+                <div class="rule-item"><strong>How to Play:</strong> Play a word, calculate points based on letter values and board bonuses, and draw back to 7 tiles.</div>
+                <div class="rule-item"><strong>Connector Tip:</strong> Two-letter words are your best friend for tight spots.</div>
+            </div>
+        </div>
+
+        <div class="game-card" data-category="Table Talk">
+            <div class="game-header" onclick="toggleCard(this)">
+                <div>
+                    <span class="category-badge">Table Talk</span>
+                    <h2>Sushi Go!</h2>
+                </div>
+                <div class="arrow">▼</div>
+            </div>
+            <div class="game-content">
+                <div class="rule-item"><strong>The Goal:</strong> Pick the best sushi cards to score the most points over 3 rounds.</div>
+                <div class="rule-item"><strong>How to Play:</strong> Pick one card to keep, then pass your hand to the player next to you.</div>
+                <div class="rule-item"><strong>Connector Tip:</strong> Collecting "Maki" rolls is a race—the player with the most gets the bonus!</div>
+            </div>
+        </div>
+
+        <div class="game-card" data-category="Strategy">
+            <div class="game-header" onclick="toggleCard(this)">
+                <div>
+                    <span class="category-badge">Strategy</span>
+                    <h2>Wingspan</h2>
+                </div>
+                <div class="arrow">▼</div>
+            </div>
+            <div class="game-content">
+                <div class="rule-item"><strong>The Goal:</strong> Discover and attract the best birds to your wildlife original habitat.</div>
+                <div class="rule-item"><strong>How to Play:</strong> Spend food to play birds. Birds give you powers that trigger when you gather food or lay eggs.</div>
+                <div class="rule-item"><strong>Connector Tip:</strong> Pay attention to your "End of Round" goals for extra points.</div>
             </div>
         </div>
 
@@ -232,14 +192,32 @@
         card.classList.toggle('active');
     }
 
-    function filterGames() {
-        const input = document.getElementById('gameSearch').value.toLowerCase();
+    function filterLibrary() {
+        const searchInput = document.getElementById('gameSearch').value.toLowerCase();
+        const checkboxes = document.querySelectorAll('.category-check:checked');
         const cards = document.getElementsByClassName('game-card');
+        
+        const selectedCategories = Array.from(checkboxes).map(cb => cb.value);
 
         for (let i = 0; i < cards.length; i++) {
             const title = cards[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
-            cards[i].style.display = title.includes(input) ? "" : "none";
+            const category = cards[i].getAttribute('data-category');
+            
+            const matchesSearch = title.includes(searchInput);
+            const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(category);
+
+            cards[i].style.display = (matchesSearch && matchesCategory) ? "" : "none";
         }
+    }
+
+    function clearFilters() {
+        // Reset search input
+        document.getElementById('gameSearch').value = "";
+        // Uncheck all boxes
+        const checkboxes = document.querySelectorAll('.category-check');
+        checkboxes.forEach(cb => cb.checked = false);
+        // Run filter to show everything
+        filterLibrary();
     }
 </script>
 
