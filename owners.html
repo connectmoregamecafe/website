@@ -8,15 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Specific override for owner profile photos to keep them uniform */
-        .profile-card img {
+        /* Ensures all profile images are uniform circles with a border */
+        .img-container {
             width: 180px;
             height: 180px;
             border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid var(--yellow-jasper);
+            overflow: hidden;
             margin: 0 auto 20px;
+            border: 5px solid var(--yellow-jasper);
             display: block;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -29,7 +35,9 @@
 <div class="container">
     <div class="profile-grid">
         <div class="profile-card">
-            <img src="jake-photo.jpg" alt="Jake Habegger" style="object-position: center 20%;">
+            <div class="img-container">
+                <img src="jake-photo.jpg" alt="Jake Habegger" style="object-position: center 20%;">
+            </div>
             <h2>Jake Habegger</h2>
             <div class="schedule-badge" style="margin-bottom: 8px;">Operations Director</div>
             <div class="schedule-badge" style="margin-bottom: 15px;">Lead Game Connector</div>
@@ -40,7 +48,9 @@
         </div>
 
         <div class="profile-card">
-            <img src="kate-photo.jpg" alt="Kate Habegger" style="object-position: center 10%;">
+            <div class="img-container">
+                <img src="kate-photo.jpg" alt="Kate Habegger" style="object-position: center 10%;">
+            </div>
             <h2>Kate Habegger</h2>
             <div class="schedule-badge" style="margin-bottom: 8px;">Experience Director</div>
             <div class="schedule-badge" style="margin-bottom: 15px;">Administrative Director</div>
@@ -58,7 +68,9 @@
 
     <div class="profile-grid">
         <div class="profile-card" style="border-top-color: var(--crystal-seas);">
-            <img src="addy-photo.jpg" alt="Addy Habegger" style="object-position: center 20%;">
+            <div class="img-container">
+                <img src="addy-photo.jpg" alt="Addy Habegger" style="object-position: center 20%;">
+            </div>
             <h2>Addy Habegger</h2>
             <div class="schedule-badge" style="background-color: var(--black-cat); margin-bottom: 15px;">Lead Hostess</div>
             <div class="bio-text" style="text-align: left;">
@@ -67,7 +79,10 @@
         </div>
 
         <div class="profile-card" style="border-top-color: var(--crystal-seas);">
-            <img src="emma-kate-photo.jpg" alt="Emma Kate Habegger" style="object-position: center 20%;">
+            <div class="img-container">
+                <img src="emma-kate-photo.jpg" alt="Emma Kate Habegger" 
+                     style="transform: scale(1.3); transform-origin: center 10%;">
+            </div>
             <h2>Emma Kate Habegger</h2>
             <div class="schedule-badge" style="background-color: var(--black-cat); margin-bottom: 15px;">Game Connector</div>
             <div class="bio-text" style="text-align: left;">
@@ -96,5 +111,6 @@
     </div>
     <p style="font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Connect More Game Cafe LLC | Franklin, TN</p>
 </div>
+
 </body>
 </html>
