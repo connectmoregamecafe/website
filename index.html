@@ -33,7 +33,7 @@
     <div class="nav-container">
         <a href="#schedule" class="btn">FIND A POP-UP</a>
         <a href="game_menu.html" class="btn" style="background-color: var(--crystal-seas); color: white;">GAME LIBRARY</a>
-        <a href="#contact" class="btn btn-secondary" style="color:white; border-color:white;">BOOK AN EVENT</a>
+        <a href="#contact" class="btn btn-secondary" style="color:white; border-color:white;">CONTACT US</a>
     </div>
 </header>
 
@@ -106,7 +106,8 @@
     </div>
     
     <div id="contact" class="card">
-        <h2 style="text-align: center;">Book a Private Event</h2>
+        <h2 style="text-align: center;">Get in Touch</h2>
+        <p style="text-align: center; margin-bottom: 20px;">Have a question, want to book a private event, or just want to say hi? Send us a message below!</p>
         <form name="contact" method="POST" data-netlify="true" style="max-width: 450px; margin: 0 auto;">
             <input type="hidden" name="form-name" value="contact">
             <div style="margin-bottom: 15px;">
@@ -118,10 +119,10 @@
                 <input type="email" name="email" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box;">
             </div>
             <div style="margin-bottom: 15px;">
-                <label style="display: block; font-weight: 700;">Event Details</label>
-                <textarea name="message" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box; min-height: 100px;"></textarea>
+                <label style="display: block; font-weight: 700;">How can we help?</label>
+                <textarea name="message" placeholder="Ask a question, request an event booking, or share your feedback..." required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box; min-height: 100px; font-family: 'Montserrat', sans-serif;"></textarea>
             </div>
-            <button type="submit" class="btn" style="width: 100%; cursor: pointer;">Send Inquiry</button>
+            <button type="submit" class="btn" style="width: 100%; cursor: pointer;">Send Message</button>
         </form>
     </div>
 </div>
