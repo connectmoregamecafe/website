@@ -126,6 +126,30 @@ header p {
 
 .btn:hover { transform: translateY(-3px); }
 
+/* --- ABOUT US / STORY PAGE STYLES --- */
+.story-layout {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.story-text {
+    flex: 1;
+}
+
+.story-image {
+    flex: 1;
+    text-align: center;
+}
+
+.story-image img {
+    width: 100%;       /* Constrains the photo to its container */
+    max-width: 400px;  /* Keeps it from being too huge on big screens */
+    height: auto;      /* Maintains proper proportions */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
 /* --- QUICK START GUIDE STYLES --- */
 .search-container {
     background: var(--diode-blue);
@@ -306,6 +330,15 @@ header p {
 @media (max-width: 768px) {
     .hero-text { font-size: 2rem; }
     .profile-grid { grid-template-columns: 1fr; }
+    
+    .story-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .story-image img {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 600px) {
