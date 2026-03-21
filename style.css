@@ -1,9 +1,11 @@
+/* Color Palette & Base */
 :root {
     --diode-blue: #007bff;
     --yellow-jasper: #f4c430;
     --background-gray: #f8f9fa;
     --text-dark: #333;
     --white: #ffffff;
+    --shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 body {
@@ -20,16 +22,9 @@ header {
     text-align: center;
 }
 
-.tagline {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-}
-
 .hero-text {
     font-size: 2.5rem;
-    margin: 0 0 20px 0;
+    margin: 10px 0;
 }
 
 .container {
@@ -38,12 +33,12 @@ header {
     padding: 0 20px;
 }
 
-/* Search and Filters */
+/* Filter Card */
 .card {
     background: var(--white);
     padding: 25px;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow);
     border-top: 5px solid var(--yellow-jasper);
 }
 
@@ -52,62 +47,49 @@ header {
     padding: 15px;
     border-radius: 10px;
     border: 1px solid #ddd;
-    font-family: 'Montserrat';
     font-size: 1rem;
     margin-bottom: 20px;
     box-sizing: border-box;
+    font-family: 'Montserrat';
 }
 
 .filter-label {
     font-weight: bold;
     color: var(--diode-blue);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     display: block;
 }
 
 .filter-chip {
     display: inline-block;
-    background: #eee;
-    padding: 5px 10px;
-    border-radius: 20px;
-    margin: 3px 0;
+    background: #f1f1f1;
+    padding: 4px 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
     font-size: 0.85rem;
     cursor: pointer;
-    transition: background 0.2s;
-}
-
-.filter-chip:hover {
-    background: #e0e0e0;
 }
 
 /* Game Cards */
-#guideList {
-    margin-top: 30px;
-}
-
 .game-card {
     background: var(--white);
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
 }
 
 .game-header {
-    padding: 20px;
+    padding: 18px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    transition: background 0.2s;
-}
-
-.game-header:hover {
-    background: #fdfdfd;
 }
 
 .game-header h2 {
-    margin: 5px 0 0 0;
+    margin: 0;
     font-size: 1.2rem;
     color: var(--diode-blue);
 }
@@ -115,22 +97,22 @@ header {
 .category-badge {
     font-size: 0.7rem;
     text-transform: uppercase;
-    font-weight: bold;
-    color: #888;
+    font-weight: 700;
+    color: #999;
 }
 
 .arrow {
-    font-size: 0.8rem;
     transition: transform 0.3s;
-    color: #ccc;
+    color: #bbb;
 }
 
-/* Expanded State */
+/* The Expanding Logic */
 .game-content {
     display: none;
-    padding: 0 20px 20px;
+    padding: 0 25px 20px;
     border-top: 1px solid #eee;
-    background: #fafafa;
+    background-color: #fafafa;
+    line-height: 1.6;
 }
 
 .game-card.active .game-content {
@@ -141,22 +123,16 @@ header {
     transform: rotate(180deg);
 }
 
-.rule-item {
-    margin-top: 15px;
-    line-height: 1.5;
-}
-
 /* Footer */
 .footer {
     text-align: center;
     padding: 40px;
-    background: #333;
-    color: white;
+    background: #222;
+    color: #fff;
 }
 
 .footer a {
-    color: white;
-    margin: 0 15px;
+    color: #fff;
+    margin: 0 10px;
     text-decoration: none;
-    font-size: 0.9rem;
 }
