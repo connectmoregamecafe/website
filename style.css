@@ -1,4 +1,4 @@
-/* --- GLOBAL BASICS --- */
+/* --- GLOBAL STYLES --- */
 :root {
     --diode-blue: #007bff;
     --yellow-jasper: #f4c430;
@@ -9,89 +9,103 @@
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    color: var(--dark);
+    line-height: 1.6;
     background-color: #f8f9fa;
 }
 
-/* --- HERO / HOME HEADER --- */
-.home-header {
-    background: linear-gradient(rgba(0,123,255,0.8), rgba(0,123,255,0.8)), url('hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 80vh; /* Controlled height */
+/* --- HERO SECTION (Index Only) --- */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     color: white;
     text-align: center;
-    position: relative;
 }
 
-.top-nav {
+.nav-container {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 30px;
+    right: 50px;
 }
 
-.nav-btn {
+.nav-link {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 25px;
     font-weight: bold;
-    border: 1px solid white;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9rem;
 }
 
-.nav-btn:hover {
-    background: white;
-    color: var(--diode-blue);
-}
-
-.hero-logo {
-    max-width: 200px; /* Limits the logo size */
+.main-logo {
+    max-width: 250px; /* Restored size */
     height: auto;
     margin-bottom: 20px;
 }
 
-.hero-title { font-size: 3rem; margin: 0; }
-.hero-subtitle { font-size: 1.2rem; margin-top: 10px; opacity: 0.9; }
+.hero-title { font-size: 3.5rem; margin: 0; }
+.hero-tagline { font-size: 1.4rem; margin-bottom: 30px; }
 
 /* --- BUTTONS --- */
-.cta-group { margin-top: 30px; }
-.btn-primary {
-    background: var(--yellow-jasper);
-    color: var(--dark);
-    padding: 12px 25px;
+.btn {
+    padding: 12px 30px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    margin-right: 10px;
-}
-.btn-secondary {
-    border: 2px solid white;
-    color: white;
-    padding: 10px 23px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
 }
 
-/* --- LIBRARY PAGE SPECIFIC (The blue header from the menu) --- */
-header:not(.home-header) {
+.btn-primary { background-color: var(--yellow-jasper); color: var(--dark); margin-right: 15px; }
+.btn-secondary { border: 2px solid white; color: white; }
+
+/* --- PAGE CONTENT SECTIONS --- */
+.welcome-container, .how-it-works {
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 50px 10%;
     background-color: var(--diode-blue);
     color: white;
-    padding: 40px 20px;
+}
+
+.feature-card { text-align: center; padding: 20px; }
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.step { flex: 1; min-width: 200px; padding: 20px; }
+.step-num {
+    font-size: 2rem;
+    color: var(--diode-blue);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* --- GAME LIBRARY PAGE SPECIFIC OVERRIDES --- */
+header:not(.hero-section) {
+    background-color: var(--diode-blue);
+    color: white;
+    padding: 60px 20px;
     text-align: center;
 }
 
-/* --- RE-USABLE CONTAINER --- */
-.container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-/* [KEEP ALL YOUR PREVIOUS .game-card AND .filter-section CSS BELOW THIS LINE] */
+/* --- KEEP ALL PREVIOUS GAME CARD & FILTER CSS HERE --- */
+.game-card { background: white; margin-bottom: 10px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.game-header { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; }
+.game-content { display: none; padding: 20px; border-top: 1px solid #eee; }
+.game-card.active .game-content { display: block; }
