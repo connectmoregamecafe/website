@@ -1,138 +1,97 @@
-/* Color Palette & Base */
+/* --- GLOBAL BASICS --- */
 :root {
     --diode-blue: #007bff;
     --yellow-jasper: #f4c430;
-    --background-gray: #f8f9fa;
-    --text-dark: #333;
+    --dark: #222;
     --white: #ffffff;
-    --shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    background-color: var(--background-gray);
-    color: var(--text-dark);
+    color: var(--dark);
+    background-color: #f8f9fa;
 }
 
-header {
+/* --- HERO / HOME HEADER --- */
+.home-header {
+    background: linear-gradient(rgba(0,123,255,0.8), rgba(0,123,255,0.8)), url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* Controlled height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.top-nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.nav-btn {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: white;
+    color: var(--diode-blue);
+}
+
+.hero-logo {
+    max-width: 200px; /* Limits the logo size */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.hero-title { font-size: 3rem; margin: 0; }
+.hero-subtitle { font-size: 1.2rem; margin-top: 10px; opacity: 0.9; }
+
+/* --- BUTTONS --- */
+.cta-group { margin-top: 30px; }
+.btn-primary {
+    background: var(--yellow-jasper);
+    color: var(--dark);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.btn-secondary {
+    border: 2px solid white;
+    color: white;
+    padding: 10px 23px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* --- LIBRARY PAGE SPECIFIC (The blue header from the menu) --- */
+header:not(.home-header) {
     background-color: var(--diode-blue);
-    color: var(--white);
+    color: white;
     padding: 40px 20px;
     text-align: center;
 }
 
-.hero-text {
-    font-size: 2.5rem;
-    margin: 10px 0;
-}
-
+/* --- RE-USABLE CONTAINER --- */
 .container {
-    max-width: 900px;
-    margin: -30px auto 40px;
+    max-width: 1000px;
+    margin: 40px auto;
     padding: 0 20px;
 }
 
-/* Filter Card */
-.card {
-    background: var(--white);
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-    border-top: 5px solid var(--yellow-jasper);
-}
-
-.search-container input {
-    width: 100%;
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    font-size: 1rem;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    font-family: 'Montserrat';
-}
-
-.filter-label {
-    font-weight: bold;
-    color: var(--diode-blue);
-    margin-bottom: 8px;
-    display: block;
-}
-
-.filter-chip {
-    display: inline-block;
-    background: #f1f1f1;
-    padding: 4px 8px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    font-size: 0.85rem;
-    cursor: pointer;
-}
-
-/* Game Cards */
-.game-card {
-    background: var(--white);
-    margin-bottom: 12px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: transform 0.2s;
-}
-
-.game-header {
-    padding: 18px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-}
-
-.game-header h2 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: var(--diode-blue);
-}
-
-.category-badge {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #999;
-}
-
-.arrow {
-    transition: transform 0.3s;
-    color: #bbb;
-}
-
-/* The Expanding Logic */
-.game-content {
-    display: none;
-    padding: 0 25px 20px;
-    border-top: 1px solid #eee;
-    background-color: #fafafa;
-    line-height: 1.6;
-}
-
-.game-card.active .game-content {
-    display: block;
-}
-
-.game-card.active .arrow {
-    transform: rotate(180deg);
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 40px;
-    background: #222;
-    color: #fff;
-}
-
-.footer a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-}
+/* [KEEP ALL YOUR PREVIOUS .game-card AND .filter-section CSS BELOW THIS LINE] */
