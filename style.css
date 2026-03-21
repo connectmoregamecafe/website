@@ -1,10 +1,9 @@
-/* --- Global Styles & Brand Colors --- */
 :root {
-    --diode-blue: #007bff;      /* Now used for Headers */
-    --crystal-seas: #00bcd4;    
-    --yellow-jasper: #ffc107;   
-    --black-cat: #2c3e50;       
-    --accent-red: #e74c3c;      
+    --diode-blue: #007bff;
+    --crystal-seas: #00bcd4;
+    --yellow-jasper: #ffc107;
+    --black-cat: #2c3e50;
+    --accent-red: #e74c3c;
     --bg-light: #f4f7f6;
     --text-dark: #333;
     --white: #ffffff;
@@ -25,9 +24,8 @@ body {
     line-height: 1.6;
 }
 
-/* --- LIGHTER HEADER --- */
 header {
-    background-color: var(--diode-blue); /* Changed from black-cat */
+    background-color: var(--diode-blue);
     padding: 60px 20px;
     text-align: center;
     color: var(--white);
@@ -55,14 +53,13 @@ header {
     margin-bottom: 15px;
 }
 
-/* --- Containers & Cards --- */
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
-.card {
+.card, .profile-card {
     background: var(--white);
     padding: 30px;
     border-radius: 12px;
@@ -70,7 +67,6 @@ header {
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* --- Navigation & Buttons --- */
 .nav-container {
     display: flex;
     justify-content: center;
@@ -96,69 +92,75 @@ header {
 
 .btn-secondary {
     background: transparent;
-    border: 2px solid rgba(255,255,255,0.7); /* Lighter border for blue bg */
+    border: 2px solid rgba(255,255,255,0.7);
     color: var(--white);
 }
 
-.btn:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
-}
-
-/* --- Game Library Grid & Cards --- */
-#gameGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
+/* --- List View Logic --- */
+#gameGrid.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .game-card {
     background: var(--white);
     border-radius: 8px;
     overflow: hidden;
-    border-left: 6px solid #ddd;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    width: 100%;
 }
 
-/* Category Borders */
-.game-card[data-category="Strategy"] { border-left-color: var(--strategy); }
-.game-card[data-category="Party"] { border-left-color: var(--party); }
-.game-card[data-category="Classic"] { border-left-color: var(--classic); }
-.game-card[data-category="Kids"] { border-left-color: var(--kids); }
+.game-info-bar {
+    display: flex;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+}
+
+.badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    background: #e9ecef;
+    color: #495057;
+}
+
+/* Dynamic Badge Colors based on Category */
+.game-card[data-category="Strategy"] .badge:first-child { background: var(--strategy); color: white; }
+.game-card[data-category="Party"] .badge:first-child { background: var(--party); color: white; }
+.game-card[data-category="Classic"] .badge:first-child { background: var(--classic); color: white; }
+.game-card[data-category="Kids"] .badge:first-child { background: var(--kids); color: white; }
 
 .game-header {
-    padding: 20px;
+    padding: 15px 20px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.game-header h2 {
-    margin: 0;
-    font-size: 1.1rem;
-    color: var(--black-cat);
-}
+.game-header h2 { margin: 0; font-size: 1.2rem; color: var(--black-cat); }
 
 .game-content {
     max-height: 0;
     overflow: hidden;
     transition: 0.3s ease-out;
     padding: 0 20px;
-    font-size: 0.9rem;
-    color: #666;
 }
 
 .game-card.active .game-content {
-    max-height: 150px;
+    max-height: 200px;
     padding-bottom: 20px;
 }
 
-.game-card.active .arrow {
-    transform: rotate(180deg);
-}
-
 .arrow { transition: 0.3s; color: #ccc; }
+.game-card.active .arrow { transform: rotate(180deg); }
 
 /* --- Footer --- */
 .footer {
@@ -172,7 +174,7 @@ header {
 .social-icons { margin-bottom: 20px; }
 .social-icons i { font-size: 1.8rem; margin: 0 15px; color: white; }
 
-/* --- Search & Filters --- */
+/* --- Filters --- */
 .search-section {
     background: var(--white);
     padding: 25px;
@@ -187,7 +189,6 @@ header {
     padding: 15px;
     border-radius: 8px;
     border: 1px solid #ddd;
-    margin-bottom: 15px;
 }
 
 .filter-btn {
@@ -197,11 +198,20 @@ header {
     background: white;
     cursor: pointer;
     font-family: inherit;
-    transition: 0.2s;
 }
 
 .filter-btn.active {
     background: var(--diode-blue);
     color: white;
     border-color: var(--diode-blue);
+}
+
+.schedule-badge {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-top: 10px;
 }
