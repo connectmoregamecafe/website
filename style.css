@@ -98,7 +98,7 @@ header {
     color: var(--white);
 }
 
-/* --- GAME CARDS (Lighter Blue Vibe) --- */
+/* --- GAME CARDS --- */
 .container {
     max-width: 900px;
     margin: 0 auto 60px;
@@ -106,7 +106,7 @@ header {
 }
 
 .game-card {
-    background-color: var(--crystal-seas); /* LIGHT BLUE SHADE */
+    background-color: var(--crystal-seas); /* Set to Light Blue */
     color: var(--white);
     margin-bottom: 20px;
     border-radius: 15px;
@@ -161,13 +161,17 @@ header {
 
 .game-content {
     display: none;
-    padding: 0 30px 30px;
-    background-color: rgba(0, 0, 0, 0.15);
+    padding: 30px; /* Even padding for the description */
+    background-color: rgba(0, 0, 0, 0.15); /* Slightly darker to make text pop */
     color: #ffffff;
-    line-height: 1.8;
+    line-height: 1.6;
+    text-align: center; /* Centers the two-line descriptions */
 }
 
-.game-card.active .game-content { display: block; }
+.game-content p {
+    margin: 0;
+    font-size: 1.05rem;
+}
 
 /* --- FOOTER --- */
 .footer {
