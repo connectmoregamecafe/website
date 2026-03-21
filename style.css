@@ -1,6 +1,7 @@
 /* --- VARIABLES --- */
 :root {
     --diode-blue: #007bff;
+    --dark-blue: #002b5c; /* Cooler, Dark Blue Card Vibe */
     --crystal-seas: #00a8cc;
     --yellow-jasper: #f4c430;
     --black-cat: #222;
@@ -18,7 +19,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* --- HEADER & HERO --- */
+/* --- HEADER --- */
 header {
     background-color: var(--diode-blue);
     color: var(--white);
@@ -29,7 +30,7 @@ header {
 .piccenter {
     display: block;
     margin: 0 auto 20px auto;
-    max-width: 180px; /* Limits logo size strictly */
+    max-width: 180px;
     height: auto;
 }
 
@@ -48,11 +49,34 @@ header {
     text-transform: uppercase;
 }
 
-/* --- NAVIGATION & BUTTONS --- */
-.nav-container {
-    margin-top: 30px;
+/* --- SEARCH SECTION (Centered & Standout) --- */
+.search-section {
+    padding: 50px 20px;
+    text-align: center;
+    background: var(--white);
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
 }
 
+#gameSearch {
+    width: 100%;
+    max-width: 650px;
+    padding: 20px 30px;
+    font-size: 1.2rem;
+    border: 2px solid var(--diode-blue);
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.15);
+    outline: none;
+    transition: 0.3s ease;
+}
+
+#gameSearch:focus {
+    box-shadow: 0 15px 40px rgba(0, 123, 255, 0.25);
+    transform: translateY(-3px);
+}
+
+/* --- BUTTONS --- */
 .btn {
     display: inline-block;
     padding: 12px 28px;
@@ -63,13 +87,6 @@ header {
     font-weight: 700;
     font-size: 0.9rem;
     margin: 8px;
-    transition: all 0.2s ease;
-    border: 2px solid transparent;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .btn-secondary {
@@ -78,46 +95,91 @@ header {
     color: var(--white);
 }
 
-/* --- CONTAINERS & CARDS --- */
+/* --- GAME CARDS (Dark Blue Vibe) --- */
 .container {
-    max-width: 1000px;
-    margin: -40px auto 60px; /* Pulls first card up over the blue header */
+    max-width: 900px;
+    margin: 0 auto 60px;
     padding: 0 20px;
 }
 
-.card {
-    background: var(--white);
-    padding: 40px;
+.game-card {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    margin-bottom: 20px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    margin-bottom: 30px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
 }
 
-/* --- IMAGE FIXES --- */
+.game-card:hover {
+    transform: translateY(-2px);
+}
+
+.game-header {
+    padding: 25px 30px;
+    cursor: pointer;
+}
+
+.game-info-top {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 12px;
+    border-radius: 6px;
+    color: var(--yellow-jasper);
+    border: 1px solid rgba(244, 196, 48, 0.3);
+}
+
+.game-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-title-row h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.arrow {
+    color: var(--yellow-jasper);
+    font-size: 1.3rem;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.game-card.active .arrow { transform: rotate(180deg); }
+
+.game-content {
+    display: none;
+    padding: 0 30px 30px;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #f0f0f0;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.game-card.active .game-content { display: block; }
+
+/* --- ABOUT PAGE FIXES --- */
 .about-image {
     width: 100%;
-    max-width: 600px; /* Prevents the image from being huge */
+    max-width: 600px;
     height: auto;
     display: block;
     margin: 30px auto;
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* --- PRICING GRID (Index Page) --- */
-.profile-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 20px;
-}
-
-.profile-card {
-    background: var(--white);
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 /* --- FOOTER --- */
@@ -128,25 +190,5 @@ header {
     padding: 60px 20px;
 }
 
-.footer-links a {
-    color: #A0A0A0;
-    text-decoration: none;
-    margin: 0 12px;
-    font-size: 0.9rem;
-}
-
-.footer-links a:hover {
-    color: var(--white);
-}
-
-.social-icons i {
-    font-size: 1.6rem;
-    margin: 0 15px 30px;
-    color: var(--white);
-}
-
-/* --- GAME LIBRARY PAGE SPECIFIC --- */
-.game-card { background: white; margin-bottom: 12px; border-radius: 10px; border: 1px solid #eee; }
-.game-header { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-.game-content { display: none; padding: 0 20px 20px; border-top: 1px solid #f9f9f9; color: #555; }
-.game-card.active .game-content { display: block; }
+.footer a { color: #A0A0A0; text-decoration: none; margin: 0 12px; font-size: 0.9rem; }
+.social-icons i { font-size: 1.6rem; margin: 0 15px 30px; color: var(--white); }
