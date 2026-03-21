@@ -1,92 +1,67 @@
 document.addEventListener('DOMContentLoaded', () => {
     const gameSearch = document.getElementById('gameSearch');
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const clearBtn = document.getElementById('clearFilters');
     const gameCards = document.querySelectorAll('.game-card');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const clearBtn = document.getElementById('clearFilters');
 
-    function applyAllFilters() {
+    // Accordion Logic (Open/Close game descriptions)
+    gameCards.forEach(card => {
+        card.querySelector('.game-header').addEventListener('click', () => {
+            card.classList.toggle('active');
+        });
+    });
+
+    // Search and Filter Function
+    function filterGames() {
         const searchTerm = gameSearch.value.toLowerCase();
-        
-        // Collect active filters by group
         const activeFilters = {
-            players: [],
-            category: [],
-            complexity: []
+            players: document.querySelector('[data-group="players"] .active')?.dataset.filter,
+            category: document.querySelector('[data-group="category"] .active')?.dataset.filter,
+            complexity: document.querySelector('[data-group="complexity"] .active')?.dataset.filter
         };
 
-        document.querySelectorAll('.filter-btn.active').forEach(btn => {
-            const group = btn.parentElement.dataset.group;
-            activeFilters[group].push(btn.dataset.filter);
-        });
-
         gameCards.forEach(card => {
-            const allVisibleText = card.innerText.toLowerCase();
-            const cardPlayers = card.getAttribute('data-players');
-            const cardCategory = card.getAttribute('data-category');
-            const cardComplexity = card.getAttribute('data-complexity');
+            const title = card.querySelector('h2').textContent.toLowerCase();
+            const category = card.dataset.category;
+            const players = card.dataset.players;
+            const complexity = card.dataset.complexity;
 
-            // 1. Search Bar (Matches Title/Desc)
-            const matchesSearch = allVisibleText.includes(searchTerm);
+            const matchesSearch = title.includes(searchTerm);
+            const matchesCategory = !activeFilters.category || category === activeFilters.category;
+            const matchesPlayers = !activeFilters.players || players === activeFilters.players;
+            const matchesComplexity = !activeFilters.complexity || complexity === activeFilters.complexity;
 
-            // 2. Player Logic (Check if target number falls in card range)
-            let matchesPlayers = activeFilters.players.length === 0;
-            if (!matchesPlayers) {
-                const range = cardPlayers.split('-').map(n => parseInt(n.trim()));
-                const min = range[0];
-                const max = range[1] || range[0];
-                
-                matchesPlayers = activeFilters.players.some(filter => {
-                    if (filter === '5+') return max >= 5;
-                    const num = parseInt(filter);
-                    return num >= min && num <= max;
-                });
-            }
-
-            // 3. Category Logic
-            let matchesCategory = activeFilters.category.length === 0;
-            if (!matchesCategory) {
-                matchesCategory = activeFilters.category.some(f => cardCategory.includes(f));
-            }
-
-            // 4. Complexity Logic
-            let matchesComplexity = activeFilters.complexity.length === 0;
-            if (!matchesComplexity) {
-                matchesComplexity = activeFilters.complexity.some(f => cardComplexity.includes(f));
-            }
-
-            // Final Visibility: Must pass ALL active categories (AND logic)
-            if (matchesSearch && matchesPlayers && matchesCategory && matchesComplexity) {
-                card.style.display = "block";
+            if (matchesSearch && matchesCategory && matchesPlayers && matchesComplexity) {
+                card.style.display = 'block';
             } else {
-                card.style.display = "none";
+                card.style.display = 'none';
             }
         });
     }
 
-    // Toggle Button State
-    filterBtns.forEach(btn => {
+    // Filter Button Click Logic
+    filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
-            btn.classList.toggle('active');
-            applyAllFilters();
+            const group = btn.parentElement;
+            const wasActive = btn.classList.contains('active');
+            
+            // Remove active from others in group
+            group.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            
+            // Toggle current
+            if (!wasActive) btn.classList.add('active');
+            
+            filterGames();
         });
     });
 
-    // Clear All Logic
-    clearBtn.addEventListener('click', () => {
-        gameSearch.value = "";
-        filterBtns.forEach(btn => btn.classList.remove('active'));
-        applyAllFilters();
+    // Clear All
+    clearBtn?.addEventListener('click', () => {
+        gameSearch.value = '';
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        filterGames();
     });
 
-    if (gameSearch) gameSearch.addEventListener('input', applyAllFilters);
-
-    // Accordion Logic
-    gameCards.forEach(card => {
-        const header = card.querySelector('.game-header');
-        header.addEventListener('click', () => {
-            const wasActive = card.classList.contains('active');
-            gameCards.forEach(c => c.classList.remove('active'));
-            if (!wasActive) card.classList.add('active');
-        });
-    });
+    // Search Input Logic
+    gameSearch.addEventListener('input', filterGames);
 });
