@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quick Start Guides | Connect More Cafe</title>
+    <title>Game Library | Connect More</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,84 +12,54 @@
 <header>
     <div class="tagline">The Full Collection</div>
     <h1 class="hero-text">Quick Start Guides</h1>
-    <p>Find your perfect game. Use the filters to narrow the search.</p>
 </header>
 
 <div class="container">
     <div class="search-container">
-        <input type="text" id="gameSearch" placeholder="Search by name (e.g. Catan)..." onkeyup="filterLibrary()">
+        <input type="text" id="gameSearch" placeholder="Search by name..." onkeyup="filterLibrary()">
     </div>
 
     <div class="filter-section">
         <div class="filter-label">Filter by Vibe</div>
         <label class="filter-chip"><input type="checkbox" class="category-check" value="The Classics" onchange="filterLibrary()"> The Classics</label>
         <label class="filter-chip"><input type="checkbox" class="category-check" value="Gateway Game" onchange="filterLibrary()"> Gateway Games</label>
-        <label class="filter-chip"><input type="checkbox" class="category-check" value="Two-Player Duel" onchange="filterLibrary()"> 2-Player Duels</label>
         <label class="filter-chip"><input type="checkbox" class="category-check" value="Table Talk" onchange="filterLibrary()"> Table Talk</label>
         <label class="filter-chip"><input type="checkbox" class="category-check" value="Strategy" onchange="filterLibrary()"> Strategy</label>
         <label class="filter-chip"><input type="checkbox" class="category-check" value="Youth Table" onchange="filterLibrary()"> Youth Table</label>
-
-        <div class="filter-label" style="margin-top: 15px;">Number of Players</div>
-        <label class="filter-chip"><input type="checkbox" class="player-check" value="2" onchange="filterLibrary()"> 2</label>
-        <label class="filter-chip"><input type="checkbox" class="player-check" value="3" onchange="filterLibrary()"> 3</label>
-        <label class="filter-chip"><input type="checkbox" class="player-check" value="4" onchange="filterLibrary()"> 4</label>
-        <label class="filter-chip"><input type="checkbox" class="player-check" value="5+" onchange="filterLibrary()"> 5+</label>
-
-        <div style="width: 100%; text-align: center;">
-            <button class="btn-clear" onclick="clearFilters()">Clear All Filters</button>
-        </div>
+        <button class="btn-clear" onclick="clearFilters()">Clear Filters</button>
     </div>
 
     <div id="guideList">
-        <div class="game-card" data-category="Strategy" data-players="1,2,3,4,5" data-complexity="advanced">
+        <div class="game-card" data-category="Strategy" data-players="1,2,3,4,5">
             <div class="game-header" onclick="this.parentElement.classList.toggle('active')">
-                <div>
-                    <span class="category-badge">Strategy • 1-5 Players</span>
-                    <h2>Finspan</h2>
-                </div>
+                <div><span class="category-badge">Strategy • 1-5 Players</span><h2>Finspan</h2></div>
                 <div class="arrow">▼</div>
             </div>
             <div class="game-content">
-                <div class="rule-item"><strong>Goal:</strong> Curate a thriving underwater ecosystem in your private reef.</div>
-                <div class="rule-item"><strong>Play:</strong> Draft aquatic species cards and manage resources like plankton to build high-scoring "schools."</div>
+                <div class="rule-item"><strong>Goal:</strong> Curate a thriving underwater ecosystem.</div>
+                <div class="rule-item"><strong>Play:</strong> Draft aquatic species and manage plankton resources.</div>
             </div>
         </div>
 
-        <div class="game-card" data-category="Table Talk Youth Table" data-players="2,3,4,5" data-complexity="easy">
+        <div class="game-card" data-category="Table Talk Youth Table" data-players="2,3,4,5">
             <div class="game-header" onclick="this.parentElement.classList.toggle('active')">
-                <div>
-                    <span class="category-badge">Table Talk • Youth • 2-5 Players</span>
-                    <h2>Fluff</h2>
-                </div>
+                <div><span class="category-badge">Table Talk • Youth • 2-5 Players</span><h2>Fluff</h2></div>
                 <div class="arrow">▼</div>
             </div>
             <div class="game-content">
-                <div class="rule-item"><strong>Goal:</strong> Outlast your opponents in a game of bidding and bluffing.</div>
-                <div class="rule-item"><strong>Play:</strong> Bid on the total number of a specific die face under all cups at the table.</div>
-            </div>
-        </div>
-
-        <div class="game-card" data-category="The Classics" data-players="2,3,4,5" data-complexity="intermediate">
-            <div class="game-header" onclick="this.parentElement.classList.toggle('active')">
-                <div>
-                    <span class="category-badge">Classic • 2-6 Players</span>
-                    <h2>Clue</h2>
-                </div>
-                <div class="arrow">▼</div>
-            </div>
-            <div class="game-content">
-                <div class="rule-item"><strong>Goal:</strong> Solve the mystery: Who, Where, and with What?</div>
-                <div class="rule-item"><strong>Play:</strong> Move through the manor and test your theories to eliminate suspects and weapons.</div>
+                <div class="rule-item"><strong>Goal:</strong> Outlast opponents in bidding and bluffing.</div>
+                <div class="rule-item"><strong>Play:</strong> Bid on dice faces under all cups at the table.</div>
             </div>
         </div>
     </div>
 </div>
 
 <footer class="footer">
-    <h3>Connect More Game Cafe</h3>
-    <p>Franklin, TN</p>
-    <div class="social-icons">
-        <a href="#">Instagram</a>
+    <div style="margin-bottom: 20px;">
+        <a href="index.html">Home</a>
+        <a href="about.html">Our Story</a>
+        <a href="owners.html">Meet the Family</a>
+        <a href="faq.html">FAQ</a>
     </div>
 </footer>
 
