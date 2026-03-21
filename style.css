@@ -1,113 +1,105 @@
-/* --- SEARCH & FILTER SECTION --- */
+/* --- UPDATED SEARCH & FILTER SECTION --- */
 .search-section {
     background: #ffffff;
-    padding: 40px 20px;
+    padding: 30px 20px;
     text-align: center;
     border-bottom: 1px solid #eee;
 }
 
 #gameSearch {
-    width: 100%;
-    max-width: 600px;
-    padding: 15px 25px;
-    font-size: 1.1rem;
-    border: 2px solid #e0e0e0;
-    border-radius: 50px;
-    margin-bottom: 40px;
+    width: 90%;
+    max-width: 500px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px; /* Matching your earlier blocky/clean style */
+    margin-bottom: 30px;
     outline: none;
-    transition: 0.3s;
 }
 
-#gameSearch:focus {
-    border-color: var(--diode-blue);
-    box-shadow: 0 0 15px rgba(0,123,255,0.1);
-}
-
-/* Master Container for the 3 Categories */
+/* This container holds the 3 columns of filters */
 .filter-master-container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap; /* Allows stacking on small screens */
+    justify-content: center;
+    gap: 15px;
 }
 
 .filter-group {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 15px;
-    border: 1px solid #f0f0f0;
+    flex: 1; /* Makes columns equal width */
+    min-width: 250px; /* Prevents them from getting too skinny */
+    background: #fcfcfc;
+    padding: 15px;
+    border: 1px solid #efefef;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .filter-group h4 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #888;
-    margin-bottom: 15px;
-    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #999;
+    margin-bottom: 12px;
+    margin-top: 0;
 }
 
-/* The Button Rows */
 .filter-buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 .filter-btn {
-    background: white;
-    border: 2px solid #eee;
-    padding: 8px 18px;
-    border-radius: 50px;
-    cursor: pointer;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    border-radius: 4px; /* Clean, professional edge */
+    font-size: 0.8rem;
     font-weight: 600;
-    font-size: 0.85rem;
-    transition: 0.2s all ease;
-    color: #555;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 .filter-btn:hover {
-    border-color: var(--diode-blue);
-    color: var(--diode-blue);
+    border-color: #007bff;
+    color: #007bff;
 }
 
-/* Active State for Multi-Select */
 .filter-btn.active {
-    background: var(--diode-blue) !important;
-    color: white !important;
-    border-color: var(--diode-blue) !important;
-    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+    background: #007bff !important;
+    color: #fff !important;
+    border-color: #007bff !important;
 }
 
-/* The Clear Button */
 .clear-btn {
-    background: #ff4757;
+    width: 100%; /* Spans the width of the container */
+    max-width: 200px;
+    margin-top: 20px;
+    padding: 10px;
+    background: #333; /* Darker, neutral "clear" button */
     color: white;
     border: none;
-    padding: 15px 30px;
-    border-radius: 50px;
+    border-radius: 4px;
     font-weight: 700;
     cursor: pointer;
-    margin-top: 10px;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    transition: 0.3s;
-    align-self: center; /* Keeps it centered in the column */
+    transition: background 0.3s;
 }
 
 .clear-btn:hover {
-    background: #e04050;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.3);
+    background: #000;
 }
 
-/* Responsive Fix for Mobile */
-@media (max-width: 600px) {
-    .filter-btn {
-        padding: 6px 12px;
-        font-size: 0.75rem;
+/* Mobile Tweak */
+@media (max-width: 768px) {
+    .filter-master-container {
+        flex-direction: column;
+    }
+    .filter-group {
+        width: 100%;
     }
 }
