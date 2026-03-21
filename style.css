@@ -2,7 +2,7 @@
 :root {
     --diode-blue: #007bff;
     --dark-blue: #002b5c;
-    --crystal-seas: #00a8cc; /* Our Light Blue */
+    --crystal-seas: #00a8cc; 
     --yellow-jasper: #f4c430;
     --black-cat: #222;
     --white: #ffffff;
@@ -71,33 +71,6 @@ header {
     transition: 0.3s ease;
 }
 
-#gameSearch:focus {
-    box-shadow: 0 15px 40px rgba(0, 123, 255, 0.25);
-    transform: translateY(-3px);
-}
-
-/* --- BUTTONS --- */
-.btn {
-    display: inline-block;
-    padding: 12px 28px;
-    background-color: var(--yellow-jasper);
-    color: var(--black-cat);
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    margin: 8px;
-    transition: 0.2s;
-}
-
-.btn:hover { opacity: 0.9; transform: scale(1.05); }
-
-.btn-secondary {
-    background-color: transparent;
-    border: 2px solid var(--white);
-    color: var(--white);
-}
-
 /* --- GAME CARDS --- */
 .container {
     max-width: 900px;
@@ -106,7 +79,7 @@ header {
 }
 
 .game-card {
-    background-color: var(--crystal-seas); /* Set to Light Blue */
+    background-color: var(--crystal-seas); 
     color: var(--white);
     margin-bottom: 20px;
     border-radius: 15px;
@@ -148,24 +121,30 @@ header {
     margin: 0;
     font-size: 1.6rem;
     font-weight: 700;
-    color: var(--white);
 }
 
 .arrow {
     color: var(--yellow-jasper);
     font-size: 1.3rem;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.4s ease;
 }
 
-.game-card.active .arrow { transform: rotate(180deg); }
-
+/* --- THE FIX: DISPLAY LOGIC --- */
 .game-content {
-    display: none;
-    padding: 30px; /* Even padding for the description */
-    background-color: rgba(0, 0, 0, 0.15); /* Slightly darker to make text pop */
+    display: none; /* Hidden by default */
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.15);
     color: #ffffff;
     line-height: 1.6;
-    text-align: center; /* Centers the two-line descriptions */
+    text-align: center;
+}
+
+.game-card.active .game-content {
+    display: block; /* Shows text when card has 'active' class */
+}
+
+.game-card.active .arrow {
+    transform: rotate(180deg);
 }
 
 .game-content p {
