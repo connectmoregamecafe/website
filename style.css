@@ -7,11 +7,6 @@
     --bg-light: #f4f7f6;
     --text-dark: #333;
     --white: #ffffff;
-    
-    --strategy: #2980b9;
-    --party: #8e44ad;
-    --classic: #27ae60;
-    --kids: #f39c12;
 }
 
 * { box-sizing: border-box; }
@@ -127,15 +122,9 @@ header {
     padding: 3px 10px;
     border-radius: 4px;
     letter-spacing: 0.5px;
-    background: #e9ecef;
+    background: #e9ecef; /* Neutral Gray for all badges */
     color: #495057;
 }
-
-/* Dynamic Badge Colors based on Category */
-.game-card[data-category="Strategy"] .badge:first-child { background: var(--strategy); color: white; }
-.game-card[data-category="Party"] .badge:first-child { background: var(--party); color: white; }
-.game-card[data-category="Classic"] .badge:first-child { background: var(--classic); color: white; }
-.game-card[data-category="Kids"] .badge:first-child { background: var(--kids); color: white; }
 
 .game-header {
     padding: 15px 20px;
@@ -204,14 +193,4 @@ header {
     background: var(--diode-blue);
     color: white;
     border-color: var(--diode-blue);
-}
-
-.schedule-badge {
-    display: inline-block;
-    background: var(--accent-red);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-weight: bold;
-    margin-top: 10px;
 }
