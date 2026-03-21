@@ -1,111 +1,127 @@
-/* --- GLOBAL STYLES --- */
 :root {
     --diode-blue: #007bff;
+    --crystal-seas: #00a8cc;
     --yellow-jasper: #f4c430;
-    --dark: #222;
+    --black-cat: #222;
     --white: #ffffff;
+    --background-gray: #f8f9fa;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    line-height: 1.6;
-    background-color: #f8f9fa;
+    background-color: var(--background-gray);
+    color: var(--black-cat);
 }
 
-/* --- HERO SECTION (Index Only) --- */
-.hero-section {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-bg.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-}
-
-.nav-container {
-    position: absolute;
-    top: 30px;
-    right: 50px;
-}
-
-.nav-link {
-    color: white;
-    text-decoration: none;
-    margin-left: 25px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-}
-
-.main-logo {
-    max-width: 250px; /* Restored size */
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.hero-title { font-size: 3.5rem; margin: 0; }
-.hero-tagline { font-size: 1.4rem; margin-bottom: 30px; }
-
-/* --- BUTTONS --- */
-.btn {
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    display: inline-block;
-    transition: 0.3s;
-}
-
-.btn-primary { background-color: var(--yellow-jasper); color: var(--dark); margin-right: 15px; }
-.btn-secondary { border: 2px solid white; color: white; }
-
-/* --- PAGE CONTENT SECTIONS --- */
-.welcome-container, .how-it-works {
-    padding: 80px 20px;
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 50px 10%;
+/* Header & Hero */
+header {
     background-color: var(--diode-blue);
-    color: white;
-}
-
-.feature-card { text-align: center; padding: 20px; }
-
-.steps-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 40px;
-}
-
-.step { flex: 1; min-width: 200px; padding: 20px; }
-.step-num {
-    font-size: 2rem;
-    color: var(--diode-blue);
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-/* --- GAME LIBRARY PAGE SPECIFIC OVERRIDES --- */
-header:not(.hero-section) {
-    background-color: var(--diode-blue);
-    color: white;
+    color: var(--white);
     padding: 60px 20px;
     text-align: center;
 }
 
-/* --- KEEP ALL PREVIOUS GAME CARD & FILTER CSS HERE --- */
-.game-card { background: white; margin-bottom: 10px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-.game-header { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; }
-.game-content { display: none; padding: 20px; border-top: 1px solid #eee; }
+.piccenter {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    margin: 10px 0;
+    opacity: 0.9;
+}
+
+/* Navigation & Buttons */
+.nav-container {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--yellow-jasper);
+    color: var(--black-cat);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    margin: 5px;
+    transition: transform 0.2s;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--white);
+}
+
+/* Layout Containers */
+.container {
+    max-width: 1000px;
+    margin: -40px auto 40px;
+    padding: 0 20px;
+}
+
+.card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+/* Pricing Grid */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.profile-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--black-cat);
+    color: var(--white);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.footer a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-icons i {
+    font-size: 1.5rem;
+    margin: 0 15px 25px;
+}
+
+.schedule-badge {
+    background: #eee;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* --- LIBRARY SPECIFIC (Will only show on game_menu.html) --- */
+.filter-chip { display: inline-block; padding: 5px 10px; border-radius: 20px; background: #eee; margin: 3px; cursor: pointer; font-size: 0.8rem; }
+.game-card { background: white; margin-bottom: 10px; border-radius: 10px; overflow: hidden; }
+.game-header { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+.game-content { display: none; padding: 0 20px 20px; border-top: 1px solid #eee; }
 .game-card.active .game-content { display: block; }
