@@ -1,3 +1,4 @@
+/* --- VARIABLES --- */
 :root {
     --diode-blue: #007bff;
     --crystal-seas: #00a8cc;
@@ -7,14 +8,17 @@
     --background-gray: #f8f9fa;
 }
 
+/* --- BASE STYLES --- */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
+    padding: 0;
     background-color: var(--background-gray);
     color: var(--black-cat);
+    -webkit-font-smoothing: antialiased;
 }
 
-/* Header & Hero */
+/* --- HEADER & HERO --- */
 header {
     background-color: var(--diode-blue);
     color: var(--white);
@@ -23,66 +27,89 @@ header {
 }
 
 .piccenter {
-    max-width: 180px;
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 180px; /* Limits logo size strictly */
     height: auto;
-    margin-bottom: 20px;
 }
 
 .hero-text {
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .tagline {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     letter-spacing: 3px;
     margin: 10px 0;
     opacity: 0.9;
+    text-transform: uppercase;
 }
 
-/* Navigation & Buttons */
+/* --- NAVIGATION & BUTTONS --- */
 .nav-container {
     margin-top: 30px;
 }
 
 .btn {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 12px 28px;
     background-color: var(--yellow-jasper);
     color: var(--black-cat);
     text-decoration: none;
     border-radius: 50px;
     font-weight: 700;
-    margin: 5px;
-    transition: transform 0.2s;
+    font-size: 0.9rem;
+    margin: 8px;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .btn-secondary {
     background-color: transparent;
     border: 2px solid var(--white);
+    color: var(--white);
 }
 
-/* Layout Containers */
+/* --- CONTAINERS & CARDS --- */
 .container {
     max-width: 1000px;
-    margin: -40px auto 40px;
+    margin: -40px auto 60px; /* Pulls first card up over the blue header */
     padding: 0 20px;
 }
 
 .card {
     background: var(--white);
-    padding: 30px;
+    padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     margin-bottom: 30px;
 }
 
-/* Pricing Grid */
+/* --- IMAGE FIXES --- */
+.about-image {
+    width: 100%;
+    max-width: 600px; /* Prevents the image from being huge */
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* --- PRICING GRID (Index Page) --- */
 .profile-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
 }
 
 .profile-card {
@@ -93,7 +120,7 @@ header {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* Footer */
+/* --- FOOTER --- */
 .footer {
     background-color: var(--black-cat);
     color: var(--white);
@@ -101,27 +128,25 @@ header {
     padding: 60px 20px;
 }
 
-.footer a {
-    color: var(--white);
+.footer-links a {
+    color: #A0A0A0;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 12px;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: var(--white);
 }
 
 .social-icons i {
-    font-size: 1.5rem;
-    margin: 0 15px 25px;
+    font-size: 1.6rem;
+    margin: 0 15px 30px;
+    color: var(--white);
 }
 
-.schedule-badge {
-    background: #eee;
-    padding: 15px;
-    border-radius: 10px;
-    display: inline-block;
-}
-
-/* --- LIBRARY SPECIFIC (Will only show on game_menu.html) --- */
-.filter-chip { display: inline-block; padding: 5px 10px; border-radius: 20px; background: #eee; margin: 3px; cursor: pointer; font-size: 0.8rem; }
-.game-card { background: white; margin-bottom: 10px; border-radius: 10px; overflow: hidden; }
+/* --- GAME LIBRARY PAGE SPECIFIC --- */
+.game-card { background: white; margin-bottom: 12px; border-radius: 10px; border: 1px solid #eee; }
 .game-header { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-.game-content { display: none; padding: 0 20px 20px; border-top: 1px solid #eee; }
+.game-content { display: none; padding: 0 20px 20px; border-top: 1px solid #f9f9f9; color: #555; }
 .game-card.active .game-content { display: block; }
