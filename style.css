@@ -2,7 +2,7 @@
 :root {
     --diode-blue: #007bff;
     --dark-blue: #002b5c;
-    --crystal-seas: #00a8cc; 
+    --crystal-seas: #00a8cc; /* Our Light Blue */
     --yellow-jasper: #f4c430;
     --black-cat: #222;
     --white: #ffffff;
@@ -49,7 +49,7 @@ header {
     text-transform: uppercase;
 }
 
-/* --- SEARCH SECTION --- */
+/* --- SEARCH & FILTER SECTION --- */
 .search-section {
     padding: 50px 20px;
     text-align: center;
@@ -69,6 +69,54 @@ header {
     box-shadow: 0 10px 30px rgba(0, 123, 255, 0.15);
     outline: none;
     transition: 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 2px solid var(--diode-blue);
+    background: transparent;
+    color: var(--diode-blue);
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.filter-btn.active {
+    background: var(--diode-blue);
+    color: var(--white);
+}
+
+/* --- BUTTONS --- */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--yellow-jasper);
+    color: var(--black-cat);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin: 8px;
+    transition: 0.2s;
+}
+
+.btn:hover { opacity: 0.9; transform: scale(1.05); }
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
 }
 
 /* --- GAME CARDS --- */
@@ -129,9 +177,9 @@ header {
     transition: transform 0.4s ease;
 }
 
-/* --- THE FIX: DISPLAY LOGIC --- */
+/* --- DROPDOWN DISPLAY LOGIC --- */
 .game-content {
-    display: none; /* Hidden by default */
+    display: none; 
     padding: 30px;
     background-color: rgba(0, 0, 0, 0.15);
     color: #ffffff;
@@ -140,7 +188,7 @@ header {
 }
 
 .game-card.active .game-content {
-    display: block; /* Shows text when card has 'active' class */
+    display: block; 
 }
 
 .game-card.active .arrow {
