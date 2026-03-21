@@ -1,5 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect More Game Cafe LLC | Franklin, TN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+      (function (s, e, n, d, er) {
+        s['Sender'] = er;
+        s[er] = s[er] || function () {
+          (s[er].q = s[er].q || []).push(arguments)
+        }, s[er].l = 1 * new Date();
+        var a = e.createElement(n),
+            m = e.getElementsByTagName(n)[0];
+        a.async = 1;
+        a.src = d;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+      sender('6c119623044886')
+    </script>
+</head>
+<body>
+
 <header style="background-color: var(--diode-blue);">
-    <img class="piccenter" src="logo.png" alt="Connect More Logo">
+    <a href="index.html"><img class="piccenter" src="logo.png" alt="Connect More Logo"></a>
     <div class="hero-text">CONNECT MORE</div>
     <div class="tagline">POPUP GAME CAFE | FRANKLIN, TN</div>
     <p>Scroll Less. Connect More.</p>
@@ -11,12 +38,40 @@
 </header>
 
 <div class="container">
+    <div class="card" style="text-align: center; border-bottom: 6px solid var(--crystal-seas);">
+        <h2 style="color: var(--crystal-seas);">The Table is Set: A Pop-Up Experience</h2>
+        <p style="max-width: 700px; margin: 0 auto 20px auto; line-height: 1.6;">
+            A <strong>Pop-Up Game Cafe</strong> is a temporary social hub that turns your favorite local Franklin spots into a "living room" for the community. 
+            We bring a massive, curated library of games and a team of <strong>Game Connectors</strong> who are there to help you skip the rulebook and start connecting immediately!
+        </p>
+        
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+            <div style="flex: 1; min-width: 150px;">
+                <i class="fas fa-users" style="color: var(--crystal-seas); font-size: 1.5rem;"></i>
+                <p style="font-size: 0.85rem; font-weight: bold; margin-top: 5px;">Community First</p>
+            </div>
+            <div style="flex: 1; min-width: 150px;">
+                <i class="fas fa-chalkboard-user" style="color: var(--crystal-seas); font-size: 1.5rem;"></i>
+                <p style="font-size: 0.85rem; font-weight: bold; margin-top: 5px;">Expert Hosting</p>
+            </div>
+            <div style="flex: 1; min-width: 150px;">
+                <i class="fas fa-truck-ramp-box" style="color: var(--crystal-seas); font-size: 1.5rem;"></i>
+                <p style="font-size: 0.85rem; font-weight: bold; margin-top: 5px;">Mobile Library</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="schedule" class="card" style="text-align:center;">
+        <h2>Upcoming Pop-Ups</h2>
+        <div class="schedule-badge">TBD: Stay Tuned!</div>
+    </div>
+
     <div id="pricing" style="margin-bottom: 40px;">
         <h2 style="text-align: center; color: var(--diode-blue); margin-bottom: 30px; font-size: 2rem;">Stay & Play</h2>
         
         <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; max-width: 900px; margin: 0 auto;">
             
-            <div class="profile-card" style="flex: 1; min-width: 300px; border-top: 8px solid var(--diode-blue); margin: 0;">
+            <div class="profile-card" style="flex: 1; min-width: 300px; border-top: 8px solid var(--diode-blue);">
                 <i class="fas fa-user" style="font-size: 2.5rem; color: var(--diode-blue); margin-bottom: 15px;"></i>
                 <h3 style="margin-bottom: 5px;">Adults</h3>
                 <div style="font-size: 2.5rem; font-weight: 700; color: var(--black-cat);">$10.00</div>
@@ -28,7 +83,7 @@
                 </div>
             </div>
 
-            <div class="profile-card" style="flex: 1; min-width: 300px; border-top: 8px solid var(--yellow-jasper); margin: 0;">
+            <div class="profile-card" style="flex: 1; min-width: 300px; border-top: 8px solid var(--yellow-jasper);">
                 <i class="fas fa-child" style="font-size: 2.5rem; color: var(--yellow-jasper); margin-bottom: 15px;"></i>
                 <h3 style="margin-bottom: 5px;">Youth</h3>
                 <div style="font-size: 2.5rem; font-weight: 700; color: var(--black-cat);">$5.00</div>
@@ -46,4 +101,50 @@
         </p>
     </div>
 
+    <div id="newsletter" class="card" style="text-align: center; border-top: 6px solid var(--diode-blue);">
+        <h2 style="color: var(--diode-blue);">Join Connect More+</h2>
+        <p style="margin-bottom: 25px;">Be the first to get info on upcoming location reveals for our Franklin pop-up nights.</p>
+        <div style="text-align: center" class="sender-form-field" data-sender-form-id="av26Z8"></div>
+        <p style="font-size: 0.8rem; margin-top: 15px; opacity: 0.8;">No spam. Just games.</p>
     </div>
+    
+    <div id="contact" class="card">
+        <h2 style="text-align: center;">Get in Touch</h2>
+        <p style="text-align: center; margin-bottom: 20px;">Have a question, want to book a private event, or just want to say hi?</p>
+        <form name="contact" method="POST" data-netlify="true" style="max-width: 450px; margin: 0 auto;">
+            <input type="hidden" name="form-name" value="contact">
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; font-weight: 700;">Name</label>
+                <input type="text" name="name" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; font-weight: 700;">Email</label>
+                <input type="email" name="email" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; font-weight: 700;">How can we help?</label>
+                <textarea name="message" placeholder="Ask a question, request an event booking..." required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box; min-height: 100px; font-family: 'Montserrat', sans-serif;"></textarea>
+            </div>
+            <button type="submit" class="btn" style="width: 100%; cursor: pointer;">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<footer class="footer">
+    <h3>Stay Connected</h3>
+    <div class="social-icons">
+        <a href="https://instagram.com/connectmoregamecafe" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61582265409098" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:connect@connectmoregamecafe.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="footer-nav">
+        <a href="about.us.html">Our Story</a>
+        <a href="owners.html">Meet the Family</a>
+        <a href="game_menu.html">Game Library</a>
+        <a href="faq.html">FAQ</a>
+    </div>
+    <p style="font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Connect More Game Cafe LLC | Franklin, TN</p>
+</footer>
+
+</body>
+</html>
