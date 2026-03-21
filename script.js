@@ -1,65 +1,84 @@
 document.addEventListener('DOMContentLoaded', () => {
     const gameSearch = document.getElementById('gameSearch');
     const filterBtns = document.querySelectorAll('.filter-btn');
+    const clearBtn = document.getElementById('clearFilters');
     const gameCards = document.querySelectorAll('.game-card');
-    let currentFilter = 'all';
 
     function applyAllFilters() {
         const searchTerm = gameSearch.value.toLowerCase();
         
+        // Collect active filters by group
+        const activeFilters = {
+            players: [],
+            category: [],
+            complexity: []
+        };
+
+        document.querySelectorAll('.filter-btn.active').forEach(btn => {
+            const group = btn.parentElement.dataset.group;
+            activeFilters[group].push(btn.dataset.filter);
+        });
+
         gameCards.forEach(card => {
             const allVisibleText = card.innerText.toLowerCase();
-            const playersAttr = card.getAttribute('data-players'); // e.g., "2-4" or "2"
-            const category = card.getAttribute('data-category').toLowerCase();
-            const complexity = card.getAttribute('data-complexity').toLowerCase();
-            
-            // 1. Search Bar Logic
-            const matchesSearch = allVisibleText.includes(searchTerm);
-            
-            // 2. Button Filter Logic
-            let matchesButton = false;
-            
-            if (currentFilter === 'all') {
-                matchesButton = true;
-            } 
-            // Handle Player Count Ranges (The "Smart" Part)
-            else if (currentFilter.includes('Players')) {
-                const targetNum = parseInt(currentFilter); // Gets 2, 3, 4, or 5
-                
-                // Split "2-10" into [2, 10] or "2" into [2, 2]
-                const range = playersAttr.split('-').map(num => parseInt(num.trim()));
-                const min = range[0];
-                const max = range[1] || range[0]; // If it's just "2", max is also 2
+            const cardPlayers = card.getAttribute('data-players');
+            const cardCategory = card.getAttribute('data-category');
+            const cardComplexity = card.getAttribute('data-complexity');
 
-                if (currentFilter === '5+ Players') {
-                    if (max >= 5) matchesButton = true;
-                } else {
-                    if (targetNum >= min && targetNum <= max) matchesButton = true;
-                }
-            } 
-            // Handle Category/Difficulty
-            else {
-                const filterLower = currentFilter.toLowerCase();
-                if (category.includes(filterLower) || complexity.includes(filterLower)) {
-                    matchesButton = true;
-                }
+            // 1. Search Bar (Matches Title/Desc)
+            const matchesSearch = allVisibleText.includes(searchTerm);
+
+            // 2. Player Logic (Check if target number falls in card range)
+            let matchesPlayers = activeFilters.players.length === 0;
+            if (!matchesPlayers) {
+                const range = cardPlayers.split('-').map(n => parseInt(n.trim()));
+                const min = range[0];
+                const max = range[1] || range[0];
+                
+                matchesPlayers = activeFilters.players.some(filter => {
+                    if (filter === '5+') return max >= 5;
+                    const num = parseInt(filter);
+                    return num >= min && num <= max;
+                });
             }
 
-            card.style.display = (matchesSearch && matchesButton) ? "block" : "none";
+            // 3. Category Logic
+            let matchesCategory = activeFilters.category.length === 0;
+            if (!matchesCategory) {
+                matchesCategory = activeFilters.category.some(f => cardCategory.includes(f));
+            }
+
+            // 4. Complexity Logic
+            let matchesComplexity = activeFilters.complexity.length === 0;
+            if (!matchesComplexity) {
+                matchesComplexity = activeFilters.complexity.some(f => cardComplexity.includes(f));
+            }
+
+            // Final Visibility: Must pass ALL active categories (AND logic)
+            if (matchesSearch && matchesPlayers && matchesCategory && matchesComplexity) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
         });
     }
 
-    // Event Listeners
-    if (gameSearch) gameSearch.addEventListener('input', applyAllFilters);
-
+    // Toggle Button State
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            currentFilter = btn.getAttribute('data-filter');
+            btn.classList.toggle('active');
             applyAllFilters();
         });
     });
+
+    // Clear All Logic
+    clearBtn.addEventListener('click', () => {
+        gameSearch.value = "";
+        filterBtns.forEach(btn => btn.classList.remove('active'));
+        applyAllFilters();
+    });
+
+    if (gameSearch) gameSearch.addEventListener('input', applyAllFilters);
 
     // Accordion Logic
     gameCards.forEach(card => {
