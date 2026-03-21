@@ -3,288 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Game Library | Connect More Cafe</title>
+    <title>Game Library | Connect More Game Cafe</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <div class="tagline">The Full Collection</div>
-    <h1 class="hero-text">Quick Start Guides</h1>
+    <a href="index.html"><img class="piccenter" src="logo.png" alt="Connect More Logo"></a>
+    <div class="hero-text">GAME LIBRARY</div>
+    <div class="tagline">40+ WAYS TO UNPLUG</div>
     <div class="nav-container">
-        <a href="index.html" class="btn btn-secondary" style="color:white; border-color:white; text-decoration:none; padding: 10px 20px; border: 1px solid white; border-radius: 5px;">Back to Home</a>
+        <a href="index.html" class="btn btn-secondary">BACK TO HOME</a>
     </div>
 </header>
 
+<div class="search-section">
+    <input type="text" id="gameSearch" placeholder="Search by name, category, or player count...">
+</div>
+
 <div class="container">
-    
-    <div class="search-container">
-        <input type="text" id="gameSearch" placeholder="Search by name (e.g. Catan)...">
-    </div>
-
-    <div class="filter-section card" style="margin-bottom: 30px; padding: 20px;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px;">
-            <div>
-                <div class="filter-label">Vibe</div>
-                <label class="filter-chip"><input type="checkbox" class="category-check" value="The Classics"> The Classics</label><br>
-                <label class="filter-chip"><input type="checkbox" class="category-check" value="Gateway Game"> Gateway Games</label><br>
-                <label class="filter-chip"><input type="checkbox" class="category-check" value="Two-Player Duel"> 2-Player Duels</label><br>
-                <label class="filter-chip"><input type="checkbox" class="category-check" value="Table Talk"> Table Talk</label><br>
-                <label class="filter-chip"><input type="checkbox" class="category-check" value="Strategy"> Strategy</label><br>
-                <label class="filter-chip"><input type="checkbox" class="category-check" value="Youth Table"> Youth Table</label>
+    <div id="gameGrid">
+        
+        <div class="game-card" data-category="Strategy" data-players="2-7" data-complexity="Medium">
+            <div class="game-header">
+                <div class="game-info-top">
+                    <span class="badge">Strategy</span>
+                    <span class="badge"><i class="fas fa-users"></i> 2-7 Players</span>
+                    <span class="badge"><i class="fas fa-brain"></i> Medium</span>
+                </div>
+                <div class="game-title-row">
+                    <h2>7 Wonders</h2>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
             </div>
-
-            <div>
-                <div class="filter-label">Players</div>
-                <label class="filter-chip"><input type="checkbox" class="player-check" value="2"> 2</label><br>
-                <label class="filter-chip"><input type="checkbox" class="player-check" value="3"> 3</label><br>
-                <label class="filter-chip"><input type="checkbox" class="player-check" value="4"> 4</label><br>
-                <label class="filter-chip"><input type="checkbox" class="player-check" value="5+"> 5+</label>
-            </div>
-
-            <div>
-                <div class="filter-label">Complexity</div>
-                <label class="filter-chip"><input type="checkbox" class="complexity-check" value="easy"> Easy</label><br>
-                <label class="filter-chip"><input type="checkbox" class="complexity-check" value="intermediate"> Intermediate</label><br>
-                <label class="filter-chip"><input type="checkbox" class="complexity-check" value="advanced"> Advanced</label>
+            <div class="game-content">
+                <p>Lead one of the seven great cities of the Ancient World. Harvest resources, develop commercial routes, and affirm your military supremacy.</p>
             </div>
         </div>
-        <div style="text-align: center; margin-top: 15px;">
-            <button id="clearFiltersBtn" style="background:none; border:none; text-decoration:underline; cursor:pointer; font-family:'Montserrat';">Clear All Filters</button>
-        </div>
-    </div>
 
-    <div id="guideList">
-
-        <div class="game-card" data-category="Strategy" data-players="2,3,4" data-complexity="intermediate">
-            <div class="game-header"><div><span class="category-badge">Strategy</span><h2>10 Days in the USA</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Complete a 10-day journey across the US. <strong>Play:</strong> Sequence cards that border each other geographically.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Youth Table" data-players="2,3,4" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Youth</span><h2>Animal Upon Animal</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Be the first to stack all your wooden animals. <strong>Play:</strong> Roll the die and carefully place animals on the pyramid.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Table Talk" data-players="4,5+" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Table Talk</span><h2>Apples to Apples</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Win the most Green Apple cards. <strong>Play:</strong> Match your Red Apple (Noun) to the Judge's Green Apple (Adjective).</p></div>
+        <div class="game-card" data-category="Strategy" data-players="2-4" data-complexity="Easy">
+            <div class="game-header">
+                <div class="game-info-top">
+                    <span class="badge">Strategy</span>
+                    <span class="badge"><i class="fas fa-users"></i> 2-4 Players</span>
+                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
+                </div>
+                <div class="game-title-row">
+                    <h2>Azul</h2>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+            </div>
+            <div class="game-content">
+                <p>Draft beautiful tiles to decorate the walls of the Royal Palace of Evora. Simple rules with deep strategic planning.</p>
+            </div>
         </div>
 
-        <div class="game-card" data-category="Gateway Game" data-players="2,3,4" data-complexity="intermediate">
-            <div class="game-header"><div><span class="category-badge">Gateway</span><h2>Azul</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Score points by creating beautiful tile mosaics. <strong>Play:</strong> Draft tiles from factory displays to fill rows on your board.</p></div>
+        <div class="game-card" data-category="Strategy" data-players="1-4" data-complexity="Easy">
+            <div class="game-header">
+                <div class="game-info-top">
+                    <span class="badge">Strategy</span>
+                    <span class="badge"><i class="fas fa-users"></i> 1-4 Players</span>
+                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
+                </div>
+                <div class="game-title-row">
+                    <h2>Cascadia</h2>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+            </div>
+            <div class="game-content">
+                <p>A puzzly tile-laying and token-drafting game featuring the habitats and wildlife of the Pacific Northwest.</p>
+            </div>
         </div>
 
-        <div class="game-card" data-category="The Classics" data-players="2" data-complexity="intermediate">
-            <div class="game-header"><div><span class="category-badge">Classic</span><h2>Backgammon</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Move all checkers off the board. <strong>Play:</strong> Roll dice to move around the points and block your opponent.</p></div>
+        <div class="game-card" data-category="Strategy" data-players="3-4" data-complexity="Medium">
+            <div class="game-header">
+                <div class="game-info-top">
+                    <span class="badge">Strategy</span>
+                    <span class="badge"><i class="fas fa-users"></i> 3-4 Players</span>
+                    <span class="badge"><i class="fas fa-brain"></i> Medium</span>
+                </div>
+                <div class="game-title-row">
+                    <h2>Catan</h2>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+            </div>
+            <div class="game-content">
+                <p>The modern classic. Trade, build, and settle the island of Catan. Watch out for the robber!</p>
+            </div>
         </div>
 
-        <div class="game-card" data-category="The Classics" data-players="2" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Classic</span><h2>Battleship</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Sink all five of your opponent's ships. <strong>Play:</strong> Call out grid coordinates and track hits and misses.</p></div>
+        <div class="game-card" data-category="Party" data-players="2-8" data-complexity="Easy">
+            <div class="game-header">
+                <div class="game-info-top">
+                    <span class="badge">Party</span>
+                    <span class="badge"><i class="fas fa-users"></i> 2-8 Players</span>
+                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
+                </div>
+                <div class="game-title-row">
+                    <h2>Codenames</h2>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+            </div>
+            <div class="game-content">
+                <p>Give one-word clues to help your team find their secret agents on the board without hitting the assassin.</p>
+            </div>
         </div>
 
-        <div class="game-card" data-category="Table Talk" data-players="2,3,4,5+" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Table Talk</span><h2>Bears and the Bees</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Get rid of all your cards. <strong>Play:</strong> Match honeycomb colors and use special Bear or Queen Bee cards.</p></div>
+        <div class="game-card" data-category="Party" data-players="3-6" data-complexity="Easy">
+            <div class="game-header">
+                <div class="game-info-top">
+                    <span class="badge">Party</span>
+                    <span class="badge"><i class="fas fa-users"></i> 3-6 Players</span>
+                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
+                </div>
+                <div class="game-title-row">
+                    <h2>Dixit</h2>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+            </div>
+            <div class="game-content">
+                <p>A storytelling game where your imagination creates the tale. Use beautifully illustrated cards to bluff and dream.</p>
+            </div>
         </div>
 
-        <div class="game-card" data-category="Table Talk" data-players="2,3,4,5+" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Table Talk</span><h2>Camel Up</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Have the most money at the end. <strong>Play:</strong> Bet on camels as they race around the pyramid.</p></div>
+        <div class="game-card" data-category="Party" data-players="2-5" data-complexity="Easy">
+            <div class="game-header">
+                <div class="game-info-top">
+                    <span class="badge">Party</span>
+                    <span class="badge"><i class="fas fa-users"></i> 2-5 Players</span>
+                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
+                </div>
+                <div class="game-title-row">
+                    <h2>Exploding Kittens</h2>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+            </div>
+            <div class="game-content">
+                <p>A highly strategic, kitty-powered version of Russian Roulette. Avoid the explosions at all costs!</p>
+            </div>
         </div>
 
-        <div class="game-card" data-category="Youth Table" data-players="2,3,4" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Youth</span><h2>Candy Land</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Reach the Candy Castle. <strong>Play:</strong> Draw color cards and move your piece to the matching space.</p></div>
+        <div class="game-card" data-category="Strategy" data-players="1-5" data-complexity="Easy">
+            <div class="game-header">
+                <div class="game-info-top">
+                    <span class="badge">Strategy</span>
+                    <span class="badge"><i class="fas fa-users"></i> 1-5 Players</span>
+                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
+                </div>
+                <div class="game-title-row">
+                    <h2>Parks</h2>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+            </div>
+            <div class="game-content">
+                <p>Hike through the US National Parks, collecting memories and photos. A visually stunning, relaxing experience.</p>
+            </div>
         </div>
 
-        <div class="game-card" data-category="Gateway Game" data-players="2,3,4,5+" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Gateway</span><h2>Carcassonne</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Score points by building landscape features. <strong>Play:</strong> Draw tiles and place meeples as knights, thieves, or farmers.</p></div>
+        <div class="game-card" data-category="Strategy" data-players="1-5" data-complexity="Hard">
+            <div class="game-header">
+                <div class="game-info-top">
+                    <span class="badge">Strategy</span>
+                    <span class="badge"><i class="fas fa-users"></i> 1-5 Players</span>
+                    <span class="badge"><i class="fas fa-brain"></i> Hard</span>
+                </div>
+                <div class="game-title-row">
+                    <h2>Scythe</h2>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+            </div>
+            <div class="game-content">
+                <p>Engine building and territory control in an alternate-history 1920s. Heavy strategy with incredible components.</p>
+            </div>
         </div>
 
-        <div class="game-card" data-category="Gateway Game" data-players="3,4,5+" data-complexity="intermediate">
-            <div class="game-header"><div><span class="category-badge">Gateway</span><h2>Catan</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Reach 10 Victory Points. <strong>Play:</strong> Roll for resources, trade with players, and build roads/settlements.</p></div>
+        <div class="game-card" data-category="Strategy" data-players="2-4" data-complexity="Easy">
+            <div class="game-header">
+                <div class="game-info-top">
+                    <span class="badge">Strategy</span>
+                    <span class="badge"><i class="fas fa-users"></i> 2-4 Players</span>
+                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
+                </div>
+                <div class="game-title-row">
+                    <h2>Splendor</h2>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+            </div>
+            <div class="game-content">
+                <p>Collect gems and purchase development cards to gain prestige points. A fast-paced, addictive engine builder.</p>
+            </div>
         </div>
 
-        <div class="game-card" data-category="The Classics" data-players="2" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Classic</span><h2>Checkers</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Capture all opponent pieces. <strong>Play:</strong> Move diagonally and jump over pieces to "king" your tokens.</p></div>
+        <div class="game-card" data-category="Party" data-players="2-8" data-complexity="Easy">
+            <div class="game-header">
+                <div class="game-info-top">
+                    <span class="badge">Party</span>
+                    <span class="badge"><i class="fas fa-users"></i> 2-8 Players</span>
+                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
+                </div>
+                <div class="game-title-row">
+                    <h2>Sushi Go! Party</h2>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+            </div>
+            <div class="game-content">
+                <p>Draft the best combination of sushi dishes. This expanded version allows for larger groups and more variety.</p>
+            </div>
         </div>
 
-        <div class="game-card" data-category="The Classics" data-players="2" data-complexity="advanced">
-            <div class="game-header"><div><span class="category-badge">Classic</span><h2>Chess</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Put the opponent's king in Checkmate. <strong>Play:</strong> Strategic movement of 6 different types of pieces.</p></div>
+        <div class="game-card" data-category="Strategy" data-players="2-5" data-complexity="Easy">
+            <div class="game-header">
+                <div class="game-info-top">
+                    <span class="badge">Strategy</span>
+                    <span class="badge"><i class="fas fa-users"></i> 2-5 Players</span>
+                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
+                </div>
+                <div class="game-title-row">
+                    <h2>Ticket to Ride</h2>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+            </div>
+            <div class="game-content">
+                <p>Build your train routes across North America to connect cities and complete your tickets.</p>
+            </div>
         </div>
 
-        <div class="game-card" data-category="Youth Table" data-players="2,3,4" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Youth</span><h2>Chutes and Ladders</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Reach space 100 first. <strong>Play:</strong> Spin and move. Ladders take you up; chutes send you back.</p></div>
+        <div class="game-card" data-category="Party" data-players="2-8" data-complexity="Easy">
+            <div class="game-header">
+                <div class="game-info-top">
+                    <span class="badge">Party</span>
+                    <span class="badge"><i class="fas fa-users"></i> 2-8 Players</span>
+                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
+                </div>
+                <div class="game-title-row">
+                    <h2>Unstable Unicorns</h2>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+            </div>
+            <div class="game-content">
+                <p>Build a Unicorn Army. Betray your friends. Unicorns are your friends now.</p>
+            </div>
         </div>
 
-        <div class="game-card" data-category="Youth Table" data-players="2,3,4,5+" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Youth</span><h2>Clack!</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Build the tallest stack. <strong>Play:</strong> Race to grab magnetic discs that match the rolled color and shape.</p></div>
-        </div>
-
-        <div class="game-card" data-category="The Classics" data-players="2,3,4,5+" data-complexity="intermediate">
-            <div class="game-header"><div><span class="category-badge">Classic</span><h2>Clue</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Solve the murder. <strong>Play:</strong> Move between rooms and use deduction to find the culprit, weapon, and room.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Table Talk" data-players="2,3,4,5+" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Table Talk</span><h2>Codenames</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Contact all your agents. <strong>Play:</strong> Give one-word clues to help your team find cards while avoiding the assassin.</p></div>
-        </div>
-
-        <div class="game-card" data-category="The Classics" data-players="2" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Classic</span><h2>Connect 4</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Get 4 discs in a row. <strong>Play:</strong> Drop tokens into the grid while blocking your opponent.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Table Talk" data-players="2,3,4,5+" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Table Talk</span><h2>Dinosaur Tea Party</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Deduce the names of other guests. <strong>Play:</strong> Ask Yes/No questions about traits to identify dinosaurs.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Table Talk" data-players="3,4,5+" data-complexity="intermediate">
-            <div class="game-header"><div><span class="category-badge">Table Talk</span><h2>Dixit</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Guess cards based on abstract clues. <strong>Play:</strong> Use imagination and beautiful artwork cards to score points.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Table Talk" data-players="2,3,4" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Table Talk</span><h2>Dutch Blitz</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Empty your Blitz pile. <strong>Play:</strong> Fast-paced card game; play in sequence onto center piles.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Table Talk" data-players="2,3,4,5+" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Table Talk</span><h2>Exploding Kittens</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Don't explode. <strong>Play:</strong> Draw cards and use defuses, skips, or attacks to stay alive.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Youth Table" data-players="2,3,4,5+" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Youth</span><h2>Ghost Blitz</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Grab the correct object first. <strong>Play:</strong> Rapid-fire recognition game based on colors and shapes.</p></div>
-        </div>
-
-        <div class="game-card" data-category="The Classics" data-players="2" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Classic</span><h2>Guess Who</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Identify your opponent's character. <strong>Play:</strong> Ask trait-based Yes/No questions to flip down faces.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Two-Player Duel" data-players="2" data-complexity="intermediate">
-            <div class="game-header"><div><span class="category-badge">2-Player</span><h2>Hive</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Completely surround the opponent's Queen Bee. <strong>Play:</strong> Strategic piece movement without a board.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Two-Player Duel" data-players="2" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">2-Player</span><h2>Jaipur</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Be the best merchant. <strong>Play:</strong> Collect and sell cards for high-value tokens.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Table Talk" data-players="3,4,5+" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Table Talk</span><h2>Just One</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Guess the secret word. <strong>Play:</strong> Cooperative; everyone writes a one-word clue. Duplicates are removed!</p></div>
-        </div>
-
-        <div class="game-card" data-category="Strategy" data-players="2,3,4" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Strategy</span><h2>Karuba</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Lead explorers to temples. <strong>Play:</strong> Tile-placement game where you build your own jungle path.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Table Talk" data-players="2,3,4" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Table Talk</span><h2>Love Letter</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Have your letter reach the Princess. <strong>Play:</strong> Hold one card, draw one card, and use effects to knock out rivals.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Strategy" data-players="2,3,4" data-complexity="intermediate">
-            <div class="game-header"><div><span class="category-badge">Strategy</span><h2>Pandemic</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Cure 4 diseases. <strong>Play:</strong> Cooperative team roles; stop outbreaks before time runs out.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Table Talk" data-players="2,3,4,5+" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Table Talk</span><h2>Piles</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Complete 4 sets of 4 matching cards. <strong>Play:</strong> High-speed trading from a messy pile in the center.</p></div>
-        </div>
-
-        <div class="game-card" data-category="The Classics" data-players="2,3,4" data-complexity="intermediate">
-            <div class="game-header"><div><span class="category-badge">Classic</span><h2>Rummikub</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Be the first to empty your rack. <strong>Play:</strong> Form runs or groups using number tiles on the table.</p></div>
-        </div>
-
-        <div class="game-card" data-category="The Classics" data-players="2,3,4,5+" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Classic</span><h2>Scattergories</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> List unique items in specific categories. <strong>Play:</strong> Roll a letter die and race against the timer.</p></div>
-        </div>
-
-        <div class="game-card" data-category="The Classics" data-players="2,3,4" data-complexity="intermediate">
-            <div class="game-header"><div><span class="category-badge">Classic</span><h2>Scrabble</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Score points with crossword-style words. <strong>Play:</strong> Place letter tiles onto the board using premium squares.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Two-Player Duel" data-players="2" data-complexity="intermediate">
-            <div class="game-header"><div><span class="category-badge">2-Player</span><h2>Sky Team</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Safely land your plane at the airport. <strong>Play:</strong> Cooperative dice-placement; players cannot talk during the landing.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Youth Table" data-players="2,3,4,5+" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Youth</span><h2>Sleeping Queens</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Wake up the most Queens. <strong>Play:</strong> Use Kings to wake them, Knights to steal, and Dragons to protect.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Gateway Game" data-players="2,3,4" data-complexity="intermediate">
-            <div class="game-header"><div><span class="category-badge">Gateway</span><h2>Splendor</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Reach 15 Prestige points. <strong>Play:</strong> Collect gem tokens to buy cards that act as permanent resources.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Table Talk" data-players="2,3,4,5+" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Table Talk</span><h2>Sushi Go! Party</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Create the highest-scoring sushi platter. <strong>Play:</strong> Pick a card and pass the hand to the next player.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Gateway Game" data-players="2,3,4,5+" data-complexity="intermediate">
-            <div class="game-header"><div><span class="category-badge">Gateway</span><h2>Ticket to Ride (USA)</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Connect North American cities by train. <strong>Play:</strong> Collect color cards to claim routes and finish tickets.</p></div>
-        </div>
-
-        <div class="game-card" data-category="The Classics" data-players="2,3,4,5+" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Classic</span><h2>Uno</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Empty your hand first. <strong>Play:</strong> Match cards by color or number and use Action cards to mess with rivals.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Strategy" data-players="1,2,3,4,5" data-complexity="advanced">
-            <div class="game-header"><div><span class="category-badge">Strategy</span><h2>Wingspan</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Build the best bird habitat. <strong>Play:</strong> Manage food and eggs to play birds that create engine-building combos.</p></div>
-        </div>
-
-        <div class="game-card" data-category="The Classics" data-players="2,3,4,5+" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Classic</span><h2>Yahtzee</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Score the most points on the scorecard. <strong>Play:</strong> Roll five dice three times to get specific combinations.</p></div>
-        </div>
-
-        <div class="game-card" data-category="Youth Table" data-players="2,3,4,5+" data-complexity="easy">
-            <div class="game-header"><div><span class="category-badge">Youth</span><h2>Zingo</h2></div><div class="arrow">▼</div></div>
-            <div class="game-content"><p><strong>Goal:</strong> Fill your Bingo-style card. <strong>Play:</strong> Race to grab tiles that match your card from the Zinger.</p></div>
+        <div class="game-card" data-category="Strategy" data-players="1-5" data-complexity="Medium">
+            <div class="game-header">
+                <div class="game-info-top">
+                    <span class="badge">Strategy</span>
+                    <span class="badge"><i class="fas fa-users"></i> 1-5 Players</span>
+                    <span class="badge"><i class="fas fa-brain"></i> Medium</span>
+                </div>
+                <div class="game-title-row">
+                    <h2>Wingspan</h2>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+            </div>
+            <div class="game-content">
+                <p>A competitive, bird-collection engine-building game. Beautiful art and relaxing gameplay.</p>
+            </div>
         </div>
 
     </div>
 </div>
 
 <footer class="footer">
+    <div class="social-icons">
+        <a href="https://instagram.com/connectmoregamecafe" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61582265409098" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:connect@connectmoregamecafe.com"><i class="fas fa-envelope"></i></a>
+    </div>
     <div style="margin-bottom: 20px;">
         <a href="index.html">Home</a>
         <a href="about.html">Our Story</a>
         <a href="owners.html">Meet the Family</a>
         <a href="faq.html">FAQ</a>
     </div>
+    <p style="font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Connect More Game Cafe LLC | Franklin, TN</p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
