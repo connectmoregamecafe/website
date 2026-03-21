@@ -1,46 +1,113 @@
-/* Filter Layout Adjustments */
-.filter-master-container {
-    max-width: 800px;
-    margin: 0 auto;
+/* --- SEARCH & FILTER SECTION --- */
+.search-section {
+    background: #ffffff;
+    padding: 40px 20px;
     text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+#gameSearch {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 50px;
+    margin-bottom: 40px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#gameSearch:focus {
+    border-color: var(--diode-blue);
+    box-shadow: 0 0 15px rgba(0,123,255,0.1);
+}
+
+/* Master Container for the 3 Categories */
+.filter-master-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .filter-group {
-    margin-bottom: 25px;
-    padding: 15px;
-    background: #fdfdfd;
-    border-radius: 10px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #f0f0f0;
 }
 
 .filter-group h4 {
-    font-size: 0.75rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
     letter-spacing: 2px;
-    color: var(--dark-blue);
-    margin-bottom: 12px;
+    color: #888;
+    margin-bottom: 15px;
+    text-transform: uppercase;
 }
 
-/* Updated Button State */
+/* The Button Rows */
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filter-btn {
+    background: white;
+    border: 2px solid #eee;
+    padding: 8px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: 0.2s all ease;
+    color: #555;
+}
+
+.filter-btn:hover {
+    border-color: var(--diode-blue);
+    color: var(--diode-blue);
+}
+
+/* Active State for Multi-Select */
 .filter-btn.active {
-    background: var(--diode-blue);
-    color: var(--white);
-    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    background: var(--diode-blue) !important;
+    color: white !important;
+    border-color: var(--diode-blue) !important;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
 }
 
+/* The Clear Button */
 .clear-btn {
     background: #ff4757;
     color: white;
     border: none;
-    padding: 12px 25px;
+    padding: 15px 30px;
     border-radius: 50px;
     font-weight: 700;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 0.8rem;
     letter-spacing: 1px;
     transition: 0.3s;
+    align-self: center; /* Keeps it centered in the column */
 }
 
 .clear-btn:hover {
     background: #e04050;
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.3);
+}
+
+/* Responsive Fix for Mobile */
+@media (max-width: 600px) {
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
 }
