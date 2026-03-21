@@ -1,6 +1,6 @@
 /* --- Global Styles & Brand Colors --- */
 :root {
-    --diode-blue: #007bff;      
+    --diode-blue: #007bff;      /* Now used for Headers */
     --crystal-seas: #00bcd4;    
     --yellow-jasper: #ffc107;   
     --black-cat: #2c3e50;       
@@ -9,7 +9,6 @@
     --text-dark: #333;
     --white: #ffffff;
     
-    /* Category Colors for Game Menu */
     --strategy: #2980b9;
     --party: #8e44ad;
     --classic: #27ae60;
@@ -26,9 +25,9 @@ body {
     line-height: 1.6;
 }
 
-/* --- Header --- */
+/* --- LIGHTER HEADER --- */
 header {
-    background-color: var(--black-cat);
+    background-color: var(--diode-blue); /* Changed from black-cat */
     padding: 60px 20px;
     text-align: center;
     color: var(--white);
@@ -56,7 +55,7 @@ header {
     margin-bottom: 15px;
 }
 
-/* --- Containers & General Cards --- */
+/* --- Containers & Cards --- */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -71,7 +70,7 @@ header {
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* --- Buttons & Navigation --- */
+/* --- Navigation & Buttons --- */
 .nav-container {
     display: flex;
     justify-content: center;
@@ -97,7 +96,7 @@ header {
 
 .btn-secondary {
     background: transparent;
-    border: 2px solid var(--white);
+    border: 2px solid rgba(255,255,255,0.7); /* Lighter border for blue bg */
     color: var(--white);
 }
 
@@ -106,68 +105,60 @@ header {
     opacity: 0.9;
 }
 
-/* --- Profile & Pricing Grid --- */
-.profile-grid {
+/* --- Game Library Grid & Cards --- */
+#gameGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
 }
 
-.profile-card {
+.game-card {
     background: var(--white);
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    border-left: 6px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.schedule-badge {
-    display: inline-block;
-    background: var(--black-cat);
-    color: white;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-size: 1rem;
-    font-weight: 700;
-    margin-top: 15px;
-}
-
-/* --- Story Layout (Mission Page) --- */
-.story-layout {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-.story-text { flex: 2; min-width: 300px; }
-.story-image { flex: 1; min-width: 250px; }
-.story-image img { width: 100%; border-radius: 10px; }
-
-/* --- Game Library (Menu) --- */
-.search-section {
-    max-width: 900px;
-    margin: -40px auto 40px;
-    background: var(--white);
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-#gameSearch { width: 100%; padding: 15px; border-radius: 8px; border: 1px solid #ddd; font-family: inherit; }
-.filter-buttons { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 15px; }
-.filter-btn { padding: 6px 14px; border-radius: 20px; border: 1px solid #ddd; background: white; cursor: pointer; font-size: 0.8rem; }
-.filter-btn.active { background: var(--black-cat); color: white; }
-
-#gameGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-.game-card { background: white; border-radius: 8px; overflow: hidden; border-left: 6px solid #ddd; }
+/* Category Borders */
 .game-card[data-category="Strategy"] { border-left-color: var(--strategy); }
 .game-card[data-category="Party"] { border-left-color: var(--party); }
 .game-card[data-category="Classic"] { border-left-color: var(--classic); }
 .game-card[data-category="Kids"] { border-left-color: var(--kids); }
 
-.game-header { padding: 20px; cursor: pointer; }
-.game-content { max-height: 0; overflow: hidden; transition: 0.3s ease-out; padding: 0 20px; }
-.game-card.active .game-content { max-height: 250px; padding: 10px 20px 20px; }
+.game-header {
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-header h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--black-cat);
+}
+
+.game-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-out;
+    padding: 0 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.game-card.active .game-content {
+    max-height: 150px;
+    padding-bottom: 20px;
+}
+
+.game-card.active .arrow {
+    transform: rotate(180deg);
+}
+
+.arrow { transition: 0.3s; color: #ccc; }
 
 /* --- Footer --- */
 .footer {
@@ -175,13 +166,42 @@ header {
     color: var(--white);
     text-align: center;
     padding: 60px 20px;
-    margin-top: 40px;
 }
-.footer-nav { margin: 20px 0; }
+
 .footer-nav a { color: white; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
 .social-icons { margin-bottom: 20px; }
 .social-icons i { font-size: 1.8rem; margin: 0 15px; color: white; }
 
-@media (max-width: 600px) {
-    .hero-text { font-size: 2.2rem; }
+/* --- Search & Filters --- */
+.search-section {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: -40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+#gameSearch {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.filter-btn {
+    padding: 6px 15px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.2s;
+}
+
+.filter-btn.active {
+    background: var(--diode-blue);
+    color: white;
+    border-color: var(--diode-blue);
 }
