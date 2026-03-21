@@ -2,65 +2,45 @@ document.addEventListener('DOMContentLoaded', () => {
     const gameSearch = document.getElementById('gameSearch');
     const filterBtns = document.querySelectorAll('.filter-btn');
     const gameCards = document.querySelectorAll('.game-card');
+    let currentFilter = 'all';
 
-    let currentCategory = 'all';
-
-    // Core Filtering Function
-    function applyFilters() {
+    function applyAllFilters() {
         const searchTerm = gameSearch.value.toLowerCase();
-
         gameCards.forEach(card => {
             const title = card.querySelector('h2').innerText.toLowerCase();
-            const categoryData = card.getAttribute('data-category'); // e.g., "Strategy"
+            const category = card.getAttribute('data-category').toLowerCase();
             const players = card.getAttribute('data-players').toLowerCase();
+            const complexity = card.getAttribute('data-complexity').toLowerCase();
             
-            // Search logic (Checks title, category, or player count)
-            const matchesSearch = title.includes(searchTerm) || 
-                                  categoryData.toLowerCase().includes(searchTerm) || 
-                                  players.includes(searchTerm);
+            const pool = `${title} ${category} ${players} ${complexity}`;
+            const matchesSearch = pool.includes(searchTerm);
             
-            // Button logic
-            const matchesCategory = (currentCategory === 'all' || categoryData.includes(currentCategory));
+            const matchesButton = (currentFilter === 'all' || 
+                                   category.includes(currentFilter.toLowerCase()) || 
+                                   players.includes(currentFilter.toLowerCase()) || 
+                                   complexity.includes(currentFilter.toLowerCase()));
 
-            if (matchesSearch && matchesCategory) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
+            card.style.display = (matchesSearch && matchesButton) ? "block" : "none";
         });
     }
 
-    // Event Listener for Search Typing
-    if (gameSearch) {
-        gameSearch.addEventListener('input', applyFilters);
-    }
+    if (gameSearch) gameSearch.addEventListener('input', applyAllFilters);
 
-    // Event Listener for Category Buttons
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Update button UI
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-
-            // Set category and filter
-            currentCategory = btn.getAttribute('data-filter');
-            applyFilters();
+            currentFilter = btn.getAttribute('data-filter');
+            applyAllFilters();
         });
     });
 
-    // Event Listener for Accordion Dropdowns
     gameCards.forEach(card => {
         const header = card.querySelector('.game-header');
         header.addEventListener('click', () => {
             const wasActive = card.classList.contains('active');
-            
-            // Close all open cards
             gameCards.forEach(c => c.classList.remove('active'));
-            
-            // If the clicked card wasn't already open, open it
-            if (!wasActive) {
-                card.classList.add('active');
-            }
+            if (!wasActive) card.classList.add('active');
         });
     });
 });
