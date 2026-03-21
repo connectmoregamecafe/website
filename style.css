@@ -1,118 +1,162 @@
-/* --- CONNECT MORE MASTER STYLES --- */
 :root {
-    --diode-blue: #0045B0;
-    --crystal-seas: #5dafce;
-    --yellow-jasper: #F4D896;
-    --black-cat: #413F42;
-    --bright-white: #F4F5F0;
+    --diode-blue: #007bff;
+    --yellow-jasper: #f4c430;
+    --background-gray: #f8f9fa;
+    --text-dark: #333;
+    --white: #ffffff;
 }
 
-* { box-sizing: border-box; }
-
-body { 
-    font-family: 'Montserrat', sans-serif; 
-    background-color: var(--bright-white); 
-    color: var(--black-cat); 
-    line-height: 1.6;
-    margin: 0; padding: 0;
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: var(--background-gray);
+    color: var(--text-dark);
 }
 
-header { 
-    background: var(--diode-blue); 
-    color: white; 
-    padding: 60px 20px; 
+header {
+    background-color: var(--diode-blue);
+    color: var(--white);
+    padding: 40px 20px;
     text-align: center;
 }
 
-.piccenter { width: 200px; display: block; margin: 0 auto; }
-.hero-text { font-size: 2.5rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
-.tagline { color: var(--yellow-jasper); font-weight: 700; letter-spacing: 1px; }
-
-.container { max-width: 900px; margin: 0 auto; padding: 20px; }
-
-.card { 
-    background: white; 
-    padding: 30px; 
-    border-radius: 20px; 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
-    margin-bottom: 30px; 
-    border-top: 6px solid var(--diode-blue); 
+.tagline {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
 }
 
-/* --- STORY LAYOUT & IMAGE FIX --- */
-.story-layout {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap; /* Allows stacking on mobile */
+.hero-text {
+    font-size: 2.5rem;
+    margin: 0 0 20px 0;
 }
 
-.story-text { flex: 1; min-width: 300px; }
-
-.story-image { flex: 1; min-width: 300px; text-align: center; }
-
-.story-image img { 
-    width: 100%; 
-    max-width: 400px; /* This keeps the photo from being huge */
-    height: auto; 
-    border-radius: 15px; 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.container {
+    max-width: 900px;
+    margin: -30px auto 40px;
+    padding: 0 20px;
 }
 
-/* --- GRIDS & CARDS --- */
-.profile-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 20px; 
+/* Search and Filters */
+.card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--yellow-jasper);
 }
 
-.profile-card { 
-    background: white; 
-    padding: 30px; 
-    border-radius: 20px; 
-    text-align: center; 
-    border-top: 6px solid var(--diode-blue);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+.search-container input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
-/* --- BUTTONS --- */
-.nav-container { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin: 30px 0; }
-
-.btn { 
-    display: inline-block; 
-    background: var(--yellow-jasper); 
-    color: var(--diode-blue); 
-    padding: 12px 25px; 
-    border-radius: 50px; 
-    text-decoration: none; 
-    font-weight: 700; 
-    transition: 0.3s;
+.filter-label {
+    font-weight: bold;
+    color: var(--diode-blue);
+    margin-bottom: 10px;
+    display: block;
 }
 
-.btn-secondary { background: transparent; color: var(--diode-blue); border: 2px solid var(--diode-blue); }
-.btn:hover { transform: translateY(-2px); opacity: 0.9; }
-
-.schedule-badge {
+.filter-chip {
     display: inline-block;
-    background: var(--crystal-seas);
-    color: white;
-    padding: 5px 15px;
+    background: #eee;
+    padding: 5px 10px;
     border-radius: 20px;
+    margin: 3px 0;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.filter-chip:hover {
+    background: #e0e0e0;
+}
+
+/* Game Cards */
+#guideList {
+    margin-top: 30px;
+}
+
+.game-card {
+    background: var(--white);
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.game-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.game-header:hover {
+    background: #fdfdfd;
+}
+
+.game-header h2 {
+    margin: 5px 0 0 0;
+    font-size: 1.2rem;
+    color: var(--diode-blue);
+}
+
+.category-badge {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #888;
+}
+
+.arrow {
     font-size: 0.8rem;
-    font-weight: 700;
+    transition: transform 0.3s;
+    color: #ccc;
 }
 
-/* --- FOOTER --- */
-.footer { 
-    background: var(--black-cat); 
-    color: white; 
-    padding: 40px 20px; 
-    text-align: center; 
-    margin-top: 40px; 
+/* Expanded State */
+.game-content {
+    display: none;
+    padding: 0 20px 20px;
+    border-top: 1px solid #eee;
+    background: #fafafa;
 }
-.footer a { color: var(--yellow-jasper); text-decoration: none; margin: 0 10px; font-weight: bold; }
-.social-icons a { color: white; font-size: 1.5rem; margin: 0 10px; }
 
-@media (max-width: 600px) {
-    .story-layout { text-align: center; }
+.game-card.active .game-content {
+    display: block;
+}
+
+.game-card.active .arrow {
+    transform: rotate(180deg);
+}
+
+.rule-item {
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 40px;
+    background: #333;
+    color: white;
+}
+
+.footer a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 0.9rem;
 }
