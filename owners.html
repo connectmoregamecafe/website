@@ -8,15 +8,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Specific styling for the circular profile photos */
+        /* Profile Grid Logic to keep them side-by-side */
+        .profile-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .profile-card {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 8px solid var(--diode-blue);
+        }
+
         .img-container {
             width: 180px;
             height: 180px;
             border-radius: 50%;
             overflow: hidden;
-            margin: 0 auto 20px;
+            margin: 0 auto 25px;
             border: 5px solid var(--yellow-jasper);
-            display: block;
             background-color: #eee; 
         }
 
@@ -25,12 +44,30 @@
             height: 100%;
             object-fit: cover;
         }
+
+        .schedule-badge {
+            display: inline-block;
+            background: var(--black-cat);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 4px;
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>The Faces Behind the Games</h1>
+<header style="background-color: var(--diode-blue);">
+    <a href="index.html"><img class="piccenter" src="logo.png" alt="Connect More Logo"></a>
+    <div class="hero-text">MEET THE FAMILY</div>
+    <div class="tagline">THE FACES BEHIND THE GAMES</div>
+    <div class="nav-container">
+        <a href="index.html" class="btn btn-secondary">BACK TO HOME</a>
+        <a href="about.html" class="btn">OUR STORY</a>
+    </div>
 </header>
 
 <div class="container">
@@ -39,10 +76,10 @@
             <div class="img-container">
                 <img src="jake-photo.jpg" alt="Jake Habegger" style="transform: scale(1.1); transform-origin: center 0%;">
             </div>
-            <h2>Jake Habegger</h2>
-            <div class="schedule-badge" style="margin-bottom: 8px;">Operations Director</div>
-            <div class="schedule-badge" style="margin-bottom: 15px;">Lead Game Connector</div>
-            <div class="bio-text" style="text-align: left;">
+            <h2 style="color: var(--black-cat); margin-bottom: 10px;">Jake Habegger</h2>
+            <div class="schedule-badge">Operations Director</div>
+            <div class="schedule-badge">Lead Game Connector</div>
+            <div class="bio-text" style="text-align: left; margin-top: 20px;">
                 <p>With over fifteen years as a dedicated educator, Jake brings a profound understanding of fostering interactive learning environments. Jake curates our game library and leads daily operations.</p>
             </div>
         </div>
@@ -51,18 +88,18 @@
             <div class="img-container">
                 <img src="kate-photo.jpg" alt="Kate Habegger" style="object-position: center 10%;">
             </div>
-            <h2>Kate Habegger</h2>
-            <div class="schedule-badge" style="margin-bottom: 8px;">Experience Director</div>
-            <div class="schedule-badge" style="margin-bottom: 15px;">Administrative Director</div>
-            <div class="bio-text" style="text-align: left;">
+            <h2 style="color: var(--black-cat); margin-bottom: 10px;">Kate Habegger</h2>
+            <div class="schedule-badge">Experience Director</div>
+            <div class="schedule-badge">Administrative Director</div>
+            <div class="bio-text" style="text-align: left; margin-top: 20px;">
                 <p>A social worker and operations manager with over fifteen years of experience, Kate is committed to connection and inclusivity. Kate leads our efforts in human resources and financial oversight.</p>
             </div>
         </div>
     </div>
 
-    <div style="text-align: center; margin: 60px 0 30px;">
-        <h2 style="color: var(--diode-blue);">The Next Generation</h2>
-        <p>The official game-testers and joy-bringers of Connect More.</p>
+    <div style="text-align: center; margin: 80px 0 40px;">
+        <h2 style="color: var(--diode-blue); font-size: 2rem; text-transform: uppercase; letter-spacing: 2px;">The Next Generation</h2>
+        <p style="font-size: 1.1rem; color: var(--black-cat);">The official game-testers and joy-bringers of Connect More.</p>
     </div>
 
     <div class="profile-grid">
@@ -70,9 +107,9 @@
             <div class="img-container">
                 <img src="addy-photo.jpg" alt="Addy Habegger" style="object-position: center 20%;">
             </div>
-            <h2>Addy Habegger</h2>
-            <div class="schedule-badge" style="background-color: var(--black-cat); margin-bottom: 15px;">Lead Hostess</div>
-            <div class="bio-text" style="text-align: left;">
+            <h2 style="color: var(--black-cat); margin-bottom: 10px;">Addy Habegger</h2>
+            <div class="schedule-badge" style="background-color: var(--crystal-seas);">Lead Hostess</div>
+            <div class="bio-text" style="text-align: left; margin-top: 20px;">
                 <p>Addy ensures every guest feels like a regular the moment they walk in. She's the master of our table waitlist and hospitality.</p>
             </div>
         </div>
@@ -81,17 +118,12 @@
             <div class="img-container">
                 <img src="emma-kate-photo.jpg" alt="Emma Kate Habegger" style="transform: scale(1.3); transform-origin: center 10%;">
             </div>
-            <h2>Emma Kate Habegger</h2>
-            <div class="schedule-badge" style="background-color: var(--black-cat); margin-bottom: 15px;">Game Connector</div>
-            <div class="bio-text" style="text-align: left;">
+            <h2 style="color: var(--black-cat); margin-bottom: 10px;">Emma Kate Habegger</h2>
+            <div class="schedule-badge" style="background-color: var(--crystal-seas);">Game Connector</div>
+            <div class="bio-text" style="text-align: left; margin-top: 20px;">
                 <p>Emma Kate has a keen sense for strategy. She’s your go-to when you need a game recommendation that gets the whole table talking.</p>
             </div>
         </div>
-    </div>
-
-    <div class="nav-container">
-        <a href="index.html" class="btn">Back to Home</a>
-        <a href="about.html" class="btn btn-secondary" style="border-color: var(--diode-blue); color: var(--diode-blue);">Our Story</a>
     </div>
 </div>
 
@@ -102,9 +134,9 @@
         <a href="https://www.facebook.com/profile.php?id=61582265409098" target="_blank"><i class="fab fa-facebook"></i></a>
         <a href="mailto:connect@connectmoregamecafe.com"><i class="fas fa-envelope"></i></a>
     </div>
-    <div style="margin-bottom: 20px;">
-        <a href="index.html">Home</a>
+    <div class="footer-nav">
         <a href="about.html">Our Story</a>
+        <a href="owners.html">Meet the Family</a>
         <a href="game_menu.html">Game Library</a>
         <a href="faq.html">FAQ</a>
     </div>
