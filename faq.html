@@ -3,38 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ | Connect More</title>
+    <title>FAQ | Connect More Game Cafe</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>Frequently Asked Questions</h1>
+<header style="background-color: var(--diode-blue);">
+    <a href="index.html"><img class="piccenter" src="logo.png" alt="Connect More Logo"></a>
+    <div class="hero-text">QUESTIONS?</div>
+    <div class="tagline">WE HAVE ANSWERS</div>
+    <div class="nav-container">
+        <a href="index.html" class="btn btn-secondary">BACK TO HOME</a>
+        <a href="game_menu.html" class="btn">GAME LIBRARY</a>
+    </div>
 </header>
 
 <div class="container">
-    <div class="card">
-        <h3 style="color: var(--diode-blue);">What is a Board Game Cafe?</h3>
-        <p>A social space to enjoy curated games with drinks/snacks. Designed to help people <strong>Connect More</strong>.</p>
-    </div>
-    <div class="card">
-        <h3 style="color: var(--diode-blue);">Do you teach people how to play?</h3>
-        <p>Yes! Our "Game Connectors" help you skip the manual and start playing immediately.</p>
-    </div>
+    <div id="faqGrid" class="list-view">
+        
+        <div class="game-card">
+            <div class="game-header">
+                <div class="game-title-row">
+                    <h2>What exactly is a Board Game Cafe?</h2>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+            </div>
+            <div class="game-content">
+                <p>A board game cafe is a social space designed for friends, families, and even strangers to gather over a shared activity. Unlike a traditional cafe where you might sit with a laptop, we encourage you to put the screens away. You pay a small cover fee for access to our curated library of 44+ games, and we provide the snacks, drinks, and expertise to make sure you have a great time.</p>
+            </div>
+        </div>
 
-    <div class="nav-container">
-        <a href="index.html" class="btn">Back to Home</a>
+        <div class="game-card">
+            <div class="game-header">
+                <div class="game-title-row">
+                    <h2>Do you teach people how to play the games?</h2>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+            </div>
+            <div class="game-content">
+                <p>Absolutely! That is the "Connect More" difference. Our **Game Connectors** (like Jake and Emma Kate) are experts at our library. If you find a game you like but don't want to spend 30 minutes reading a manual, just ask! We love helping you skip the rules and start playing immediately.</p>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-header">
+                <div class="game-title-row">
+                    <h2>Is this a permanent location or a pop-up?</h2>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+            </div>
+            <div class="game-content">
+                <p>We are currently operating as a high-end **pop-up experience** in Franklin, TN. We partner with local venues to host dedicated gaming nights. This allows us to bring the community together in different spaces while we scout for our perfect permanent home!</p>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-header">
+                <div class="game-title-row">
+                    <h2>Is Connect More kid-friendly?</h2>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+            </div>
+            <div class="game-content">
+                <p>Very much so! We have a dedicated "Kids" section in our library with games specifically chosen for younger players. We believe that learning to win and lose gracefully is a great life skill, and board games are the perfect way to teach it.</p>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-header">
+                <div class="game-title-row">
+                    <h2>Can I bring my own games?</h2>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+            </div>
+            <div class="game-content">
+                <p>You are more than welcome to bring your favorites! However, we think you'll find something new to love in our curated collection. Please note that the "Game Cover" fee still applies to help us keep our space open and our staff ready to assist.</p>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-header">
+                <div class="game-title-row">
+                    <h2>What kind of food and drinks do you serve?</h2>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+            </div>
+            <div class="game-content">
+                <p>We focus on "finger-friendly" snacks that won't mess up the game boards. Think local coffees, specialty sodas, and curated treats that keep your energy up for a long strategy session.</p>
+            </div>
+        </div>
+
     </div>
 </div>
 
 <footer class="footer">
-    <div style="margin-bottom: 20px;">
-        <a href="index.html">Home</a>
+    <h3>Stay Connected</h3>
+    <div class="social-icons">
+        <a href="https://instagram.com/connectmoregamecafe" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61582265409098" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:connect@connectmoregamecafe.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="footer-nav">
         <a href="about.html">Our Story</a>
         <a href="owners.html">Meet the Family</a>
         <a href="game_menu.html">Game Library</a>
+        <a href="faq.html">FAQ</a>
     </div>
+    <p style="font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Connect More Game Cafe LLC | Franklin, TN</p>
 </footer>
+
+<script src="script.js"></script>
 </body>
 </html>
