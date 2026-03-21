@@ -1,8 +1,8 @@
 /* --- VARIABLES --- */
 :root {
     --diode-blue: #007bff;
-    --dark-blue: #002b5c; /* Cooler, Dark Blue Card Vibe */
-    --crystal-seas: #00a8cc;
+    --dark-blue: #002b5c;
+    --crystal-seas: #00a8cc; /* Our Light Blue */
     --yellow-jasper: #f4c430;
     --black-cat: #222;
     --white: #ffffff;
@@ -49,7 +49,7 @@ header {
     text-transform: uppercase;
 }
 
-/* --- SEARCH SECTION (Centered & Standout) --- */
+/* --- SEARCH SECTION --- */
 .search-section {
     padding: 50px 20px;
     text-align: center;
@@ -87,7 +87,10 @@ header {
     font-weight: 700;
     font-size: 0.9rem;
     margin: 8px;
+    transition: 0.2s;
 }
+
+.btn:hover { opacity: 0.9; transform: scale(1.05); }
 
 .btn-secondary {
     background-color: transparent;
@@ -95,7 +98,7 @@ header {
     color: var(--white);
 }
 
-/* --- GAME CARDS (Dark Blue Vibe) --- */
+/* --- GAME CARDS (Lighter Blue Vibe) --- */
 .container {
     max-width: 900px;
     margin: 0 auto 60px;
@@ -103,17 +106,13 @@ header {
 }
 
 .game-card {
-    background-color: var(--dark-blue);
+    background-color: var(--crystal-seas); /* LIGHT BLUE SHADE */
     color: var(--white);
     margin-bottom: 20px;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     transition: transform 0.2s ease;
-}
-
-.game-card:hover {
-    transform: translateY(-2px);
 }
 
 .game-header {
@@ -133,11 +132,10 @@ header {
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     padding: 5px 12px;
     border-radius: 6px;
-    color: var(--yellow-jasper);
-    border: 1px solid rgba(244, 196, 48, 0.3);
+    color: var(--white);
 }
 
 .game-title-row {
@@ -164,23 +162,12 @@ header {
 .game-content {
     display: none;
     padding: 0 30px 30px;
-    background-color: rgba(0, 0, 0, 0.25);
-    color: #f0f0f0;
+    background-color: rgba(0, 0, 0, 0.15);
+    color: #ffffff;
     line-height: 1.8;
-    font-size: 1rem;
 }
 
 .game-card.active .game-content { display: block; }
-
-/* --- ABOUT PAGE FIXES --- */
-.about-image {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    display: block;
-    margin: 30px auto;
-    border-radius: 12px;
-}
 
 /* --- FOOTER --- */
 .footer {
