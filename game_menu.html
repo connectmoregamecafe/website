@@ -20,17 +20,18 @@
 </header>
 
 <div class="search-section">
-    <input type="text" id="gameSearch" placeholder="Search by name, category, or player count...">
+    <input type="text" id="gameSearch" placeholder="Search by name, category, players, or difficulty...">
     
     <div class="filter-container">
-        <p style="margin-bottom: 15px; font-weight: 700; font-size: 0.8rem; letter-spacing: 1px; color: var(--diode-blue);">FILTER BY CATEGORY:</p>
+        <p style="margin-bottom: 15px; font-weight: 700; font-size: 0.8rem; letter-spacing: 1px; color: var(--diode-blue);">QUICK FILTERS:</p>
         <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="Strategy">Strategy</button>
             <button class="filter-btn" data-filter="Party">Party</button>
-            <button class="filter-btn" data-filter="Classic">Classic</button>
             <button class="filter-btn" data-filter="Kids">Kids</button>
-            <button class="filter-btn" data-filter="Family">Family</button>
+            <button class="filter-btn" data-filter="2 Players">2-Player</button>
+            <button class="filter-btn" data-filter="Intermediate">Intermediate</button>
+            <button class="filter-btn" data-filter="Advanced">Advanced</button>
         </div>
     </div>
 </div>
@@ -39,662 +40,222 @@
     <div id="gameGrid">
 
         <div class="game-card" data-category="Strategy" data-players="2-4" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Strategy</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-4 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>10 Days in the USA</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Strategy</span><span class="badge">2-4 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>10 Days in the USA</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>A travel-themed puzzle across the country. <br><br> Arrange a 10-day trip using state and transportation tiles to win.</p></div>
         </div>
 
         <div class="game-card" data-category="Kids" data-players="2-4" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Kids / Dexterity</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-4 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Animal Upon Animal</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Kids</span><span class="badge">2-4 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Animal Upon Animal</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>A classic wooden stacking game for the family. <br><br> Be the first to place all your animals on the pyramid without knocking it over.</p></div>
         </div>
 
         <div class="game-card" data-category="Party" data-players="4-10" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Party</span>
-                    <span class="badge"><i class="fas fa-users"></i> 4-10 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Apples to Apples</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Party</span><span class="badge">4-10 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Apples to Apples</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>The game of hilarious comparisons. <br><br> Select the card from your hand that best fits the judge’s description.</p></div>
         </div>
 
         <div class="game-card" data-category="Strategy" data-players="2-4" data-complexity="Intermediate">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Strategy</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-4 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Intermediate</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Azul</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Strategy</span><span class="badge">2-4 Players</span><span class="badge">Intermediate</span></div><div class="game-title-row"><h2>Azul</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Draft beautiful tiles to decorate the Royal Palace. <br><br> Simple to learn but offers deep strategic planning for competitive players.</p></div>
         </div>
 
         <div class="game-card" data-category="Classic" data-players="2" data-complexity="Medium">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Classic</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Medium</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Backgammon</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Classic</span><span class="badge">2 Players</span><span class="badge">Medium</span></div><div class="game-title-row"><h2>Backgammon</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>One of the oldest board games in existence. <br><br> Combine luck from dice rolls with strategy to move your checkers off the board.</p></div>
         </div>
 
         <div class="game-card" data-category="Classic" data-players="2" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Classic</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Battleship</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Classic</span><span class="badge">2 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Battleship</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Seek and destroy your opponent's fleet. <br><br> A game of hidden coordinates and tactical strikes on the high seas.</p></div>
         </div>
 
         <div class="game-card" data-category="Family" data-players="2-5" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Family</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-5 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Bears and the Bees</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Family</span><span class="badge">2-5 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Bears and the Bees</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>A colorful card-laying game for the hive. <br><br> Build a honeycomb while avoiding bears and using special bee cards to win.</p></div>
         </div>
 
         <div class="game-card" data-category="Party" data-players="2-8" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Party / Betting</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-8 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Camel Up</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Party</span><span class="badge">2-8 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Camel Up</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Bet on the craziest camel race you've ever seen. <br><br> Watch camels stack and hop over each other as you race to the finish line.</p></div>
         </div>
 
         <div class="game-card" data-category="Kids" data-players="2-4" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Kids</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-4 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Candy Land</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Kids</span><span class="badge">2-4 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Candy Land</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>A magical journey through a world of sweets. <br><br> Perfect for the youngest gamers to learn colors and turn-taking.</p></div>
         </div>
 
         <div class="game-card" data-category="Strategy" data-players="2-5" data-complexity="Intermediate">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Strategy</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-5 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Intermediate</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Carcassonne</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Strategy</span><span class="badge">2-5 Players</span><span class="badge">Intermediate</span></div><div class="game-title-row"><h2>Carcassonne</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Build the medieval landscape of France tile by tile. <br><br> Claim cities, roads, and fields with your meeple followers to score points.</p></div>
         </div>
 
         <div class="game-card" data-category="Strategy" data-players="3-4" data-complexity="Medium">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Strategy</span>
-                    <span class="badge"><i class="fas fa-users"></i> 3-4 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Medium</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Catan</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Strategy</span><span class="badge">3-4 Players</span><span class="badge">Medium</span></div><div class="game-title-row"><h2>Catan</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>The classic social strategy game of discovery. <br><br> Trade resources with your neighbors to build settlements and roads on the island.</p></div>
         </div>
 
         <div class="game-card" data-category="Classic" data-players="2" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Classic</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Checkers</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Classic</span><span class="badge">2 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Checkers</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>The timeless game of jumping and capturing. <br><br> Simple enough for kids, with room for strategic mastery for adults.</p></div>
         </div>
 
         <div class="game-card" data-category="Classic" data-players="2" data-complexity="Advanced">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Classic</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Advanced</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Chess</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Classic</span><span class="badge">2 Players</span><span class="badge">Advanced</span></div><div class="game-title-row"><h2>Chess</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>The ultimate game of strategy and calculation. <br><br> No luck, just pure tactical combat between two opposing kingdoms.</p></div>
         </div>
 
         <div class="game-card" data-category="Kids" data-players="2-4" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Kids</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-4 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Chutes and Ladders</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Kids</span><span class="badge">2-4 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Chutes and Ladders</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>A fun, simple way for kids to race to the top. <br><br> Learn about rewards and consequences while navigating the slides and ladders.</p></div>
         </div>
 
         <div class="game-card" data-category="Kids" data-players="2-6" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Kids / Dexterity</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-6 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Clack!</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Kids</span><span class="badge">2-6 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Clack!</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>A magnetic, fast-paced game of pattern matching. <br><br> Roll the dice and grab the matching discs before anyone else!</p></div>
         </div>
 
         <div class="game-card" data-category="Classic" data-players="2-6" data-complexity="Medium">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Classic / Deduction</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-6 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Medium</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Clue</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Classic</span><span class="badge">2-6 Players</span><span class="badge">Medium</span></div><div class="game-title-row"><h2>Clue</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Solve the classic mystery at the manor. <br><br> Was it Colonel Mustard in the library with the candlestick? Use deduction to find out.</p></div>
         </div>
 
         <div class="game-card" data-category="Party" data-players="2-8" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Party</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-8 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Codenames</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Party</span><span class="badge">2-8 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Codenames</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Identify your secret agents using one-word clues. <br><br> Spymasters must lead their team to victory without hitting the assassin.</p></div>
         </div>
 
         <div class="game-card" data-category="Classic" data-players="2" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Classic</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Connect 4</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Classic</span><span class="badge">2 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Connect 4</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Drop your discs and block your opponent. <br><br> Be the first to get four in a row horizontally, vertically, or diagonally.</p></div>
         </div>
 
         <div class="game-card" data-category="Family" data-players="3-5" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Family / Deduction</span>
-                    <span class="badge"><i class="fas fa-users"></i> 3-5 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Dinosaur Tea Party</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Family</span><span class="badge">3-5 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Dinosaur Tea Party</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>A whimsical game of dinosaur deduction. <br><br> Ask questions to figure out which fancy dino everyone is pretending to be.</p></div>
         </div>
 
         <div class="game-card" data-category="Party" data-players="3-6" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Party</span>
-                    <span class="badge"><i class="fas fa-users"></i> 3-6 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Dixit</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Party</span><span class="badge">3-6 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Dixit</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Use dreamlike illustrations to tell a unique story. <br><br> Use your imagination and bluff your opponents in this beautiful creative game.</p></div>
         </div>
 
         <div class="game-card" data-category="Party" data-players="2-4" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Party / Speed</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-4 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Dutch Blitz</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Party</span><span class="badge">2-4 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Dutch Blitz</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>A fast-paced card game where everyone plays at once. <br><br> Empty your Blitz pile as quickly as possible to win the round!</p></div>
         </div>
 
         <div class="game-card" data-category="Party" data-players="2-5" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Party</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-5 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Exploding Kittens</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Party</span><span class="badge">2-5 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Exploding Kittens</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>A kitty-powered version of Russian Roulette. <br><br> Play cards to skip, attack, or defuse the kittens before they go boom.</p></div>
         </div>
 
         <div class="game-card" data-category="Family" data-players="2-8" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Family / Reflex</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-8 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Ghost Blitz</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Family</span><span class="badge">2-8 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Ghost Blitz</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Lightning-fast reaction game for all ages. <br><br> Spot the correct object from the card and grab it before your friends do.</p></div>
         </div>
 
         <div class="game-card" data-category="Classic" data-players="2" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Classic / Deduction</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Guess Who</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Classic</span><span class="badge">2 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Guess Who</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Find out which person your opponent is holding. <br><br> Ask yes-or-no questions to eliminate characters from your board.</p></div>
         </div>
 
         <div class="game-card" data-category="Strategy" data-players="2" data-complexity="Medium">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Strategy</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Medium</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Hive</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Strategy</span><span class="badge">2 Players</span><span class="badge">Medium</span></div><div class="game-title-row"><h2>Hive</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>A bug-themed abstract game for two. <br><br> Surround your opponent's Queen Bee to win—no board required!</p></div>
         </div>
 
         <div class="game-card" data-category="Family" data-players="3-6" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Family / Deduction</span>
-                    <span class="badge"><i class="fas fa-users"></i> 3-6 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Hooky</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Family</span><span class="badge">3-6 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Hooky</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>A clever game of hidden letters. <br><br> Deduce which letters are missing while playing cards from your own hand.</p></div>
         </div>
 
         <div class="game-card" data-category="Strategy" data-players="2" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Strategy</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Jaipur</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Strategy</span><span class="badge">2 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Jaipur</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>A fast-paced market card game for two. <br><br> Trade, buy, and sell goods to become the Maharaja's personal trader.</p></div>
         </div>
 
         <div class="game-card" data-category="Party" data-players="3-7" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Party / Co-op</span>
-                    <span class="badge"><i class="fas fa-users"></i> 3-7 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Just One</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Party</span><span class="badge">3-7 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Just One</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Work together to guess secret words. <br><br> But if two people give the same clue, it's discarded, making communication tricky!</p></div>
         </div>
 
         <div class="game-card" data-category="Family" data-players="2-4" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Family / Tile-laying</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-4 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Karuba</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Family</span><span class="badge">2-4 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Karuba</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Race to get your adventurers to the jungle temples. <br><br> Everyone uses the same tiles, but your unique path determines who wins.</p></div>
         </div>
 
         <div class="game-card" data-category="Party" data-players="2-4" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Party / Deduction</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-4 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Love Letter</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Party</span><span class="badge">2-4 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Love Letter</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>A quick-fire game of risk and deduction. <br><br> Use the palace staff to deliver your message to the Princess and outlast others.</p></div>
         </div>
 
         <div class="game-card" data-category="Strategy" data-players="2-4" data-complexity="Medium">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Strategy / Co-op</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-4 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Medium</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Pandemic</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Strategy</span><span class="badge">2-4 Players</span><span class="badge">Medium</span></div><div class="game-title-row"><h2>Pandemic</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Work as a team to stop global diseases. <br><br> Travel the world, treat infections, and find the four cures before it's too late.</p></div>
         </div>
 
         <div class="game-card" data-category="Family" data-players="2-8" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Family / Speed</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-8 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Piles</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Family</span><span class="badge">2-8 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Piles</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>A frantic race to complete your sets. <br><br> Exchange cards quickly to match sets of clothes and pack your suitcase first.</p></div>
         </div>
 
         <div class="game-card" data-category="Classic" data-players="2-4" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Classic</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-4 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Rummikub</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Classic</span><span class="badge">2-4 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Rummikub</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Arrange numbered tiles into runs and groups. <br><br> A brilliant game of tile manipulation and strategic planning for the whole family.</p></div>
         </div>
 
         <div class="game-card" data-category="Strategy" data-players="2-4" data-complexity="Medium">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Strategy / Tile-laying</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-4 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Medium</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Sanibel</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Strategy</span><span class="badge">2-4 Players</span><span class="badge">Medium</span></div><div class="game-title-row"><h2>Sanibel</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Collect beautiful shells on the shore. <br><br> Build your island collection in this relaxing yet strategically deep tile-drafting game.</p></div>
         </div>
 
         <div class="game-card" data-category="Party" data-players="2-6" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Party</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-6 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Scattergories</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Party</span><span class="badge">2-6 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Scattergories</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Think of words that fit specific categories. <br><br> Your answers must start with the chosen letter—unique answers get more points!</p></div>
         </div>
 
         <div class="game-card" data-category="Classic" data-players="2-4" data-complexity="Medium">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Classic</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-4 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Medium</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Scrabble</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Classic</span><span class="badge">2-4 Players</span><span class="badge">Medium</span></div><div class="game-title-row"><h2>Scrabble</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>The world's favorite word-building game. <br><br> Build crosswords on the board using letter tiles to maximize your score.</p></div>
         </div>
 
         <div class="game-card" data-category="Strategy" data-players="2" data-complexity="Medium">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Strategy / Co-op</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Medium</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Sky Team</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Strategy</span><span class="badge">2 Players</span><span class="badge">Medium</span></div><div class="game-title-row"><h2>Sky Team</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Work together to land a plane safely. <br><br> A Pilot and Co-pilot must manage dice and communicate silently to succeed.</p></div>
         </div>
 
         <div class="game-card" data-category="Kids" data-players="2-5" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Kids / Card Game</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-5 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Sleeping Queens</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Kids</span><span class="badge">2-5 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Sleeping Queens</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>A royal game of cards and strategy. <br><br> Use Kings to waken the queens, and Knights to protect them from potions.</p></div>
         </div>
 
         <div class="game-card" data-category="Strategy" data-players="2-4" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Strategy</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-4 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Splendor</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Strategy</span><span class="badge">2-4 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Splendor</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Collect gems and buy development cards. <br><br> Build your jewel empire to earn prestige points in this elegant game.</p></div>
         </div>
 
         <div class="game-card" data-category="Party" data-players="2-8" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Party</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-8 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Sushi Go! Party</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Party</span><span class="badge">2-8 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Sushi Go! Party</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>A card-drafting game with a delicious theme. <br><br> Pick the best sushi combinations to outscore your friends at the table.</p></div>
         </div>
 
         <div class="game-card" data-category="Strategy" data-players="2-5" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Strategy</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-5 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Ticket to Ride (USA)</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Strategy</span><span class="badge">2-5 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Ticket to Ride (USA)</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Claim railway routes across the United States. <br><br> Complete your tickets and build the longest train to become a tycoon.</p></div>
         </div>
 
         <div class="game-card" data-category="Classic" data-players="2-10" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Classic / Card Game</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-10 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Uno</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Classic</span><span class="badge">2-10 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Uno</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Match colors and numbers to empty your hand. <br><br> Thwart your opponents with action cards, and don’t forget to shout "Uno!"</p></div>
         </div>
 
         <div class="game-card" data-category="Strategy" data-players="1-5" data-complexity="Medium">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Strategy</span>
-                    <span class="badge"><i class="fas fa-users"></i> 1-5 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Medium</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Wingspan</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Strategy</span><span class="badge">1-5 Players</span><span class="badge">Medium</span></div><div class="game-title-row"><h2>Wingspan</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Attract beautiful birds to your wildlife preserve. <br><br> A relaxing engine-building game where birds provide unique bonuses.</p></div>
         </div>
 
         <div class="game-card" data-category="Classic" data-players="2-6" data-complexity="Easy">
-            <div class="game-header">
-                <div class="game-info-top">
-                    <span class="badge">Classic / Dice</span>
-                    <span class="badge"><i class="fas fa-users"></i> 2-6 Players</span>
-                    <span class="badge"><i class="fas fa-brain"></i> Easy</span>
-                </div>
-                <div class="game-title-row">
-                    <h2>Yahtzee</h2>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </div>
-            </div>
+            <div class="game-header"><div class="game-info-top"><span class="badge">Classic</span><span class="badge">2-6 Players</span><span class="badge">Easy</span></div><div class="game-title-row"><h2>Yahtzee</h2><i class="fas fa-chevron-down arrow"></i></div></div>
             <div class="game-content"><p>Roll the dice for high-scoring combinations. <br><br> Will you play it safe with a full house or go for the big Yahtzee?</p></div>
         </div>
 
