@@ -6,7 +6,7 @@
     --text-dark: #333;
     --white: #ffffff;
     
-    /* Category Colors */
+    /* Game Category Colors */
     --strategy: #2980b9;
     --party: #8e44ad;
     --classic: #27ae60;
@@ -77,16 +77,19 @@ header {
     transition: 0.3s;
     font-size: 0.9rem;
     display: inline-block;
+    cursor: pointer;
 }
 
 .btn-primary {
     background-color: var(--secondary-color);
     color: var(--white);
+    border: none;
 }
 
 .btn-secondary {
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
+    background: transparent;
 }
 
 .btn:hover {
@@ -111,9 +114,10 @@ header {
     font-size: 2.2rem;
     color: var(--primary-color);
     margin-bottom: 20px;
+    letter-spacing: 1px;
 }
 
-/* --- Features Grid --- */
+/* --- Features Grid (From Original) --- */
 .features-section {
     padding: 60px 20px;
     background-color: #ececec;
@@ -139,7 +143,12 @@ header {
     margin-bottom: 20px;
 }
 
-/* --- Contact Form (Original Style) --- */
+.feature-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* --- Contact Form (Original Styles) --- */
 .contact-section {
     padding: 80px 20px;
     background: var(--white);
@@ -176,6 +185,7 @@ header {
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
+    background: var(--white);
 }
 
 .submit-btn {
@@ -189,13 +199,15 @@ header {
     cursor: pointer;
     font-size: 1rem;
     transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .submit-btn:hover {
     background-color: var(--secondary-color);
 }
 
-/* --- Game Library Specifics --- */
+/* --- Game Library (Search & Filters) --- */
 .search-section {
     max-width: 900px;
     margin: -40px auto 40px;
@@ -215,7 +227,7 @@ header {
 }
 
 .filter-group h4 {
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
     font-size: 0.75rem;
     color: #777;
     text-transform: uppercase;
@@ -235,13 +247,30 @@ header {
     cursor: pointer;
     border-radius: 20px;
     font-size: 0.8rem;
+    transition: 0.2s;
+}
+
+.filter-btn:hover {
+    border-color: var(--primary-color);
 }
 
 .filter-btn.active {
     background: var(--primary-color);
     color: var(--white);
+    border-color: var(--primary-color);
 }
 
+.clear-btn {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+/* --- Game Cards & Grid --- */
 #gameGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -255,6 +284,7 @@ header {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     border-left: 6px solid #ddd;
+    transition: transform 0.2s;
 }
 
 .game-card[data-category="Strategy"] { border-left-color: var(--strategy); }
@@ -267,13 +297,41 @@ header {
     cursor: pointer;
 }
 
+.game-info-top {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
 .badge {
     font-size: 0.6rem;
     padding: 2px 6px;
     background: #eee;
-    margin-right: 5px;
     border-radius: 3px;
     text-transform: uppercase;
+    font-weight: 700;
+    color: #666;
+}
+
+.game-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-title-row h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.arrow {
+    transition: transform 0.3s;
+    color: #ccc;
+}
+
+.game-card.active .arrow {
+    transform: rotate(180deg);
 }
 
 .game-content {
@@ -297,30 +355,45 @@ header {
     padding: 60px 20px;
 }
 
-.social-icons i {
-    font-size: 1.8rem;
-    margin: 0 15px 30px;
+.social-icons {
+    margin-bottom: 30px;
+}
+
+.social-icons a {
     color: var(--white);
+    font-size: 1.8rem;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--secondary-color);
 }
 
 .footer-nav {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .footer-nav a {
     color: var(--white);
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 12px;
     font-size: 0.9rem;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
 }
 
 .copyright {
     font-size: 0.8rem;
     opacity: 0.6;
+    margin-top: 20px;
 }
 
-/* --- Mobile Fixes --- */
+/* --- Responsive Adjustments --- */
 @media (max-width: 600px) {
-    .hero-text { font-size: 2rem; }
-    .main-nav { flex-direction: column; align-items: stretch; }
+    .hero-text { font-size: 2.2rem; }
+    .main-nav { flex-direction: column; align-items: stretch; text-align: center; }
+    .main-contact-form { padding: 25px; }
 }
