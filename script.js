@@ -1,37 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. SELECT ELEMENTS
     const gameSearch = document.getElementById('gameSearch');
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     const gameCards = document.querySelectorAll('.game-card');
 
-    // 2. RUN LIBRARY LOGIC ONLY IF CARDS EXIST
     if (gameCards.length > 0) {
-        
-        // Expansion Toggle
+        // Toggle Accordion functionality
         gameCards.forEach(card => {
             const header = card.querySelector('.game-header');
             if (header) {
                 header.addEventListener('click', () => {
+                    // Optional: Close other open cards
+                    gameCards.forEach(c => {
+                        if (c !== card) c.classList.remove('active');
+                    });
                     card.classList.toggle('active');
                 });
             }
         });
 
-        // Filter Function
-        const filterLibrary = () => {
-            const query = gameSearch ? gameSearch.value.toLowerCase() : "";
-            
-            gameCards.forEach(card => {
-                const name = card.querySelector('h2').innerText.toLowerCase();
-                const matchesSearch = name.includes(query);
+        // Search functionality
+        if (gameSearch) {
+            gameSearch.addEventListener('input', () => {
+                const query = gameSearch.value.toLowerCase();
                 
-                // Add any additional complex filter logic here later
-                card.style.display = matchesSearch ? "block" : "none";
-            });
-        };
+                gameCards.forEach(card => {
+                    const name = card.querySelector('h2').innerText.toLowerCase();
+                    const category = card.getAttribute('data-category').toLowerCase();
+                    const players = card.getAttribute('data-players').toLowerCase();
 
-        // Event Listeners for Filters
-        if (gameSearch) gameSearch.addEventListener('input', filterLibrary);
-        checkboxes.forEach(box => box.addEventListener('change', filterLibrary));
+                    if (name.includes(query) || category.includes(query) || players.includes(query)) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            });
+        }
     }
 });
