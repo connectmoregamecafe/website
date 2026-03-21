@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-
     <script>
       (function (s, e, n, d, er) {
         s['Sender'] = er;
@@ -16,8 +15,7 @@
         }, s[er].l = 1 * new Date();
         var a = e.createElement(n),
             m = e.getElementsByTagName(n)[0];
-        a.async = 1;
-        a.src = d;
+        a.async = 1; a.src = d;
         m.parentNode.insertBefore(a, m)
       })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
       sender('6c119623044886')
@@ -31,9 +29,9 @@
     <div class="tagline">POPUP GAME CAFE | FRANKLIN, TN</div>
     <p>Scroll Less. Connect More.</p>
     <div class="nav-container">
-        <a href="#schedule" class="btn">FIND A POP-UP</a>
-        <a href="game_menu.html" class="btn" style="background-color: #00a8cc; color: white;">GAME LIBRARY</a>
-        <a href="#contact" class="btn btn-secondary" style="color:white; border-color:white;">CONTACT US</a>
+        <a href="#schedule" class="btn btn-secondary">FIND A POP-UP</a>
+        <a href="game_menu.html" class="btn" style="background-color: #007bff; color: white;">GAME LIBRARY</a>
+        <a href="#contact" class="btn btn-secondary">CONTACT US</a>
     </div>
 </header>
 
@@ -68,57 +66,25 @@
 
     <div id="pricing" style="margin-bottom: 40px;">
         <h2 style="text-align: center; color: #007bff; margin-bottom: 20px;">Stay & Play</h2>
-        <div class="profile-grid">
-            <div class="profile-card" style="border-top: 6px solid #007bff;">
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <div class="card" style="flex: 1; min-width: 280px; border-top: 6px solid #007bff; text-align: center;">
                 <i class="fas fa-user" style="font-size: 2.5rem; color: #007bff; margin-bottom: 15px;"></i>
                 <h3>Adults</h3>
                 <div style="font-size: 2.2rem; font-weight: 700;">$10.00</div>
-                <p style="opacity: 0.8;">Ages 14+</p>
-                <div style="text-align: left; font-size: 0.9rem;">
-                    <p><i class="fas fa-check" style="color: #00a8cc; margin-right: 8px;"></i> Unlimited library access</p>
-                    <p><i class="fas fa-check" style="color: #00a8cc; margin-right: 8px;"></i> No time limits</p>
-                    <p><i class="fas fa-check" style="color: #00a8cc; margin-right: 8px;"></i> Expert game teaching</p>
-                </div>
+                <p>Ages 14+</p>
             </div>
-
-            <div class="profile-card" style="border-top: 6px solid #f4c430;">
+            <div class="card" style="flex: 1; min-width: 280px; border-top: 6px solid #f4c430; text-align: center;">
                 <i class="fas fa-child" style="font-size: 2.5rem; color: #f4c430; margin-bottom: 15px;"></i>
                 <h3>Youth</h3>
                 <div style="font-size: 2.2rem; font-weight: 700;">$5.00</div>
-                <p style="opacity: 0.8;">Ages 5-13</p>
-                <div style="text-align: left; font-size: 0.9rem;">
-                    <p><i class="fas fa-check" style="color: #f4c430; margin-right: 8px;"></i> Kid-friendly library access</p>
-                    <p><i class="fas fa-check" style="color: #f4c430; margin-right: 8px;"></i> Perfect for family outings</p>
-                    <p><i class="fas fa-check" style="color: #f4c430; margin-right: 8px;"></i> Learning through play</p>
-                </div>
+                <p>Ages 5-13</p>
             </div>
         </div>
-        <p style="text-align: center; font-size: 0.85rem; margin-top: 15px; font-style: italic;">*Children under 5 play free with a playing adult.</p>
     </div>
 
     <div id="newsletter" class="card" style="text-align: center; border-top: 6px solid #007bff;">
         <h2 style="color: #007bff;">Join Connect More+</h2>
         <div class="sender-form-field" data-sender-form-id="av26Z8"></div>
-    </div>
-    
-    <div id="contact" class="card">
-        <h2 style="text-align: center;">Get in Touch</h2>
-        <form name="contact" method="POST" data-netlify="true" style="max-width: 450px; margin: 0 auto;">
-            <input type="hidden" name="form-name" value="contact">
-            <div style="margin-bottom: 15px;">
-                <label style="display: block; font-weight: 700;">Name</label>
-                <input type="text" name="name" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box;">
-            </div>
-            <div style="margin-bottom: 15px;">
-                <label style="display: block; font-weight: 700;">Email</label>
-                <input type="email" name="email" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box;">
-            </div>
-            <div style="margin-bottom: 15px;">
-                <label style="display: block; font-weight: 700;">Message</label>
-                <textarea name="message" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box; min-height: 100px; font-family: 'Montserrat';"></textarea>
-            </div>
-            <button type="submit" class="btn" style="width: 100%; cursor: pointer;">Send Message</button>
-        </form>
     </div>
 </div>
 
@@ -136,7 +102,5 @@
     </div>
     <p style="font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Connect More Game Cafe LLC | Franklin, TN</p>
 </div>
-
-<script src="script.js"></script>
 </body>
 </html>
