@@ -3,12 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const gameCards = document.querySelectorAll('.game-card');
 
     if (gameCards.length > 0) {
-        // Toggle Accordion functionality
         gameCards.forEach(card => {
             const header = card.querySelector('.game-header');
             if (header) {
                 header.addEventListener('click', () => {
-                    // Optional: Close other open cards
                     gameCards.forEach(c => {
                         if (c !== card) c.classList.remove('active');
                     });
@@ -17,11 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Search functionality
         if (gameSearch) {
             gameSearch.addEventListener('input', () => {
                 const query = gameSearch.value.toLowerCase();
-                
                 gameCards.forEach(card => {
                     const name = card.querySelector('h2').innerText.toLowerCase();
                     const category = card.getAttribute('data-category').toLowerCase();
