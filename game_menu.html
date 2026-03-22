@@ -7,13 +7,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Increased margins for this page only */
+        .search-section, .list-view {
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Centering logic */
+        .filter-master-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        #gameSearch {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
 <header style="background-color: var(--diode-blue);">
     <a href="index.html"><img class="piccenter" src="logo.png" alt="Connect More Logo"></a>
     <div class="hero-text">GAME LIBRARY</div>
-    <div class="tagline">44 WAYS TO DISCONNECT</div>
+    <div class="tagline">What shall we play today?</div>
     <div class="nav-container">
         <a href="index.html" class="btn btn-secondary">BACK TO HOME</a>
     </div>
@@ -53,7 +80,7 @@
                 </div>
             </div>
 
-            <button id="clearFilters" class="btn" style="background-color: var(--black-cat); font-size: 0.7rem; width: 100%;">CLEAR ALL FILTERS</button>
+            <button id="clearFilters" class="btn" style="background-color: var(--black-cat); font-size: 0.7rem; width: 100%; max-width: 300px;">CLEAR ALL FILTERS</button>
         </div>
     </div>
 
