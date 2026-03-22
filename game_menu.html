@@ -10,18 +10,37 @@
     <style>
         /* Even larger margins to make the boxes thinner */
         .search-section, .list-view {
-            max-width: 650px; /* Reduced from 900px for thinner look */
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
             padding: 0 20px;
         }
         
-        /* Set game card borders to Diode Blue */
+        /* New styling to make the entire box Diode Blue */
         .game-card {
+            background-color: var(--diode-blue) !important;
             border: 2px solid var(--diode-blue) !important;
         }
+
+        /* Set all text inside the Diode Blue box to white */
+        .game-header h2,
+        .game-content p,
+        .game-card .badge,
+        .game-card .arrow {
+            color: white !important;
+        }
         
-        /* Centering logic */
+        /* Make the badges slightly more opaque against the blue */
+        .game-card .badge {
+            background-color: rgba(255, 255, 255, 0.15) !important;
+        }
+
+        /* Adjust the arrow color when active to match the white theme */
+        .game-card.active .arrow {
+            color: white !important;
+        }
+
+        /* Keep the filter buttons centered */
         .filter-master-container {
             display: flex;
             flex-direction: column;
@@ -54,7 +73,7 @@
 
 <div class="container">
     <div class="search-section">
-        <input type="text" id="gameSearch" placeholder="Search our 44 games...">
+        <input type="text" id="gameSearch" placeholder="Search our games">
         
         <div class="filter-master-container" style="margin-top: 20px;">
             <div class="filter-group" style="margin-bottom: 15px;">
@@ -113,6 +132,7 @@
         <div class="game-card" data-category="Party" data-players="3-6" data-complexity="Easy"><div class="game-info-bar"><span class="badge">Party</span><span class="badge">3-6 Players</span><span class="badge">Easy</span></div><div class="game-header"><div class="game-title-row"><h2>Dixit</h2><i class="fas fa-chevron-down arrow"></i></div></div><div class="game-content"><p>A storytelling game of imagination. Every picture tells a story.</p></div></div>
         <div class="game-card" data-category="Party" data-players="2-4" data-complexity="Easy"><div class="game-info-bar"><span class="badge">Party</span><span class="badge">2-4 Players</span><span class="badge">Easy</span></div><div class="game-header"><div class="game-title-row"><h2>Dutch Blitz</h2><i class="fas fa-chevron-down arrow"></i></div></div><div class="game-content"><p>The fast-paced "vonderful" card game. Speed is everything.</p></div></div>
         <div class="game-card" data-category="Party" data-players="2-5" data-complexity="Easy"><div class="game-info-bar"><span class="badge">Party</span><span class="badge">2-5 Players</span><span class="badge">Easy</span></div><div class="game-header"><div class="game-title-row"><h2>Exploding Kittens</h2><i class="fas fa-chevron-down arrow"></i></div></div><div class="game-content"><p>A kitty-powered version of Russian Roulette.</p></div></div>
+        <div class="game-card" data-category="Strategy" data-players="1-5" data-complexity="Intermediate"><div class="game-info-bar"><span class="badge">Strategy</span><span class="badge">1-5 Players</span><span class="badge">Intermediate</span></div><div class="game-header"><div class="game-title-row"><h2>Finspan</h2><i class="fas fa-chevron-down arrow"></i></div></div><div class="game-content"><p>A stunning aquatic strategy game where you attract diverse fish species to your vibrant coral reef ecosystem.</p></div></div>
         <div class="game-card" data-category="Party" data-players="2-8" data-complexity="Easy"><div class="game-info-bar"><span class="badge">Party</span><span class="badge">2-8 Players</span><span class="badge">Easy</span></div><div class="game-header"><div class="game-title-row"><h2>Ghost Blitz</h2><i class="fas fa-chevron-down arrow"></i></div></div><div class="game-content"><p>A lightning-fast reaction game. Grab the right item!</p></div></div>
         <div class="game-card" data-category="Kids" data-players="2" data-complexity="Easy"><div class="game-info-bar"><span class="badge">Kids</span><span class="badge">2 Players</span><span class="badge">Easy</span></div><div class="game-header"><div class="game-title-row"><h2>Guess Who</h2><i class="fas fa-chevron-down arrow"></i></div></div><div class="game-content"><p>Ask the right questions to identify your opponent's character.</p></div></div>
         <div class="game-card" data-category="Strategy" data-players="2" data-complexity="Intermediate"><div class="game-info-bar"><span class="badge">Strategy</span><span class="badge">2 Players</span><span class="badge">Intermediate</span></div><div class="game-header"><div class="game-title-row"><h2>Hive</h2><i class="fas fa-chevron-down arrow"></i></div></div><div class="game-content"><p>The bug-themed abstract game with no board. Surround the Queen!</p></div></div>
