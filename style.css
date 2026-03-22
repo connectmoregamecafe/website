@@ -1,14 +1,14 @@
 /* --- Root Variables --- */
 :root {
     --diode-blue: #007bff;
-    --crystal-seas: #00bcd4;
+    /* Crystal Seas Removed */
     --yellow-jasper: #e6d491;
     --black-cat: #2c3e50;
     --bg-light: #f4f7f6;
     --text-dark: #333;
     --white: #ffffff;
     
-    /* Category Reference Colors (Still available for accents if needed) */
+    /* Category Reference Colors */
     --strategy: #2980b9;
     --party: #8e44ad;
     --classic: #27ae60;
@@ -67,8 +67,10 @@ header {
     padding: 40px 20px;
 }
 
+/* Card background set to White, Text set to Black Cat */
 .card {
     background: var(--white);
+    color: var(--black-cat);
     padding: 30px;
     border-radius: 12px;
     margin-bottom: 30px;
@@ -93,8 +95,8 @@ header {
     font-size: 0.9rem;
     display: inline-block;
     cursor: pointer;
-    background-color: var(--yellow-jasper); /* Yellow Buttons */
-    color: var(--black-cat); /* Dark text for readability on yellow */
+    background-color: var(--yellow-jasper);
+    color: var(--black-cat);
     border: none;
     text-transform: uppercase;
     text-align: center;
@@ -119,8 +121,10 @@ header {
     gap: 15px;
 }
 
+/* Game Card now uses White as base with Black Cat text */
 .game-card {
     background: var(--white);
+    color: var(--black-cat);
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid #eee;
@@ -132,7 +136,7 @@ header {
     display: flex;
     gap: 10px;
     padding: 10px 20px;
-    background-color: #f8f9fa;
+    background-color: #f8f9fa; /* Light white-gray */
     border-bottom: 1px solid #eee;
 }
 
@@ -143,8 +147,8 @@ header {
     padding: 3px 10px;
     border-radius: 4px;
     letter-spacing: 0.5px;
-    background: #e9ecef; /* Neutral Gray badges */
-    color: #495057;
+    background: var(--black-cat); /* Changed to dark to pop on white card */
+    color: var(--white);
 }
 
 .game-header {
@@ -173,6 +177,11 @@ header {
     overflow: hidden;
     transition: 0.3s ease-out;
     padding: 0 20px;
+}
+
+/* Set internal card paragraph text to Black Cat */
+.game-content p {
+    color: var(--black-cat);
 }
 
 .game-card.active .game-content {
@@ -208,13 +217,15 @@ header {
     font-size: 1rem;
     font-family: inherit;
     margin-bottom: 20px;
+    color: var(--black-cat);
 }
 
 .filter-btn {
     padding: 6px 15px;
     border-radius: 20px;
     border: 1px solid #ddd;
-    background: white;
+    background: var(--white);
+    color: var(--black-cat);
     cursor: pointer;
     font-family: inherit;
     font-size: 0.8rem;
