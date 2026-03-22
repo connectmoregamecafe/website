@@ -4,12 +4,12 @@
     --crystal-seas: #00bcd4;
     --yellow-jasper: #ffc107;
     --black-cat: #2c3e50;
-    --accent-red: #e74c3c;
+    --accent-red: #007bff; /* Changed from red to Diode Blue */
     --bg-light: #f4f7f6;
     --text-dark: #333;
     --white: #ffffff;
     
-    /* Category Reference Colors (Still used for filters/accents) */
+    /* Category Reference Colors */
     --strategy: #2980b9;
     --party: #8e44ad;
     --classic: #27ae60;
@@ -94,7 +94,7 @@ header {
     font-size: 0.9rem;
     display: inline-block;
     cursor: pointer;
-    background-color: var(--accent-red);
+    background-color: var(--diode-blue); /* Updated from Red */
     color: var(--white);
     border: none;
     text-transform: uppercase;
@@ -110,11 +110,11 @@ header {
 .btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    opacity: 0.9;
+    filter: brightness(1.1); /* Subtle highlight effect */
 }
 
-/* --- Game Library (List View) --- */
-#gameGrid.list-view {
+/* --- Game Library & FAQ (List View) --- */
+#gameGrid.list-view, #faqGrid.list-view {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -144,7 +144,7 @@ header {
     padding: 3px 10px;
     border-radius: 4px;
     letter-spacing: 0.5px;
-    background: #e9ecef; /* Neutral styling for all games */
+    background: #e9ecef;
     color: #495057;
 }
 
@@ -177,7 +177,7 @@ header {
 }
 
 .game-card.active .game-content {
-    max-height: 250px; /* Adjusted for description length */
+    max-height: 500px;
     padding-bottom: 20px;
 }
 
@@ -188,6 +188,7 @@ header {
 
 .game-card.active .arrow { 
     transform: rotate(180deg); 
+    color: var(--diode-blue);
 }
 
 /* --- Search & Filters --- */
@@ -244,19 +245,15 @@ header {
     border-color: var(--diode-blue);
 }
 
-/* --- About Page / Photos --- */
+/* --- Photos & Profiles --- */
 .about-image {
     width: 100%;
-    max-width: 600px; /* Prevents picture from being "huge" */
+    max-width: 600px;
     height: auto;
     border-radius: 12px;
     display: block;
     margin: 0 auto 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.about-content p {
-    margin-bottom: 1.5rem;
 }
 
 /* --- Footer --- */
@@ -287,6 +284,7 @@ header {
 
 .footer-nav a:hover {
     opacity: 1;
+    color: var(--crystal-seas);
 }
 
 .social-icons { 
