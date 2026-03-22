@@ -16,26 +16,32 @@
             padding: 0 20px;
         }
         
-        /* New styling to make the entire box Diode Blue */
+        /* Box styling: Diode Blue background */
         .game-card {
             background-color: var(--diode-blue) !important;
             border: 2px solid var(--diode-blue) !important;
+            color: white !important;
         }
 
         /* Set all text inside the Diode Blue box to white */
         .game-header h2,
         .game-content p,
-        .game-card .badge,
         .game-card .arrow {
             color: white !important;
         }
         
-        /* Make the badges slightly more opaque against the blue */
+        /* FIX: Ensure badges have a dark background so white text is visible */
         .game-card .badge {
-            background-color: rgba(255, 255, 255, 0.15) !important;
+            background-color: rgba(0, 0, 0, 0.3) !important; /* Darker overlay */
+            color: white !important;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-right: 5px;
+            font-size: 0.7rem;
         }
 
-        /* Adjust the arrow color when active to match the white theme */
+        /* Toggle Arrow color */
         .game-card.active .arrow {
             color: white !important;
         }
@@ -73,7 +79,7 @@
 
 <div class="container">
     <div class="search-section">
-        <input type="text" id="gameSearch" placeholder="Search our games">
+        <input type="text" id="gameSearch" placeholder="Search our 45 games...">
         
         <div class="filter-master-container" style="margin-top: 20px;">
             <div class="filter-group" style="margin-bottom: 15px;">
