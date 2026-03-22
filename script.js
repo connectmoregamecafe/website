@@ -15,14 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Filter State
-    let activeFilters = {
-        players: null,
-        category: null,
-        complexity: null
-    };
+    let activeFilters = { players: null, category: null, complexity: null };
 
-    // Filter Click Logic
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             const group = btn.parentElement.dataset.group;
@@ -40,10 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Search Input Logic
     gameSearch.addEventListener('input', applyFilters);
 
-    // Clear Filters
     clearBtn.addEventListener('click', () => {
         activeFilters = { players: null, category: null, complexity: null };
         filterButtons.forEach(btn => btn.classList.remove('active'));
@@ -58,47 +50,43 @@ document.addEventListener('DOMContentLoaded', () => {
             const title = card.querySelector('h2').textContent.toLowerCase();
             const category = card.dataset.category;
             const complexity = card.dataset.complexity;
-            
-            // Player Logic: Handles ranges like "2-4" or "5+"
-            const playerAttr = card.dataset.players; // e.g., "4" or "5+"
+            const playerAttr = card.dataset.players; 
+
             const isMatchPlayers = checkPlayerMatch(playerAttr, activeFilters.players);
-            
             const isMatchCategory = !activeFilters.category || category === activeFilters.category;
             const isMatchComplexity = !activeFilters.complexity || complexity === activeFilters.complexity;
             const isMatchSearch = title.includes(searchTerm);
 
-            if (isMatchPlayers && isMatchCategory && isMatchComplexity && isMatchSearch) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
+            card.style.display = (isMatchPlayers && isMatchCategory && isMatchComplexity && isMatchSearch) 
+                ? 'block' : 'none';
         });
     }
 
     /**
-     * Helper to determine if a game fits the selected player count
-     * @param {string} gameValue - The data-players attribute (e.g., "4", "5+")
-     * @param {string} filterValue - The active filter (e.g., "3", "5+")
+     * Advanced Player Matching
+     * Handles: "2-4", "2+", "5", "2-10"
      */
     function checkPlayerMatch(gameValue, filterValue) {
         if (!filterValue) return true;
-
-        // If filter is "5+", check if game allows 5 or more
-        if (filterValue === "5+") {
-            return gameValue === "5+";
-        }
+        if (!gameValue) return false;
 
         const filterNum = parseInt(filterValue);
 
-        // If game is "5+", it inherently supports 5, 6, 7+ 
-        // (Adjust this logic if 5+ games should show up when '4' is clicked)
-        if (gameValue === "5+") {
-            return filterNum >= 5;
+        // Scenario 1: Range (e.g., "2-10")
+        if (gameValue.includes('-')) {
+            const parts = gameValue.split('-');
+            const min = parseInt(parts[0]);
+            const max = parseInt(parts[1]);
+            return filterNum >= min && filterNum <= max;
         }
 
-        // Check if the filtered number is less than or equal to the game's max capacity
-        // Note: We assume games labeled "4" generally support 2-4 players.
-        const gameMax = parseInt(gameValue);
-        return filterNum <= gameMax;
+        // Scenario 2: Open-ended (e.g., "2+")
+        if (gameValue.includes('+')) {
+            const min = parseInt(gameValue.replace('+', ''));
+            return filterNum >= min;
+        }
+
+        // Scenario 3: Exact Match (e.g., "4")
+        return parseInt(gameValue) === filterNum;
     }
 });
